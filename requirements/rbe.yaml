@@ -1,0 +1,36 @@
+id: rbe-bsms
+name: B.S./M.S. in Robotics Engineering
+catalog_url: https://wpi-grad.cleancatalog.net/robotics-engineering/ms-in-robotics-engineering
+total_credits: 30
+requirements:
+  - name: Robotics Core
+    min_credits: 15
+    children:
+      # all three (ME codes are cross-listed)
+      - name: Foundations
+        min_credits: 9
+        courses: [RBE 500, ME 527, RBE 501, ME 528, RBE 502]
+      # any RBE 510+ except project/thesis courses
+      - name: Core Robotics Engineering Electives
+        min_credits: 6
+        match:
+          code_prefix: RBE
+          code_min: 510
+          # otherwise undergrad RBE 1001+ passes code_min
+          academic_level: Graduate
+          exclude: [RBE 593, RBE 594, RBE 596, RBE 597, RBE 598, RBE 599, RBE 699]
+
+  # these plus any SYS 500+
+  - name: Engineering Context
+    min_credits: 3
+    courses: [ETR 500, ETR 593, MIS 576, OBC 506, BUS 546, WR 513]
+    match:
+      code_prefix: SYS
+      code_min: 500
+      academic_level: Graduate
+
+  - name: Capstone or Thesis
+    min_children: 1
+    children:
+      - { name: Capstone Project, min_credits: 3, courses: [RBE 594, RBE 596, RBE 593] }
+      - { name: Thesis,           min_credits: 9, courses: [RBE 599] }

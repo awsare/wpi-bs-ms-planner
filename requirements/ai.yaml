@@ -1,0 +1,40 @@
+id: ai-bsms
+name: Bachelor's/Master's in Artificial Intelligence
+catalog_url: https://wpi-grad.cleancatalog.net/artificial-intelligence/ms-in-artificial-intelligence
+total_credits: 30
+requirements:
+  # optional, at most 6 credits count
+  - name: Preparatory Courses
+    max_credits: 6
+    courses: [CS 5007, CS 5008, CS 5084, MA 517, DS 5002, DS 501, DS 5006, MIS 587, RBE 500, ME 527]
+
+  # one course from each bin
+  - name: Core
+    min_credits: 15
+    children:
+      - name: Artificial Intelligence
+        min_credits: 3
+        courses: [CS 534]
+      - name: Fairness Ethics and AI
+        min_credits: 3
+        courses: [CS 555, DS 555, SS 560, MIS 520, WR 513]
+      - name: Machine Learning
+        min_credits: 3
+        courses: [CS 548, DS 502, MA 543, CS 539, CS 541, DS 541, CS 586, DS 504,
+                  CS 551, DS 551, ECE 571, ECE 556, CS 556, DS 556, DS 577, ECE 577, RBE 577]
+      - name: Knowledge Representation and Reasoning
+        min_credits: 3
+        courses: [CS 553, DS 553, CS 542, CS 585, DS 503, CS 509, MIS 502, OIE 559,
+                  RBE 550, RBE 575, RBE 511]
+      - name: Interaction and Action
+        min_credits: 3
+        courses: [CS 552, DS 552, CS 554, DS 554, CS 547, DS 547, CS 549, RBE 549,
+                  RBE 526, CS 526, ECE 545, CS 545]
+
+  - name: Capstone or Thesis
+    min_children: 1
+    children:
+      - { name: Capstone Project, min_credits: 3, courses: [CS 594, DS 594, RBE 594] }
+      - { name: Thesis,           min_credits: 9, courses: [CS 599, DS 599, RBE 599] }
+
+  # not modeled: under 50% Business School credits; no course counts twice

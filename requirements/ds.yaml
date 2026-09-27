@@ -1,0 +1,31 @@
+id: ds-bsms
+name: Bachelor's/Master's in Data Science
+catalog_url: https://wpi-grad.cleancatalog.net/data-science/ms-in-data-science
+total_credits: 30
+requirements:
+  - name: Core Data Science Coursework
+    min_credits: 15
+    children:
+      - name: Integrative Data Science
+        min_credits: 3
+        courses: [DS 501]
+      - name: Mathematical Analytics
+        min_credits: 3
+        courses: [DS 502, MA 543, MA 542, MA 554]
+      - name: Data Access and Management
+        min_credits: 3
+        courses: [CS 542, MIS 571, CS 561, CS 585, DS 503]
+      - name: Data Analytics and Mining
+        min_credits: 3
+        courses: [CS 548, CS 539, CS 541, DS 541, CS 586, DS 504, CS 547, DS 547,
+                  CS 551, DS 551, CS 552, DS 552, CS 554, DS 554]
+      - name: Business Intelligence and Case Studies
+        min_credits: 3
+        courses: [MIS 584, MIS 587, MKT 568]
+
+  # project track: 3 cr + 12 electives; thesis track: 9 cr + 6 electives
+  - name: Capstone or Thesis
+    min_children: 1
+    children:
+      - { name: Graduate Qualifying Project, min_credits: 3, courses: [DS 598] }
+      - { name: Thesis,                      min_credits: 9, courses: [DS 599] }

@@ -1,0 +1,57 @@
+id: cs-bsms
+name: B.S./M.S. in Computer Science
+catalog_url: https://wpi-grad.cleancatalog.net/computer-science/ms-in-computer-science
+total_credits: 30
+requirements:
+  # 4 bins, at least 3 essential
+  - name: CS Breadth
+    min_credits: 12
+    min_children: 4
+    min_essential_children: 3
+    children:
+      - name: Theory
+        essential: true
+        min_credits: 3
+        courses: [CS 5003, CS 503, CS 521, CS 559]
+      - name: Algorithms
+        essential: true
+        min_credits: 3
+        courses: [CS 5084, CS 584, CS 504]
+      - name: Systems
+        essential: true
+        min_credits: 3
+        courses: [CS 502, CS 533, ECE 581, CS 535]
+      - name: Networks
+        essential: true
+        min_credits: 3
+        courses: [CS 513, CS 528, CS 529, CS 577, ECE 537, CS 558]
+      - name: Design
+        min_credits: 3
+        courses: [CS 509, CS 546, CS 562]
+      - name: Compilers and Languages
+        min_credits: 3
+        courses: [CS 536, CS 544]
+      - name: Graphics and Imaging
+        min_credits: 3
+        courses: [CS 543, CS 545, ECE 545, RBE 549, CS 549, CS 563, CS 573]
+      - name: Artificial Intelligence
+        min_credits: 3
+        courses: [CS 534, CS 538, CS 539, CS 540, CS 541, DS 541, CS 547, DS 547,
+                  CS 548, CS 549, RBE 549, CS 551, DS 551, CS 552, DS 552, CS 554,
+                  DS 554, CS 555, DS 555, CS 566]
+      - name: Databases
+        min_credits: 3
+        courses: [CS 542, CS 547, DS 547, CS 561, CS 585, DS 503, CS 586, DS 504]
+      - name: Cybersecurity
+        min_credits: 3
+        courses: [CS 557, CS 558, CS 564, CS 571, CS 578, ECE 578, CS 673, ECE 673]
+      - name: Applications of CS
+        min_credits: 3
+        courses: [RBE 526, CS 526, CS 565, CS 567, CS 568, CS 582, BCB 502, CS 583, BCB 503]
+
+  # any grad CS course
+  - name: CS Electives
+    min_credits: 18
+    match:
+      subject_contains: Computer Science
+      academic_level: Graduate
