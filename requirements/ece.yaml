@@ -1,0 +1,18 @@
+id: ece-bsms
+name: B.S./M.S. in Electrical and Computer Engineering
+catalog_url: https://wpi-grad.cleancatalog.net/electrical-and-computer-engineering/ms-in-electrical-and-computer-engineering
+total_credits: 30
+requirements:
+  # 500-, 5000-, or 600-level ECE (thesis counts)
+  - name: ECE Graduate Coursework
+    min_credits: 21
+    match:
+      code_prefix: ECE
+      academic_level: Graduate
+
+  # thesis is optional: non-thesis is all coursework
+  - name: Thesis Option
+    max_credits: 9
+    courses: [ECE 599]
+
+  # not modeled: remaining 9 cr in CS/DS/PH/MA/engineering, at most 6 cr at 4000-level

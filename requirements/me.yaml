@@ -1,0 +1,39 @@
+id: me-bsms
+name: B.S./M.S. in Mechanical Engineering
+catalog_url: https://wpi-grad.cleancatalog.net/mechanical-engineering/ms-in-mechanical-engineering
+total_credits: 30
+requirements:
+  # ME 5001 does not count
+  - name: Analytical Methods or Mathematics
+    min_credits: 3
+    courses: [ME 500]
+    match:
+      code_prefix: MA
+      academic_level: Graduate
+
+  - name: Thesis or Non-Thesis
+    min_children: 1
+    children:
+      - name: Thesis Option
+        children:
+          # no ME 500 or directed research
+          - name: ME Coursework
+            min_credits: 9
+            match:
+              code_prefix: ME
+              academic_level: Graduate
+              exclude: [ME 500, ME 591, ME 598, ME 599]
+          - name: Thesis Research
+            min_credits: 12
+            courses: [ME 599]
+      - name: Non-Thesis Option
+        children:
+          # up to 9 cr of ME 598 allowed
+          - name: ME Coursework
+            min_credits: 18
+            match:
+              code_prefix: ME
+              academic_level: Graduate
+              exclude: [ME 500, ME 591, ME 599]
+
+  # not modeled: ME 591 seminar every semester; electives; at most 9 cr directed research

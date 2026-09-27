@@ -1,0 +1,20 @@
+id: imgd-bsms
+name: B.S./M.S. in Interactive Media & Game Development
+catalog_url: https://wpi-grad.cleancatalog.net/interactive-media-game-development/ms-in-interactive-media-game-development
+total_credits: 30
+requirements:
+  - name: Game Design Studio
+    min_credits: 3
+    courses: [IMGD 5000]
+
+  - name: Core Courses
+    min_credits: 12
+    courses: [IMGD 5010, IMGD 5100, IMGD 5200, IMGD 5300, IMGD 5400, IMGD 5500, IMGD 5600]
+
+  - name: Thesis or Project
+    min_children: 1
+    children:
+      - { name: Thesis,                      min_credits: 9, courses: [IMGD 599] }
+      - { name: Graduate Qualifying Project, min_credits: 9, courses: [IMGD 596] }
+
+  # not modeled: 6 cr electives, any 4000+ course with advisor approval

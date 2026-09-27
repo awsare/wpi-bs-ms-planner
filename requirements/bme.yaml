@@ -1,0 +1,42 @@
+id: bme-bsms
+name: B.S./M.S. in Biomedical Engineering
+catalog_url: https://wpi-grad.cleancatalog.net/biomedical-engineering/ms-in-biomedical-engineering
+total_credits: 30
+requirements:
+  # BME 500-level or 4000-level (not BME 4300); at most 8 cr of 4000-level overall
+  - name: BME Courses
+    min_credits: 12
+    courses: [BME 4011, BME 4012, BME 4023, BME 4201, BME 4301, BME 4503, BME 4504,
+              BME 4505, BME 4507, BME 4606, BME 4607, BME 4701, BME 4813, BME 4814,
+              BME 4828, BME 4831]
+    match:
+      code_prefix: BME
+      academic_level: Graduate
+      exclude: [BME 591, BME 597, BME 599]
+
+  # one course each; catalog lists examples, substitutions need approval
+  - name: Core Competencies
+    children:
+      - name: Mathematics
+        min_credits: 3
+        courses: [MA 511, MA 501]
+      - name: Life Science
+        min_credits: 3
+        courses: [BME 560, BME 562, BME 564]
+      - name: Regulations and Controls
+        min_credits: 3
+        courses: [BME 535, BME 532]
+      - name: Clinical Needs Analysis and Design
+        min_credits: 1
+        courses: [BME 592]
+      - name: Value Creation and Commercialization
+        min_credits: 3
+        courses: [ETR 500, ETR 593, SYS 501, SYS 502]
+
+  - name: Thesis or Project
+    min_children: 1
+    children:
+      - { name: Thesis,               min_credits: 6, courses: [BME 599] }
+      - { name: Professional Project, min_credits: 6, courses: [BME 597] }
+
+  # not modeled: 15 cr technical depth (thematic, advisor-approved); BME 591 passed twice

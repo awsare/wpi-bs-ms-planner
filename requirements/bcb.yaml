@@ -1,0 +1,40 @@
+id: bcb-bsms
+name: B.S./M.S. in Bioinformatics and Computational Biology
+catalog_url: https://wpi-grad.cleancatalog.net/bioinformatics-and-computational-biology/ms-in-bioinformatics-and-computational-biology
+total_credits: 30
+requirements:
+  # cross-listed codes included
+  - name: BCB Interdisciplinary Courses
+    min_credits: 6
+    courses: [BCB 501, BB 581, BCB 502, CS 582, BCB 503, CS 583, BCB 504, MA 584,
+              BCB 555, BCB 590]
+
+  - name: Life Science
+    min_credits: 3
+    courses: [BB 504, BB 526, BB 550, BB 552, BB 553, BB 554, BB 561, BB 562, BB 570,
+              BB 575, BB 590, CH 538, CH 540, CH 541, CH 542, CH 545, CH 554, CHE 554, CH 555]
+
+  # not both CS 5084 and CS 584
+  - name: Computer Science
+    min_credits: 3
+    courses: [CS 5007, CS 5084, CS 504, CS 509, CS 522, MA 510, CS 534, CS 539, CS 541,
+              DS 541, CS 542, CS 547, DS 547, CS 548, CS 561, CS 573, CS 584, CS 585,
+              DS 503, CS 586, DS 504]
+
+  - name: Mathematics
+    min_credits: 3
+    courses: [MA 500, MA 501, MA 508, MA 510, CS 522, MA 511, DS 5002, MA 517, MA 528,
+              MA 529, MA 540, MA 541, MA 542, MA 543, DS 502, MA 546, MA 547, MA 549,
+              MA 550, MA 552, MA 554, MA 556]
+
+  # one course; ID 500 is 0 credits
+  - name: Ethics
+    courses: [ID 500, BB 551, SS 560, CS 555, DS 555]
+
+  - name: Thesis or Internship
+    min_children: 1
+    children:
+      - { name: Thesis,     min_credits: 9, courses: [BCB 599] }
+      - { name: Internship, min_credits: 3, courses: [BCB 5900] }
+
+  # not modeled: 3-6 cr electives from the lists above
