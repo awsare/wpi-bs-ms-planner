@@ -1,0 +1,28 @@
+id: se-bsms
+name: B.S./M.S. in Systems Engineering
+catalog_url: https://wpi-grad.cleancatalog.net/systems-engineering/ms-in-systems-engineering
+total_credits: 30
+requirements:
+  - name: Core
+    children:
+      - { name: Concepts of Systems Engineering,                 min_credits: 3, courses: [SYS 501] }
+      - { name: Systems Architecture and Design,                 min_credits: 3, courses: [SYS 510] }
+      - { name: Systems Integration, Verification and Validation, min_credits: 3, courses: [SYS 511] }
+      - { name: Technical Decision and Risk Analysis,            min_credits: 3, courses: [SYS 544] }
+
+  # or another course with advisor approval
+  - name: Leadership and Management
+    min_credits: 3
+    courses: [BUS 546, MIS 576, MIS 582, OBC 505, OBC 506, OIE 554, SD 550]
+
+  - name: Depth
+    min_credits: 6
+    courses: [SYS 502, SYS 512, SYS 520, SYS 521, SYS 540, SYS 579]
+
+  - name: Capstone Experience
+    min_credits: 3
+    max_credits: 9
+    courses: [SYS 585, SYS 598, SYS 599]
+
+  # not modeled: 6 cr electives (CS, SD, SYS, engineering, business, MA);
+  # capstone only after 24 cr including all core

@@ -1,0 +1,25 @@
+id: stat-bsms
+name: B.S./M.S. in Applied Statistics
+catalog_url: https://wpi-grad.cleancatalog.net/mathematical-sciences/ms-in-applied-statistics-program
+total_credits: 30
+requirements:
+  - name: Required Courses
+    children:
+      - { name: Probability and Mathematical Statistics I,  min_credits: 3, courses: [MA 540] }
+      - { name: Probability and Mathematical Statistics II, min_credits: 3, courses: [MA 541] }
+      - { name: MA 546,                                     min_credits: 3, courses: [MA 546] }
+      - { name: Observational and Sampling Studies,         min_credits: 3, courses: [MA 547] }
+      - { name: Statistics Graduate Seminar,                min_credits: 3, courses: [MA 559] }
+
+  # three of MA 509 and MA 542-556
+  - name: Statistics Electives
+    min_credits: 9
+    courses: [MA 509]
+    match:
+      code_prefix: MA
+      code_min: 542
+      code_max: 556
+      exclude: [MA 546, MA 547]
+
+  # not modeled: capstone experience (thesis, project, practicum, report/proposal, or exam);
+  # upper-level undergrad courses with committee approval

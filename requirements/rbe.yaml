@@ -6,10 +6,12 @@ requirements:
   - name: Robotics Core
     min_credits: 15
     children:
-      # all three (ME codes are cross-listed)
+      # ME codes are cross-listed
       - name: Foundations
-        min_credits: 9
-        courses: [RBE 500, ME 527, RBE 501, ME 528, RBE 502]
+        children:
+          - { name: Foundations of Robotics, min_credits: 3, courses: [RBE 500, ME 527] }
+          - { name: Robot Dynamics,          min_credits: 3, courses: [RBE 501, ME 528] }
+          - { name: Robot Control,           min_credits: 3, courses: [RBE 502] }
       # any RBE 510+ except project/thesis courses
       - name: Core Robotics Engineering Electives
         min_credits: 6
@@ -34,3 +36,9 @@ requirements:
     children:
       - { name: Capstone Project, min_credits: 3, courses: [RBE 594, RBE 596, RBE 593] }
       - { name: Thesis,           min_credits: 9, courses: [RBE 599] }
+
+  - name: Internship
+    max_credits: 3
+    courses: [RBE 5900]
+
+  # not modeled: electives (500+ science, engineering, business); 6 cr before capstone

@@ -15,4 +15,10 @@ requirements:
     max_credits: 9
     courses: [ECE 599]
 
-  # not modeled: remaining 9 cr in CS/DS/PH/MA/engineering, at most 6 cr at 4000-level
+  - name: Upper-Level Undergraduate
+    max_credits: 6
+    match:
+      academic_level: Undergraduate
+      code_min: 4000
+
+  # not modeled: remaining 9 cr only from CS/DS/PH/MA/engineering

@@ -1,0 +1,29 @@
+id: mte-bsms
+name: B.S./M.S. in Materials Science and Engineering
+catalog_url: https://wpi-grad.cleancatalog.net/materials-science-and-engineering/ms-in-materials-science-and-engineering
+total_credits: 30
+requirements:
+  - name: Core
+    children:
+      - { name: Structure and Properties of Engineering Materials,   min_credits: 2, courses: [MTE 511, ME 5311] }
+      - { name: Properties and Performance of Engineering Materials, min_credits: 2, courses: [MTE 512, ME 531] }
+      - { name: Advanced Thermodynamics,                             min_credits: 2, courses: [MTE 526] }
+      - { name: X-Ray Diffraction and Crystallography,               min_credits: 2, courses: [MTE 532] }
+      - { name: Phase Transformations in Materials,                  min_credits: 3, courses: [MTE 550] }
+
+  - name: MTE Electives
+    min_credits: 7
+    match:
+      code_prefix: MTE
+      academic_level: Graduate
+      exclude: [MTE 511, MTE 512, MTE 526, MTE 532, MTE 550, MTE 580, MTE 599]
+
+  # catalog states this for the non-thesis option
+  - name: Upper-Level Undergraduate
+    max_credits: 6
+    match:
+      academic_level: Undergraduate
+      code_min: 4000
+
+  # not modeled: thesis (6 cr, MTE 599 assumed) or 3 cr capstone (no fixed code);
+  # MTE 580 seminar for full-time students; 3.0 GPA

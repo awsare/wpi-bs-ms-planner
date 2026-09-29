@@ -36,4 +36,8 @@ requirements:
               academic_level: Graduate
               exclude: [ME 500, ME 591, ME 599]
 
-  # not modeled: ME 591 seminar every semester; electives; at most 9 cr directed research
+  - name: Directed Research
+    max_credits: 9
+    courses: [ME 598]
+
+  # not modeled: ME 591 seminar every semester (full-time); electives

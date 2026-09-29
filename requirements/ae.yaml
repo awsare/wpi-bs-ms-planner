@@ -1,0 +1,52 @@
+id: ae-bsms
+name: B.S./M.S. in Aerospace Engineering
+catalog_url: https://wpi-grad.cleancatalog.net/aerospace-engineering/ms-in-aerospace-engineering
+total_credits: 30
+requirements:
+  # 12 cr of AE, at least 2 in each area
+  # ponytail: area lists are this term's offerings, grouped by second digit (AE 51xx = fluids, ...);
+  # catalog has no official mapping
+  - name: AE Curricular Areas
+    min_credits: 12
+    match:
+      code_prefix: AE
+      academic_level: Graduate
+      exclude: [AE 5032, AE 5098, AE 5099, AE 5900]
+    children:
+      - { name: Fluid Dynamics,              min_credits: 2, courses: [AE 5131, AE 5132, AE 5134] }
+      - { name: Propulsion and Energy,       min_credits: 2, courses: [AE 5231, AE 5232, AE 5233] }
+      - { name: Flight Dynamics and Control, min_credits: 2, courses: [AE 5335, AE 5336, AE 6332] }
+      - { name: Materials and Structures,    min_credits: 2, courses: [AE 5431, AE 5432, AE 6435] }
+      - { name: Computational Engineering,   min_credits: 2, courses: [AE 5531, AE 6532] }
+
+  # or another grad applied math course outside AE with approval
+  - name: Applied Mathematics
+    min_credits: 3
+    courses: [MA 501, MA 511]
+
+  - name: Thesis or Non-Thesis
+    min_children: 1
+    children:
+      - name: Thesis Option
+        children:
+          - { name: Thesis, min_credits: 8, courses: [AE 5099] }
+      - name: Non-Thesis Option
+        children:
+          # up to 8 cr directed research
+          - name: AE Coursework or Directed Research
+            min_credits: 8
+            courses: [AE 5098]
+            match:
+              code_prefix: AE
+              academic_level: Graduate
+              exclude: [AE 5032, AE 5099, AE 5900]
+
+  - name: Aerospace Engineering Seminar
+    min_courses: 4
+    courses: [AE 5032]
+
+  - name: Internship
+    max_credits: 3
+    courses: [AE 5900]
+
+  # not modeled: 7 cr electives; 6 cr coursework before AE 5098/5099

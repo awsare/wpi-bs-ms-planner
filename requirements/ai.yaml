@@ -37,4 +37,11 @@ requirements:
       - { name: Capstone Project, min_credits: 3, courses: [CS 594, DS 594, RBE 594] }
       - { name: Thesis,           min_credits: 9, courses: [CS 599, DS 599, RBE 599] }
 
-  # not modeled: under 50% Business School credits; no course counts twice
+  # under 50%: at most 14 cr from the Business School
+  - name: Business School
+    max_credits: 14
+    match:
+      code_prefix: [ACC, BUS, ETR, FIN, MIS, MKT, OBC, OIE]
+      academic_level: Graduate
+
+  # not modeled: at most 6 cr outside the core bins; AI&X specialization; no course counts twice

@@ -1,0 +1,38 @@
+id: cyber-bsms
+name: B.S./M.S. in Cyber Security
+catalog_url: https://wpi-grad.cleancatalog.net/cyber-security/ms-in-cyber-security
+total_credits: 30
+requirements:
+  # optional, at most 3 courses
+  - name: Bridge Courses
+    max_credits: 9
+    courses: [CS 5007, CS 5008, CS 509]
+
+  - name: Core
+    children:
+      # ECE 579 as Computer Security
+      - name: Technical
+        min_credits: 3
+        courses: [CS 557, CS 558, DS 577, ECE 577, ECE 579, ECE 576]
+      # CS 525 as Digital Forensics or Computer Crime Law
+      - name: Human Behavior
+        min_credits: 3
+        courses: [CS 571, CS 525, ECE 575]
+      - name: Business
+        min_credits: 3
+        courses: [MIS 582]
+
+  # core courses not used for Core also count
+  - name: Depth
+    min_credits: 9
+    courses: [CS 578, ECE 578, CS 673, ECE 673, CS 564, OIE 542,
+              CS 557, CS 558, DS 577, ECE 577, ECE 579, ECE 576, CS 571, CS 525, ECE 575, MIS 582]
+
+  - name: Capstone or Thesis
+    min_children: 1
+    children:
+      - { name: Capstone Project, min_credits: 3, courses: [CS 587, ECE 588] }
+      - { name: Thesis,           min_credits: 9, courses: [CS 599, ECE 599] }
+
+  # not modeled: electives to reach 30 (CS 502, 513, 534, 539, 542, 546, 548, 573, ECE 506,
+  # overlapping B.S./M.S. undergrad courses, unused core/depth courses)

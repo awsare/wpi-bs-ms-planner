@@ -1,0 +1,31 @@
+id: ma-bsms
+name: B.S./M.S. in Applied Mathematics
+catalog_url: https://wpi-grad.cleancatalog.net/mathematical-sciences/ms-in-applied-mathematics-program
+total_credits: 30
+requirements:
+  - name: Required Courses
+    children:
+      - { name: Linear Algebra,                   min_credits: 3, courses: [MA 502] }
+      - { name: Lebesgue Measure and Integration, min_credits: 3, courses: [MA 503] }
+      - { name: Numerical Methods,                min_credits: 3, courses: [MA 510] }
+
+  # four more MA grad courses
+  - name: Additional MA Courses
+    min_credits: 12
+    match:
+      code_prefix: MA
+      academic_level: Graduate
+      exclude: [MA 500, MA 501, MA 502, MA 503, MA 510, MA 511, MA 517, MA 557, MA 559]
+
+  - name: Graduate Seminar
+    min_courses: 1
+    courses: [MA 557]
+
+  # with coordinator approval
+  - name: Upper-Level Undergraduate
+    max_credits: 6
+    match:
+      academic_level: Undergraduate
+      code_min: 3000
+
+  # not modeled: capstone experience (thesis, project, practicum, report/proposal, or exam)

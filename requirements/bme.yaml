@@ -39,4 +39,14 @@ requirements:
       - { name: Thesis,               min_credits: 6, courses: [BME 599] }
       - { name: Professional Project, min_credits: 6, courses: [BME 597] }
 
-  # not modeled: 15 cr technical depth (thematic, advisor-approved); BME 591 passed twice
+  - name: Graduate Seminar
+    min_courses: 2
+    courses: [BME 591]
+
+  - name: Upper-Level Undergraduate
+    max_credits: 8
+    match:
+      academic_level: Undergraduate
+      code_min: 4000
+
+  # not modeled: 15 cr technical depth (thematic, advisor-approved); 12 cr electives

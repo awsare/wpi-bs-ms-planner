@@ -1,0 +1,39 @@
+id: che-bsms
+name: B.S./M.S. in Chemical Engineering
+catalog_url: https://wpi-grad.cleancatalog.net/chemical-engineering/master-of-science-in-chemical-engineering
+total_credits: 30
+requirements:
+  # any 3 of the 4
+  - name: Core
+    min_credits: 9
+    courses: [CHE 504, CHE 509, CHE 561, CHE 571]
+
+  - name: Course-Based or Thesis
+    min_children: 1
+    children:
+      - name: Course-Based Option
+        children:
+          # a 4th core course or special topics count
+          - name: ChE Electives
+            min_credits: 12
+            match:
+              code_prefix: CHE
+              academic_level: Graduate
+              exclude: [CHE 502, CHE 503, CHE 599]
+      - name: Thesis Option
+        children:
+          - name: ChE Electives
+            min_credits: 6
+            match:
+              code_prefix: CHE
+              academic_level: Graduate
+              exclude: [CHE 502, CHE 503, CHE 599]
+          - { name: Thesis Research, min_credits: 12, courses: [CHE 599] }
+
+  # one fall + one spring, full-time students
+  - name: Professional Development
+    min_courses: 2
+    courses: [CHE 502]
+
+  # not modeled: general electives (9 course-based, 3 thesis, any grad course);
+  # Professional Engineering Option (GQP + track electives in the department handbook); CHE 503 colloquium

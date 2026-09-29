@@ -29,6 +29,7 @@ requirements:
 
   # one course; ID 500 is 0 credits
   - name: Ethics
+    min_courses: 1
     courses: [ID 500, BB 551, SS 560, CS 555, DS 555]
 
   - name: Thesis or Internship
@@ -37,4 +38,5 @@ requirements:
       - { name: Thesis,     min_credits: 9, courses: [BCB 599] }
       - { name: Internship, min_credits: 3, courses: [BCB 5900] }
 
-  # not modeled: 3-6 cr electives from the lists above
+  # not modeled: electives from the lists above (3-6 cr thesis, 9-12 cr internship);
+  # BCB 555 does not count in the internship option

@@ -1,0 +1,68 @@
+id: ph-bsms
+name: B.S./M.S. in Physics or Applied Physics
+catalog_url: https://wpi-grad.cleancatalog.net/physics/ms-in-physics-or-applied-physics
+total_credits: 30
+requirements:
+  - name: Physics or Applied Physics
+    min_children: 1
+    children:
+      - name: Physics
+        children:
+          - { name: Classical Mechanics I,                 min_credits: 3, courses: [PH 511] }
+          - { name: Quantum Mechanics I,                   min_credits: 3, courses: [PH 514] }
+          - { name: Quantum Mechanics II,                  min_credits: 3, courses: [PH 515] }
+          - { name: Thermodynamics and Statistical Physics, min_credits: 3, courses: [PH 522] }
+          - { name: Advanced Electromagnetic Theory,       min_credits: 3, courses: [PH 533] }
+
+      - name: Applied Physics
+        min_children: 1
+        children:
+          - name: Biophysics and Soft Condensed Matter
+            children:
+              - { name: Classical Mechanics I,                  min_credits: 3, courses: [PH 511] }
+              - { name: Thermodynamics and Statistical Physics, min_credits: 3, courses: [PH 522] }
+              - { name: PH 562,                                 min_credits: 3, courses: [PH 562] }
+              - name: Concentration Electives
+                min_credits: 6
+                courses: [PH 563, PH 533, PH 514, PH 541, PH 554, PH 561, PH 571,
+                          BME 555, BME 564, BME 583, CH 541]
+          - name: Nanoscience and Technology
+            children:
+              - { name: Quantum Mechanics I, min_credits: 3, courses: [PH 514] }
+              - { name: Mechanics or E&M,    min_credits: 3, courses: [PH 511, PH 533] }
+              - name: Concentration Courses
+                min_credits: 9
+                courses: [PH 511, PH 533, PH 515, PH 522, PH 541, PH 554, PH 561,
+                          MTE 575, MTE 509, MTE 532, CH 516, CH 554]
+          - name: Photonics
+            children:
+              - { name: Quantum Mechanics I,             min_credits: 3, courses: [PH 514] }
+              - { name: Advanced Electromagnetic Theory, min_credits: 3, courses: [PH 533] }
+              - { name: PH 544,                          min_credits: 3, courses: [PH 544] }
+              - name: Concentration Courses
+                min_credits: 9
+                courses: [PH 511, PH 515, PH 541, PH 548, PH 554, PH 561, PH 571,
+                          ME 5225, ME 5301, BME 583]
+          - name: Radiological Sciences
+            children:
+              - { name: Core Physics, min_credits: 6, courses: [PH 511, PH 514, PH 522, PH 533] }
+              - { name: Radiation Biology, min_credits: 3, courses: [NSE 515] }
+              - { name: Health Physics,    min_credits: 3, courses: [NSE 530] }
+              - { name: NSE 560,           min_credits: 3, courses: [NSE 560] }
+          - name: Medical Physics
+            children:
+              - { name: Core Physics, min_credits: 6, courses: [PH 511, PH 514, PH 522, PH 533] }
+              - { name: Radiation Biology,           min_credits: 3, courses: [NSE 515] }
+              - { name: Health Physics,              min_credits: 3, courses: [NSE 530] }
+              - { name: NSE 560,                     min_credits: 3, courses: [NSE 560] }
+              - { name: Diagnostic Medical Physics,  min_credits: 3, courses: [NSE 570] }
+              - { name: Radiation Therapy Physics,   min_credits: 3, courses: [NSE 580] }
+
+  - name: Thesis or Directed Research
+    min_children: 1
+    children:
+      - { name: Thesis,            min_credits: 6, courses: [PH 599] }
+      - { name: Directed Research, min_credits: 6, courses: [PH 598] }
+
+  # not modeled: 9 cr electives; PH 580 seminar each semester (full-time);
+  # medical physics anatomy/physiology and ethics courses (no fixed codes)

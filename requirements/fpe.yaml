@@ -1,0 +1,25 @@
+id: fpe-bsms
+name: B.S./M.S. in Fire Protection Engineering
+catalog_url: https://wpi-grad.cleancatalog.net/fire-protection-engineering/ms-in-fire-protection-engineering
+total_credits: 30
+requirements:
+  - name: FPE Core
+    children:
+      - { name: Fire Dynamics I,         min_credits: 3, courses: [FP 521] }
+      - { name: Fire Protection Systems, min_credits: 3, courses: [FP 553] }
+      - { name: Building Fire Safety I,  min_credits: 3, courses: [FP 570] }
+
+  - name: FPE Integration
+    min_credits: 3
+    courses: [FP 571, FP 573]
+
+  # includes a second integration course and FP 590 thesis (9 cr)
+  - name: FPE Electives
+    min_credits: 18
+    match:
+      code_prefix: FP
+      academic_level: Graduate
+      exclude: [FP 521, FP 553, FP 570]
+
+  # not modeled: up to 9 cr from other departments; select 4000-level courses for B.S./M.S.;
+  # FP 580 repeatable on different topics

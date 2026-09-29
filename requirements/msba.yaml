@@ -1,0 +1,38 @@
+id: msba-bsms
+name: B.S./M.S. in Business Analytics
+catalog_url: https://wpi-grad.cleancatalog.net/business-school-the/ms-in-business-analytics-msba
+total_credits: 30
+requirements:
+  - name: Core
+    children:
+      - { name: Data Management for Analytics,     min_credits: 3, courses: [MIS 502] }
+      - { name: Business Intelligence,             min_credits: 3, courses: [MIS 584] }
+      - { name: Modeling and Optimizing Processes, min_credits: 3, courses: [OIE 552] }
+
+  - name: Specialties
+    min_children: 2
+    children:
+      - name: Advanced Business Analytics Methods
+        children:
+          - { name: Business Applications in Machine Learning, min_credits: 3, courses: [MIS 587] }
+          - { name: Marketing Research,                        min_credits: 3, courses: [MKT 562] }
+          - { name: Advanced Prescriptive Analytics,           min_credits: 3, courses: [OIE 559] }
+      - name: Artificial Intelligence in Business
+        children:
+          - { name: Business Applications in Machine Learning, min_credits: 3, courses: [MIS 587] }
+          - { name: AI Ethics or Policy,                       min_credits: 3, courses: [MIS 520, MIS 581] }
+          - { name: AI Applications,                           min_credits: 3, courses: [MIS 510, MKT 562, MKT 568, OIE 552] }
+      - name: Marketing Analytics
+        children:
+          - { name: Marketing Analytics,  min_credits: 3, courses: [MKT 568] }
+          - { name: Marketing Electives,  min_credits: 6, courses: [MKT 500, MKT 561, MKT 565] }
+      - name: Operations Analytics
+        min_credits: 9
+        courses: [OIE 501, OIE 542, OIE 544, OIE 548, OIE 558]
+
+  - name: Capstone Project Experience
+    children:
+      - { name: Teaming and Organizing for Innovation, min_credits: 3, courses: [OBC 505] }
+      - { name: Capstone Project,                      min_credits: 3, courses: [BUS 596] }
+
+  # not modeled: a course counts toward only one specialty (MIS 587, MKT 562, OIE 552 appear twice)

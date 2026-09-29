@@ -29,3 +29,12 @@ requirements:
     children:
       - { name: Graduate Qualifying Project, min_credits: 3, courses: [DS 598] }
       - { name: Thesis,                      min_credits: 9, courses: [DS 599] }
+
+  # under 50%: at most 14 cr from the Business School
+  - name: Business School
+    max_credits: 14
+    match:
+      code_prefix: [ACC, BUS, ETR, FIN, MIS, MKT, OBC, OIE]
+      academic_level: Graduate
+
+  # not modeled: electives from the pre-approved list or any DS course; not both CS 5084 and CS 584
