@@ -1,0 +1,115 @@
+id: ba
+name: B.S. in Business Analytics and Applied AI
+catalog_url: https://wpi.cleancatalog.net/business/business-analytics-and-applied-ai-major
+# undergrad credits: 1/3 unit = 3 credits, 15 units = 135; the rest is free electives
+total_credits: 135
+requirements:
+  # not modeled: each course counts in only one slot
+  # course lists are the catalog's recommended courses "or equivalent"
+  - name: Mathematics
+    min_credits: 15
+    children:
+      - name: Calculus
+        min_credits: 6
+        courses: [MA 1021, MA 1022]
+      - name: Linear Algebra
+        min_credits: 3
+        courses: [MA 2071, MA 2072, MA 2073]
+      - name: Statistics
+        min_credits: 6
+        courses: [MA 2611, MA 2612]
+
+  - name: Computer Science
+    min_credits: 3
+    courses: [CS 1004, CS 1101, CS 1102]
+
+  # the catalog states no minimum
+  - name: Basic Science
+    match:
+      code_prefix: [BB, CH, GE, PH]
+      academic_level: Undergraduate
+
+  - name: Business Foundation
+    min_credits: 15
+    children:
+      - name: Leadership
+        min_credits: 3
+        match:
+          code_prefix: OBC
+      - name: Financial Statements
+        min_credits: 3
+        courses: [ACC 2060]
+      - name: Finance
+        min_credits: 3
+        courses: [FIN 2070, OIE 2850]
+      - name: Marketing Strategy
+        min_credits: 3
+        match:
+          code_prefix: MKT
+          code_min: 4000
+      - name: Business Elective
+        min_credits: 3
+        courses: [BUS 1020, BUS 2020, ETR 2900, ETR 4930, OBC 4367]
+
+  - name: Technical and AI Foundation
+    min_credits: 12
+    children:
+      - name: Programming or Data Science
+        min_credits: 3
+        courses: [CS 2119, DS 1010, DS 2010]
+      - name: Data Management
+        min_credits: 3
+        courses: [MIS 3720, MIS 2300, CS 3431, CS 4433, DS 4433]
+      - name: Artificial Intelligence
+        min_credits: 3
+        courses: [MIS 3730, CS 4341]
+      - name: Machine Learning
+        min_credits: 3
+        courses: [MIS 3787, CS 4342]
+
+  - name: Analytics Foundation
+    min_credits: 12
+    children:
+      - name: Decision Analysis
+        min_credits: 3
+        courses: [BUS 2080, OIE 2081]
+      - name: Financial or Marketing Analytics
+        min_credits: 3
+        courses: [FIN 3330, MKT 4040]
+      - name: Operations
+        min_credits: 3
+        match:
+          code_prefix: OIE
+          code_min: 3000
+      - name: Business Intelligence
+        min_credits: 3
+        match:
+          code_prefix: MIS
+          code_min: 4000
+
+  # six electives; the catalog's category minimums conflict with its counts, so counts are used
+  - name: Business Analytics and Applied AI Electives
+    min_credits: 18
+    children:
+      - name: Business Analytics Applications
+        min_credits: 9
+        courses: [FIN 3330, MKT 2620, MKT 2630, MKT 2640, MKT 3620, MKT 3630, MKT 4040, OIE 2081,
+                  OIE 2850, OIE 3460, OIE 3510, OIE 4430]
+      # catalog: CS 3000-level or above (except CS 3043), DS or MA 2000-level or above
+      - name: Computing Technologies, Data and Mathematical Sciences
+        max_credits: 9
+        courses: [CS 2119, MIS 2300]
+        match:
+          code_prefix: [CS, DS, MA]
+          academic_level: Undergraduate
+          code_min: 2000
+          exclude: [CS 3043]
+      - name: Business and Entrepreneurship
+        max_credits: 6
+        courses: [BUS 1020, BUS 2020, MIS 3010]
+        match:
+          code_prefix: [OBC, ETR]
+
+  # not in the course listings
+  - name: Major Qualifying Project
+    min_credits: 9

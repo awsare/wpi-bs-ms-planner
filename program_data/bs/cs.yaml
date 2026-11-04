@@ -1,0 +1,83 @@
+id: cs
+name: B.S. in Computer Science
+catalog_url: https://wpi.cleancatalog.net/computer-science/computer-science-major
+# undergrad credits: 1/3 unit = 3 credits, 15 units = 135; the rest is free electives
+total_credits: 135
+requirements:
+  # 18/3 units including the MQP
+  # a cross-listed course counts toward only one of CS, Mathematics, Basic Science
+  # not modeled: only one of CS 1101/1102, CS 2301/2303, CS 2102/210X/2103 counts
+  - name: Computer Science
+    min_credits: 54
+    children:
+      - name: Systems
+        min_credits: 3
+        courses: [CS 3013, CS 4513, CS 4515, CS 4516, CS 502, CS 533, CS 535]
+      - name: Theory and Languages
+        min_credits: 3
+        courses: [CS 3133, CS 4120, CS 4123, CS 4533, CS 4536, CS 5003, CS 5084, CS 503,
+                  CS 536, CS 544, CS 584]
+      - name: Design
+        min_credits: 3
+        courses: [CS 3041, CS 3431, CS 3733, CS 4233, CS 509, CS 542, CS 546, CS 561, CS 562]
+      # 5/3 units of 4000-level or graduate CS, except CS 5007
+      - name: Advanced CS
+        min_credits: 15
+        min_children: 1
+        children:
+          - name: 4000-Level CS
+            match:
+              subject_contains: Computer Science
+              academic_level: Undergraduate
+              code_min: 4000
+          - name: Graduate CS
+            match:
+              subject_contains: Computer Science
+              academic_level: Graduate
+              exclude: [CS 5007]
+      # CS 1101, CS 1102 and 2000-level or higher
+      - name: Other CS
+        courses: [CS 1101, CS 1102]
+        match:
+          subject_contains: Computer Science
+          academic_level: Undergraduate
+          code_min: 2000
+          exclude: [CS 2119]
+      # not in the course listings
+      - name: Major Qualifying Project
+        min_credits: 9
+
+  # only CS 3043 also counts toward Computer Science
+  - name: Social Implications of Computing
+    min_credits: 3
+    courses: [CS 3043, SS 3043, GOV 2314, ID 2314, GOV 2315, IMGD 2000, IMGD 2002, RBE 3100]
+
+  # not modeled: at most four 1000-level courses
+  - name: Mathematics
+    min_credits: 21
+    children:
+      - name: Probability
+        min_credits: 3
+        courses: [MA 2621, MA 2631]
+      - name: Statistics
+        min_credits: 3
+        courses: [MA 2611, MA 2612]
+      - name: Other Mathematics
+        match:
+          code_prefix: MA
+          academic_level: Undergraduate
+
+  # not modeled: two of the three science courses from the same discipline
+  - name: Basic Science
+    min_credits: 15
+    match:
+      code_prefix: [AE, BB, BME, CE, CH, CHE, ECE, ES, GE, ME, PH, RBE]
+      academic_level: Undergraduate
+      exclude: [BME 1004, RBE 3100]
+    children:
+      - name: Natural Science
+        min_courses: 3
+        match:
+          code_prefix: [BB, CH, GE, PH]
+          academic_level: Undergraduate
+

@@ -1,0 +1,76 @@
+id: ece
+name: B.S. in Electrical and Computer Engineering
+catalog_url: https://wpi.cleancatalog.net/electrical-and-computer-engineering/electrical-and-computer-engineering-major
+# undergrad credits: 1/3 unit = 3 credits, 15 units = 135; the rest is free electives
+total_credits: 135
+requirements:
+  - name: Mathematics and Basic Science
+    min_credits: 36
+    children:
+      # must include calculus, differential equations and probability
+      - name: Mathematics
+        min_credits: 21
+        match:
+          code_prefix: MA
+          academic_level: Undergraduate
+      - name: Physics
+        min_credits: 6
+        match:
+          code_prefix: PH
+          academic_level: Undergraduate
+      - name: Chemistry or Biology
+        min_credits: 3
+        match:
+          code_prefix: [CH, BB]
+          academic_level: Undergraduate
+      - name: Mathematics or Basic Science
+        min_credits: 6
+        match:
+          code_prefix: [MA, PH, CH, BB, GE]
+          academic_level: Undergraduate
+
+  - name: Engineering Science and Design
+    min_credits: 54
+    children:
+      # 2000-level or higher ECE, including the MQP
+      - name: Electrical and Computer Engineering
+        min_credits: 45
+        courses: [ES 3011]
+        match:
+          code_prefix: ECE
+          academic_level: Undergraduate
+          code_min: 2000
+        children:
+          - name: Electrical Engineering
+            min_credits: 9
+            courses: [ECE 2112, ECE 2201, ECE 2305, ECE 2312, ECE 3012, ECE 3113, ECE 3204, ECE 3308,
+                      ECE 3311, ECE 3405, ECE 3500, ECE 4305, ECE 4503, ECE 4703, ECE 4901, ECE 4902,
+                      ECE 4904, ES 3011]
+          - name: Digital Circuit Design
+            min_credits: 3
+            courses: [ECE 2029, ECE 3829]
+          - name: Embedded Computing
+            min_credits: 3
+            courses: [ECE 2049, ECE 3849, ECE 4801]
+          # also the capstone design experience
+          # not in the course listings
+          - name: Major Qualifying Project
+            min_credits: 9
+      - name: Computational Engineering
+        min_credits: 3
+        courses: [ECE 2039]
+        match:
+          code_prefix: CS
+          academic_level: Undergraduate
+          code_min: 2000
+          exclude: [CS 2011, CS 2022, CS 3043]
+      - name: Additional Engineering Science and Design
+        min_credits: 6
+        match:
+          code_prefix: [AE, AREN, BME, CE, CHE, CS, ECE, ES, FP, ME, RBE]
+          academic_level: Undergraduate
+          code_min: 2000
+          exclude: [CS 2011, CS 2022, CS 3043]
+      - name: Engineering Design
+        min_credits: 3
+        courses: [ECE 2799, BME 3300, CS 3733, ES 3501, ME 2300, ME 4320]

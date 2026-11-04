@@ -1,0 +1,58 @@
+id: ma
+name: B.S. in Mathematical Sciences
+catalog_url: https://wpi.cleancatalog.net/mathematical-sciences/mathematical-sciences-major
+# undergrad credits: 1/3 unit = 3 credits, 15 units = 135; the rest is free electives
+total_credits: 135
+requirements:
+  # 22/3 units including the MQP
+  # a course (including cross-listed) counts toward only one requirement
+  # not modeled: credit for only one of MA 2071/2072 and one of MA 2621/2631
+  - name: Mathematics
+    min_credits: 66
+    match:
+      code_prefix: MA
+      academic_level: Undergraduate
+    children:
+      # catalog says "one of" under a 4/3 unit heading; one course used
+      - name: Transition Courses
+        min_credits: 3
+        courses: [MA 1033, MA 1971, MA 2073, MA 2211, MA 2251, MA 2271, MA 2273, MA 2431, MA 2631,
+                  MA 3631]
+      # analysis, computation and algebra; the catalog gives no selection rule
+      - name: Core Courses
+        min_credits: 12
+        courses: [MA 3831, MA 3832, CS 4032, MA 3257, MA 3457, CS 4033, MA 3823, MA 3825]
+      - name: Upper Level Courses
+        min_credits: 9
+        match:
+          code_prefix: MA
+          academic_level: Undergraduate
+          code_min: 3000
+      # not in the course listings
+      - name: Major Qualifying Project
+        min_credits: 9
+
+  # not modeled: any course or independent study except AS, MS, PE
+  - name: Additional Courses
+    min_credits: 6
+
+  - name: Basic Science
+    min_credits: 6
+    match:
+      code_prefix: [BB, CH, ES, GE, PH]
+      academic_level: Undergraduate
+
+  # not modeled: only one of DS 1010, CS 2022 and CS 3403
+  - name: Computer or Data Science
+    min_credits: 6
+    match:
+      code_prefix: [CS, DS]
+      academic_level: Undergraduate
+
+  - name: Related Courses
+    min_credits: 6
+    match:
+      code_prefix: [AE, AREN, BB, BCB, BME, CE, CH, CHE, ECE, ES, FP, GE, ME, PH, RBE, CS, DS, ACC,
+                    BUS, ETR, FIN, MIS, MKT, OBC, OIE]
+      academic_level: Undergraduate
+      exclude: [FIN 1250]

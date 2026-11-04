@@ -1,0 +1,86 @@
+id: imgd
+name: B.S. in Interactive Media & Game Development Technology
+catalog_url: https://wpi.cleancatalog.net/interactive-media-and-game-development/interactive-media-game-development-technology-major
+# undergrad credits: 1/3 unit = 3 credits, 15 units = 135; the rest is free electives
+total_credits: 135
+requirements:
+  - name: IMGD Core
+    min_credits: 6
+    courses: [IMGD 1000, IMGD 1001, IMGD 1002]
+
+  # not modeled: only one of IMGD 4200 and IMGD 5200
+  - name: IMGD Design
+    min_credits: 3
+    courses: [IMGD 2500, IMGD 2900, IMGD 3900, IMGD 4200, IMGD 4600, IMGD 4700, IMGD 4900,
+              IMGD 5000, IMGD 5200, MIS 4741]
+
+  - name: IMGD Audio
+    min_credits: 3
+    courses: [IMGD 2030, IMGD 3030]
+
+  - name: IMGD Social and Philosophical Issues
+    min_credits: 3
+    courses: [IMGD 2000]
+
+  - name: Cultural Narratives
+    min_credits: 3
+    courses: [WR 2410]
+    match:
+      code_prefix: [EN, PY, RE]
+      academic_level: Undergraduate
+
+  - name: Visual Arts
+    min_credits: 3
+    courses: [AR 1100, AR 1101, AR 2301]
+
+  - name: Natural and Engineering Sciences
+    min_credits: 6
+    match:
+      code_prefix: [AE, AREN, BB, BCB, BME, CE, CH, CHE, ECE, ES, GE, ME, NEU, PH, RBE]
+      academic_level: Undergraduate
+
+  - name: Mathematics and Data Analysis
+    min_credits: 6
+    courses: [IMGD 2905]
+    match:
+      code_prefix: [DS, MA]
+      academic_level: Undergraduate
+
+  - name: General IMGD
+    min_credits: 15
+    match:
+      code_prefix: IMGD
+    children:
+      - name: Technical Game Development
+        min_credits: 3
+        courses: [IMGD 3100, IMGD 4100, CS 4100]
+      - name: Game Development Process
+        min_credits: 6
+        courses: [IMGD 3000, IMGD 4000]
+      - name: 4000-Level IMGD
+        min_credits: 3
+        match:
+          code_prefix: IMGD
+          code_min: 4000
+
+  # CS 1101, CS 1102 and 2000-level or higher; CS 3043 doesn't count
+  # not modeled: only one of CS 1004/1101/1102, CS 2301/2303, CS 2119/2102
+  - name: Computer Science
+    min_credits: 33
+    courses: [CS 1101, CS 1102]
+    match:
+      code_prefix: CS
+      academic_level: Undergraduate
+      code_min: 2000
+      exclude: [CS 3043]
+    children:
+      - name: 3000-Level CS
+        min_credits: 9
+        courses: [CS 3013, CS 3041, CS 3431, CS 3516, CS 3733]
+      - name: 4000-Level CS
+        min_credits: 9
+        courses: [CS 4233, CS 4241, CS 4341, CS 4342, CS 4445, CS 4518, CS 4731, CS 4732]
+
+  # not in the course listings
+  - name: Major Qualifying Project
+    min_credits: 9

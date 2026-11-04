@@ -1,0 +1,32 @@
+# WPI-wide B.S. requirements, added to every bs/*.yaml
+# https://wpi.cleancatalog.net/wpi-degree-requirements
+requirements:
+  # not modeled: HUA depth (3 related courses) and breadth (1 outside that grouping)
+  - name: Humanities and Arts
+    min_credits: 18
+    match:
+      code_prefix: [AR, MU, TH, EN, WR, RH, HI, HU, INTL, PY, RE, SP, GN, ISE, AB, CN]
+      academic_level: Undergraduate
+    children:
+      - name: Inquiry Seminar or Practicum
+        min_credits: 3
+        courses: [HU 3900, HU 3910]
+
+  # STEM social-implications courses don't count
+  - name: Social Science
+    min_credits: 6
+    courses: [ID 2050]
+    match:
+      code_prefix: [ECON, ENV, DEV, GOV, PSY, SD, SOC, SS, STS]
+      academic_level: Undergraduate
+      exclude: [SS 3043]
+
+  # not in the course listings
+  - name: Interactive Qualifying Project
+    min_credits: 9
+
+  # four 0.75-credit WPE classes
+  - name: Wellness and Physical Education
+    min_credits: 3
+    match:
+      code_prefix: WPE

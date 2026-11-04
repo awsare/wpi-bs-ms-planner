@@ -1,0 +1,72 @@
+id: ai
+name: B.S. in Artificial Intelligence
+catalog_url: https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major
+# undergrad credits: 1/3 unit = 3 credits, 15 units = 135; the rest is free electives
+total_credits: 135
+requirements:
+  # not modeled: at least 4/3 units at the 4000 level overall
+  # not modeled: two of (CS 1004 or 1005), (CS 1101 or 1102), (CS 2102, 2103 or 2119)
+  - name: Computer Science Foundation
+    min_credits: 9
+    children:
+      - name: Introductory CS
+        min_credits: 6
+        courses: [CS 1004, CS 1005, CS 1101, CS 1102, CS 2102, CS 2103, CS 2119]
+      - name: Algorithms
+        min_credits: 3
+        courses: [CS 2223]
+
+  - name: Mathematical Sciences Foundation
+    min_credits: 15
+    children:
+      - name: Applied Statistics
+        min_credits: 6
+        courses: [MA 2611, MA 2612]
+      - name: Linear Algebra
+        min_credits: 3
+        courses: [MA 2071, MA 2072]
+      - name: Calculus
+        min_credits: 6
+        courses: [MA 1020, MA 1021, MA 1022, MA 1120]
+
+  # the other 2/3 units come from the lists below
+  # not modeled: at least 2/3 units at the 4000 level
+  - name: AI Core
+    min_credits: 24
+    children:
+      - name: AI Foundations
+        min_credits: 9
+        courses: [DS 1010, DS 2010, DS 3010]
+      - name: AI Overview
+        min_credits: 3
+        courses: [CS 4341, RBE 4701]
+      - name: Machine Learning
+        min_credits: 3
+        courses: [CS 4445, CS 4342, MA 4635, DS 4635, ECE 3405, CS 4433, DS 4433, RBE 4744,
+                  CS 4343, DS 4343]
+      - name: Interaction and Reasoning
+        min_credits: 3
+        courses: [CS 3041, RBE 4601, IMGD 4100, CS 4100, CS 4345, DS 4345]
+
+  - name: AI Ethics and Social Implications
+    min_credits: 3
+    courses: [CS 3043, SS 3043, ENV 2720, GOV 2302, GOV 2313, IMGD 2000, IMGD 2002, PY 2713,
+              PY 2731, RE 2731]
+
+  - name: Natural or Engineering Science
+    min_credits: 6
+    match:
+      code_prefix: [AE, AREN, BB, BCB, BME, CE, CH, CHE, ECE, ES, GE, ME, NEU, PH, RBE]
+      academic_level: Undergraduate
+
+  # not modeled: 6 courses from one of 11 concentrations, each on its own catalog page
+  - name: Concentration
+    min_credits: 18
+
+  # not modeled: from any concentration or the AI core lists
+  - name: Disciplinary AI Electives
+    min_credits: 6
+
+  # not in the course listings
+  - name: Major Qualifying Project
+    min_credits: 9

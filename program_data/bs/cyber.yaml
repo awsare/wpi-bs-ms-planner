@@ -1,0 +1,77 @@
+id: cyber
+name: B.S. in Cybersecurity
+catalog_url: https://wpi.cleancatalog.net/cybersecurity/cybersecurity-major
+# undergrad credits: 1/3 unit = 3 credits, 15 units = 135; the rest is free electives
+total_credits: 135
+requirements:
+  - name: Basic Science and Engineering Science
+    min_credits: 15
+    children:
+      # not modeled: from two of the four disciplines
+      - name: Basic Science
+        min_credits: 9
+        match:
+          code_prefix: [BB, CH, GE, PH]
+          academic_level: Undergraduate
+      - name: Engineering Science
+        min_credits: 6
+        match:
+          code_prefix: [BB, CH, GE, PH, ES, ME, CHE, BME, RBE]
+          academic_level: Undergraduate
+          exclude: [BME 1004, RBE 3100]
+
+  # also any CS course from the core or electives not used there
+  - name: Computer Science Foundation
+    min_credits: 15
+    courses: [CS 4401, CS 4402, CS 4403, CS 4404, CS 4405, CS 4801, ECE 4802, CS 1101, CS 1102,
+              CS 2011, CS 2022, MA 2201, CS 2102, CS 2103, CS 2303, CS 3013, CS 3404, CS 3516,
+              CS 4241, CS 4513, CS 4515, CS 4516]
+
+  # also any ECE course from the core or electives not used there
+  - name: Electrical and Computer Engineering Foundation
+    min_credits: 15
+    courses: [CS 4801, ECE 4802, ECE 4803, ECE 2010, ECE 2029, ECE 2039, ECE 2049, ECE 3829,
+              ECE 3849, ECE 4801]
+
+  # a cross-listed course counts toward only one of CS and ECE
+  - name: Cybersecurity Core
+    min_credits: 9
+    children:
+      - name: Core CS
+        min_credits: 3
+        courses: [CS 4401, CS 4404, CS 4801]
+      - name: Core ECE
+        min_credits: 3
+        courses: [ECE 4802, ECE 576, ECE 579]
+
+  - name: Cybersecurity Electives
+    min_credits: 6
+    children:
+      - name: Elective CS
+        min_credits: 3
+        courses: [CS 4401, CS 4402, CS 4403, CS 4404, CS 4405, CS 4801]
+      - name: Elective ECE
+        min_credits: 3
+        courses: [ECE 4802, ECE 4803, ECE 576, ECE 579]
+
+  # not in the course listings
+  - name: Major Qualifying Project
+    min_credits: 9
+
+  - name: Mathematics
+    min_credits: 18
+    children:
+      - name: Probability
+        min_credits: 3
+        courses: [MA 2621, MA 2631]
+      - name: Linear Algebra
+        min_credits: 3
+        courses: [MA 2071]
+      - name: Other Mathematics
+        match:
+          code_prefix: MA
+          academic_level: Undergraduate
+
+  - name: Societal Impacts
+    min_credits: 3
+    courses: [CS 3043, SS 3043, GOV 2314, ID 2314, GOV 2315]

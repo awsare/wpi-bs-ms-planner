@@ -1,0 +1,54 @@
+id: ph
+name: B.S. in Physics
+catalog_url: https://wpi.cleancatalog.net/physics/physics-major
+# undergrad credits: 1/3 unit = 3 credits, 15 units = 135; the rest is free electives
+total_credits: 135
+requirements:
+  - name: Mathematics
+    min_credits: 27
+    match:
+      code_prefix: MA
+      academic_level: Undergraduate
+    children:
+      - name: 3000-Level Mathematics
+        min_credits: 6
+        match:
+          code_prefix: MA
+          academic_level: Undergraduate
+          code_min: 3000
+
+  # ES 3001 and CH 3510 count as physics
+  # the five areas may instead be met under Other Subjects
+  - name: Physics
+    min_credits: 45
+    courses: [CH 3510, ES 3001]
+    match:
+      code_prefix: PH
+      academic_level: Undergraduate
+    children:
+      - name: Mechanics
+        min_credits: 3
+        courses: [PH 2201, PH 2202]
+      - name: Electromagnetism
+        min_credits: 3
+        courses: [PH 3300, PH 3301]
+      - name: Experimental Physics
+        min_credits: 3
+        courses: [PH 2601, PH 2651]
+      - name: Quantum Mechanics
+        min_credits: 3
+        courses: [PH 3401, PH 3402]
+      - name: Thermal and Statistical Physics
+        min_credits: 3
+        courses: [CH 3510, ES 3001, PH 2101, PH 3206]
+      # not in the course listings
+      - name: Major Qualifying Project
+        min_credits: 9
+
+  # mathematics, science, engineering, computer science and business
+  - name: Other Subjects
+    min_credits: 27
+    match:
+      code_prefix: [MA, BB, BCB, CH, GE, PH, AE, AREN, BME, CE, CHE, ECE, ES, FP, ME, RBE, CS, DS,
+                    ACC, BUS, ETR, FIN, MIS, MKT, OBC, OIE]
+      academic_level: Undergraduate

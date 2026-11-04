@@ -1,0 +1,74 @@
+id: che
+name: B.S. in Chemical Engineering
+catalog_url: https://wpi.cleancatalog.net/chemical-engineering/chemical-engineering-major
+# undergrad credits: 1/3 unit = 3 credits, 15 units = 135; the rest is free electives
+total_credits: 135
+requirements:
+  - name: Mathematics and Basic Science
+    min_credits: 36
+    children:
+      # must include calculus and differential equations; the catalog gives no list
+      - name: Mathematics
+        match:
+          code_prefix: MA
+          academic_level: Undergraduate
+      - name: Chemistry
+        min_courses: 3
+        match:
+          code_prefix: CH
+          academic_level: Undergraduate
+      - name: Physics
+        min_courses: 2
+        match:
+          code_prefix: PH
+          academic_level: Undergraduate
+      - name: Biology or Biochemistry
+        min_courses: 1
+        match:
+          code_prefix: BB
+          academic_level: Undergraduate
+
+  # 2000-level or above, plus CHE 1011; CS and DS count as engineering
+  # not modeled: not both CHE 1011 and ES 2002
+  - name: Engineering Science and Design
+    min_credits: 54
+    courses: [CHE 1011]
+    match:
+      code_prefix: [AE, AREN, BME, CE, CHE, CS, DS, ECE, ES, FP, ME, RBE]
+      academic_level: Undergraduate
+      code_min: 2000
+    children:
+      # the catalog also says "at least 4 units from the above list"; 12/3 is used
+      # not modeled: not both CHE 4404 and CHE 4410 as core
+      - name: Core Chemical Engineering
+        min_credits: 36
+        courses: [CHE 2011, CHE 2012, CHE 2013, CHE 2014, CHE 3201, CHE 3501, CHE 4401, CHE 4402,
+                  CHE 4403, CHE 4404, CHE 4405, CHE 4410, ES 3002, ES 3003, ES 3004]
+      - name: Capstone Design
+        min_credits: 3
+        courses: [CHE 4404, CHE 4410]
+      - name: Engineering Outside the Major
+        min_credits: 3
+        match:
+          code_prefix: [AE, AREN, BME, CE, CS, DS, ECE, ES, FP, ME, RBE]
+          academic_level: Undergraduate
+          code_min: 2000
+      # not in the course listings
+      - name: Major Qualifying Project
+        min_credits: 9
+
+  # up to 2/3 unit may also count toward Mathematics and Basic Science
+  - name: Advanced Chemistry and Natural Science
+    min_credits: 15
+    courses: [CH 1040]
+    match:
+      code_prefix: [BB, CH, PH, GE]
+      academic_level: Undergraduate
+      code_min: 2000
+    children:
+      - name: Advanced Chemistry
+        min_courses: 3
+        match:
+          code_prefix: CH
+          academic_level: Undergraduate
+          code_min: 2000

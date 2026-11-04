@@ -2,3 +2,5 @@ pandas
 psycopg[binary]
 streamlit
 python-dotenv
+pyyaml
+requests

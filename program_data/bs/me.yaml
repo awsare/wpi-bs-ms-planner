@@ -1,0 +1,79 @@
+id: me
+name: B.S. in Mechanical Engineering
+catalog_url: https://wpi.cleancatalog.net/mechanical-and-materials-engineering/mechanical-engineering-major
+# undergrad credits: 1/3 unit = 3 credits, 15 units = 135; the rest is free electives
+total_credits: 135
+requirements:
+  - name: Mathematics and Basic Science
+    min_credits: 33
+    children:
+      - name: Mathematics
+        min_credits: 18
+        courses: [MA 1021, MA 1022, MA 1023, MA 1024, MA 2051, MA 2071]
+      # one chemistry and two physics, or one physics and two chemistry
+      - name: Chemistry and Physics
+        min_credits: 9
+        children:
+          - name: Chemistry
+            min_credits: 3
+            courses: [CH 1010, CH 1020]
+          - name: Physics
+            min_credits: 3
+            courses: [PH 1110, PH 1120]
+      - name: Additional Mathematics or Basic Science
+        min_credits: 6
+        match:
+          code_prefix: [MA, BB, CH, GE, PH]
+          academic_level: Undergraduate
+
+  - name: Mechanical Engineering Science and Design
+    min_credits: 57
+    children:
+      - name: Programming
+        min_credits: 3
+        courses: [BME 1004, CS 1004, CS 1101, ME 2312, ME 4512]
+      - name: Electrical Engineering
+        min_credits: 3
+        match:
+          code_prefix: ECE
+          academic_level: Undergraduate
+          exclude: [ECE 1799]
+      - name: Materials Science
+        min_credits: 3
+        courses: [ES 2001]
+      - name: Experimentation
+        min_credits: 3
+        courses: [ME 3901, ME 3902]
+      # 2000-level or higher engineering; 1000-level ES and ME also count
+      - name: Mechanical Engineering Electives
+        min_credits: 12
+        match:
+          code_prefix: [AE, AREN, BME, CE, CHE, ECE, ES, FP, ME, RBE]
+          academic_level: Undergraduate
+          code_min: 2000
+        children:
+          - name: ME 2000 or 3000 Level
+            min_credits: 6
+            courses: [ES 3011, ES 3323]
+            match:
+              code_prefix: ME
+              code_min: 2000
+              code_max: 3999
+      - name: Mechanical Systems
+        min_credits: 12
+        courses: [ES 2501, ES 2502, ES 2503, ME 4320, ME 4323, ME 4324, RBE 4322, ME 4322]
+        children:
+          - name: Mechanical Design
+            min_credits: 3
+            courses: [ME 4320, ME 4323, ME 4324, RBE 4322, ME 4322]
+      # thermodynamics by CH 3510 or PH counts as science; another engineering elective is then needed
+      - name: Thermofluid Systems
+        min_credits: 12
+        courses: [CH 3510, ES 3001, ES 3003, ES 3004, ME 4422, ME 4429, PH 2101]
+        children:
+          - name: Thermofluid Design
+            min_credits: 3
+            courses: [ME 4422, ME 4429]
+      # not in the course listings
+      - name: Major Qualifying Project
+        min_credits: 9

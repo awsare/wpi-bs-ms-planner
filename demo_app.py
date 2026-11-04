@@ -131,9 +131,9 @@ def demo_app():
         """
         trigger_test_data = {
             'student_id' : [1234567],
-            'program_id' : ['cs-bsms'],
+            'program_id' : ['cs-bs-cs-ms'],
             'course_code' : ['CS 1000'],
-            'requirement_id' : ['cs-bsms/cs-breadth/other-breadth/applications-of-cs'],
+            'requirement_id' : ['cs-bs-cs-ms/ms/cs-breadth/other-breadth/applications-of-cs'],
             'doublecount_for' : [None]
         }
         tt = pd.DataFrame(trigger_test_data)
@@ -149,9 +149,9 @@ def demo_app():
             )
             """
             student_id = 1234567
-            program_id = 'cs-bsms'
+            program_id = 'cs-bs-cs-ms'
             course_code = 'CS 1000'
-            requirement_id = 'cs-bsms/cs-breadth/other-breadth/applications-of-cs'
+            requirement_id = 'cs-bs-cs-ms/ms/cs-breadth/other-breadth/applications-of-cs'
             doublecount_for = None
             sql = """
                 INSERT INTO plan (student_id, program_id, course_code, requirement_id, doublecount_for) VALUES (%s, %s, %s, %s, %s)"""

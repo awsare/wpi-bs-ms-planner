@@ -1,0 +1,71 @@
+id: rbe
+name: B.S. in Robotics Engineering
+catalog_url: https://wpi.cleancatalog.net/robotics-engineering/robotics-engineering-major
+# undergrad credits: 1/3 unit = 3 credits, 15 units = 135; the rest is free electives
+total_credits: 135
+requirements:
+  # must include calculus, differential equations, linear algebra and probability
+  - name: Mathematics
+    min_credits: 21
+    match:
+      code_prefix: MA
+      academic_level: Undergraduate
+
+  - name: Basic Science
+    min_credits: 12
+    match:
+      code_prefix: [BB, CH, GE, PH]
+      academic_level: Undergraduate
+    children:
+      - name: Physics
+        min_credits: 6
+        match:
+          code_prefix: PH
+          academic_level: Undergraduate
+
+  # the catalog gives no course list
+  - name: Entrepreneurship
+    min_credits: 3
+
+  - name: Social Implications
+    min_credits: 3
+    courses: [CS 3043, SS 3043, GOV 2302, GOV 2314, ID 2314, RBE 3100]
+
+  - name: Engineering Science and Design
+    min_credits: 54
+    children:
+      - name: Robotics Engineering
+        min_credits: 15
+        match:
+          code_prefix: RBE
+          academic_level: Undergraduate
+          exclude: [RBE 3100]
+        children:
+          - name: Core Robotics
+            min_credits: 12
+            courses: [RBE 2001, RBE 2002, RBE 3001, RBE 3002]
+      # must include object-oriented programming and software engineering
+      - name: Computer Science
+        min_credits: 9
+        match:
+          code_prefix: CS
+          academic_level: Undergraduate
+      # must include embedded systems
+      - name: Electrical and Computer Engineering
+        min_credits: 6
+        match:
+          code_prefix: ECE
+          academic_level: Undergraduate
+      # the catalog gives no course list
+      - name: Statics
+        min_credits: 3
+      - name: Classical Controls
+        min_credits: 3
+        courses: [ES 3011, ECE 3012, AE 2310]
+      # not modeled: at least 2/3 unit at the 4000 level; RBE 502 cannot count
+      - name: Engineering Science and Design Electives
+        min_credits: 9
+      # must be a capstone design experience in robotics
+      # not in the course listings
+      - name: Major Qualifying Project
+        min_credits: 9
