@@ -25,6 +25,7 @@
 import os
 from collections import defaultdict
 
+import pandas as pd
 import psycopg
 import streamlit as st
 from dotenv import load_dotenv
@@ -232,8 +233,8 @@ def my_courses(plan):
     in_plan = {p["course_code"] for p in plan}
     with st.container(border=True):
         st.subheader("My courses", icon=":material/inventory_2:")
-        st.caption("Courses you've taken or plan to take that aren't assigned yet. "
-                   "Assign them from the requirement sections below, where they're marked *taken*.")
+        st.caption("Every course you've taken or plan to take. Assign unassigned ones from the requirement "
+                   "sections below, where they're marked ✓ taken.")
         with st.container(horizontal=True, vertical_alignment="bottom"):
             add = st.multiselect("Add courses", [c for c in courses() if c not in in_plan],
                                  format_func=course_label, key=f"bank-add-{ver()}",
@@ -244,14 +245,13 @@ def my_courses(plan):
                                 "ON CONFLICT DO NOTHING", (ss.sid, ss.program, c)) for c in add],
                              done=f"Added {len(add)} course{'s' * (len(add) > 1)}"):
             st.rerun()
-        if not unassigned:
-            st.caption("No unassigned courses.")
-            return
-        table = [{"Course": c, "Title": courses().get(c, {}).get("title"), "Credits": credits_of(c)}
-                 for c in unassigned]
+        credits_col = {"Credits": st.column_config.NumberColumn(format="%g")}
+        # Tables size to their rows (default auto height); an empty one still shows its header and one blank row.
+        st.markdown(f"**Unassigned** :gray-badge[{len(unassigned)}]")
+        table = pd.DataFrame([{"Course": c, "Title": courses().get(c, {}).get("title"), "Credits": credits_of(c)}
+                              for c in unassigned], columns=["Course", "Title", "Credits"])
         picked = st.dataframe(table, hide_index=True, on_select="rerun", selection_mode="multi-row",
-                              key=f"bank-{ss.program}-{ver()}", height=250, alt="Unassigned courses",
-                              column_config={"Credits": st.column_config.NumberColumn(format="%g")})
+                              key=f"bank-{ss.program}-{ver()}", alt="Unassigned courses", column_config=credits_col)
         gone = [unassigned[i] for i in picked.selection.rows]
         if st.button(f"Remove selected ({len(gone)})", icon=":material/delete:", disabled=not gone,
                      key=f"bank-rm-{ver()}") and write(
@@ -259,6 +259,16 @@ def my_courses(plan):
                    "AND requirement_id IS NULL", (ss.sid, ss.program, c)) for c in gone],
                 done=f"Removed {len(gone)} course{'s' * (len(gone) > 1)}"):
             st.rerun()
+
+        assigned = [p for p in plan if p["requirement_id"]]
+        names = {r["id"]: r["name"] for r in requirements(ss.program)}
+        st.markdown(f"**Assigned** :gray-badge[{len(assigned)}]")
+        st.dataframe(pd.DataFrame([{"Course": p["course_code"], "Title": courses().get(p["course_code"], {}).get("title"),
+                                    "Credits": credits_of(p["course_code"]), "Requirement": names.get(p["requirement_id"]),
+                                    "Degree": "M.S." if "/ms/" in p["requirement_id"] + "/" else "B.S."}
+                                   for p in assigned], columns=["Course", "Title", "Credits", "Requirement", "Degree"]),
+                     hide_index=True, alt="Assigned courses", column_config=credits_col)
+        st.caption("Unassign a course with ✕ in its requirement below.")
 
 
 # ----------------------------------------------------------------------------- requirements
