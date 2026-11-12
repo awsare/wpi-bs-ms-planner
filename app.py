@@ -285,28 +285,41 @@ def badge(done, text, started):
     return f":{color}-badge[{':material/check: ' if done else ''}{text}]"
 
 
-def option_label(o):
+def option_label(o, paired):
     tags = []
     if o["tier"] <= 4:
         tags.append(f"popular, {o['pct_chosen'] or 0:g}% chose")
+    code = o["course_code"]
     if o["is_taken"]:
         tags.append("taken")
-    if o["is_double_countable"]:
+    if code in paired:
+        tags.append(f"paired with {paired[code]}")
+    elif o["is_double_countable"]:
         tags.append("double-countable")
     if o["hua_role"]:
         tags.append(o["hua_role"])
-    return f"{o['course_code']} — {o['title']}" + (f"  ({', '.join(tags)})" if tags else "")
+    # ✓ taken · ⇄ double-countable (can start a pair) · 🔗 already paired, just needs a requirement
+    link = "🔗 " if code in paired else "⇄ " if o["is_double_countable"] else ""
+    marks = ("✓ " if o["is_taken"] else "") + link
+    return f"{marks}{o['course_code']} — {o['title']}" + (f"  ({', '.join(tags)})" if tags else "")
 
 
 def picker(node, plan):
     """Assigned courses (with unassign buttons) + an add box fed by get_requirement_options()."""
     req, v = node["id"], ver()
+    paired = {}  # course -> its partner, both directions (one relation counts both ways)
+    for p in plan:
+        if p["doublecount_for"]:
+            paired[p["course_code"]], paired[p["doublecount_for"]] = p["doublecount_for"], p["course_code"]
     for p in plan:
         if p["requirement_id"] != req:
             continue
-        code, dc = p["course_code"], p["doublecount_for"]
+        code = p["course_code"]
+        dc = paired.get(code)
         with st.container(horizontal=True, vertical_alignment="center"):
-            st.markdown(f"**{code}** {courses().get(code, {}).get('title', '')} :gray-badge[{credits_of(code):g} cr]"
+            # Indent arrow marks it as a course inside the requirement above, not another requirement.
+            st.markdown(f":gray[:material/subdirectory_arrow_right:] {code} · {courses().get(code, {}).get('title', '')} "
+                        f":gray-badge[{credits_of(code):g} cr]"
                         + (f" :violet-badge[:material/sync_alt: {dc}]" if dc else ""), width="stretch")
             # Unassign (back to My courses). Either half of a double count unassigns the pair.
             unassign = st.button(":material/close:", type="tertiary", key=f"rm-{req}-{code}",
@@ -320,16 +333,23 @@ def picker(node, plan):
                 {"s": ss.sid, "p": ss.program, "r": req, "c": code}), done=f"Moved {code} back to My courses"):
             st.rerun()
 
+    # Enough credits (this requirement plus its sub-requirements): no add box.
+    cr = sum(credits_of(p["course_code"]) for p in plan if p["requirement_id"] and
+             (p["requirement_id"] == req or p["requirement_id"].startswith(req + "/")))
+    if node["min_credits"] and cr >= node["min_credits"]:
+        return
     opts = options(ss.sid, ss.program, req)
     if not opts:
         st.caption("No more eligible courses.")
         return
+    # One relation covers both directions: a course already in a pair (either side) can't start another.
     with st.container(horizontal=True, vertical_alignment="bottom"):
-        code = st.selectbox("Add a course", list(opts), index=None, format_func=lambda c: option_label(opts[c]),
+        code = st.selectbox("Add a course", list(opts), index=None, format_func=lambda c: option_label(opts[c], paired),
                             key=f"add-{req}-{v}", placeholder="Add a course…", label_visibility="collapsed")
         pair = None
-        if code and opts[code]["is_double_countable"]:
-            pair = st.selectbox("Double-count with", [None] + partners(ss.program).get(code, []),
+        free = [c for c in partners(ss.program).get(code, []) if c not in paired] if code not in paired else []
+        if code and free:
+            pair = st.selectbox("Double-count with", free + [None],  # first partner is the default
                                 key=f"pair-{req}-{v}", label_visibility="collapsed", width=230,
                                 format_func=lambda c: "Don't double count" if c is None else f"Double count with {c}")
         go = st.button("Add", icon=":material/add:", type="primary", disabled=not code, key=f"go-{req}-{v}")
@@ -352,8 +372,8 @@ def render(node, kids, plan):
     elif not children:
         st.caption("No course list in the catalog for this requirement — it's tracked outside the planner.")
     for ch in children:
-        # Sections that have their own subsections get a border so the nesting is visible.
-        with st.container(border=bool(kids.get(ch["id"]))):
+        # Each requirement is its own card, so its courses and add box sit visibly inside it.
+        with st.container(border=True):
             st.markdown(f"**{ch['name']}** {badge(*stats(ch, kids, plan))}")
             render(ch, kids, plan)
 
@@ -367,7 +387,7 @@ def requirement_tree(plan):
             bs = root["path"] == "bs"
             st.header("Undergraduate" if bs else "Graduate",
                       icon=":material/school:" if bs else ":material/workspace_premium:")
-            st.markdown(f"{root['name']} {badge(*stats(root, kids, plan))}")
+            st.caption(root["name"])
             for top in kids[root["id"]]:
                 done, text, _ = stats(top, kids, plan)
                 # The label is part of the expander's identity, so a changed credit count would make a
