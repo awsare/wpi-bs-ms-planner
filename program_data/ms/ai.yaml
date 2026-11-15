@@ -39,6 +39,13 @@ requirements:
       - { name: Capstone Project, min_credits: 3, courses: [CS 594, DS 594, RBE 594] }
       - { name: Thesis,           min_credits: 9, courses: [CS 599, DS 599, RBE 599] }
 
+  # 30 = 15 core + 3 GQP + 12 electives; the thesis route doesn't reduce electives (15 + 9 + 12 = 36)
+  # not modeled: at most 6 cr outside the core bins (AI-related topics, ISG, research with advisor OK)
+  - name: Electives
+    min_credits: 12
+    match:
+      academic_level: Graduate
+
   # under 50%: at most 14 cr from the Business School
   - name: Business School
     max_credits: 14
@@ -46,4 +53,4 @@ requirements:
       code_prefix: [ACC, BUS, ETR, FIN, MIS, MKT, OBC, OIE]
       academic_level: Graduate
 
-  # not modeled: at most 6 cr outside the core bins; AI&X specialization; no course counts twice
+  # not modeled: AI&X specialization; no course counts twice

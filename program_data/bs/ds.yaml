@@ -1,13 +1,15 @@
 id: ds
 name: B.S. in Data Science
 catalog_url: https://wpi.cleancatalog.net/data-science/data-science-major
-# undergrad credits: 1/3 unit = 3 credits, 15 units = 135; the rest is free electives
+# source: DS program tracking sheet, students entering AY 2024-2025
+# undergrad credits: 1/3 unit = 3 credits, 15 units = 135
 total_credits: 135
 requirements:
   - name: Data Science Core
     min_credits: 9
     courses: [DS 1010, DS 2010, DS 3010]
 
+  # Disciplinary Foundation (10/3 units) = business 2/3 + CS 3/3 + math 5/3
   - name: Business Foundation
     min_credits: 6
     children:
@@ -18,24 +20,32 @@ requirements:
         min_credits: 3
         courses: [BUS 2080, OIE 2081]
 
-  # not modeled: 3000-level CS electives may replace introductory CS
+  # two of the intro list or the CS disciplinary electives, plus CS 2223
+  # not modeled: at most 1/3 CS unit at the 1000 level
   - name: Computer Science Foundation
     min_credits: 9
     children:
       - name: Introductory CS
         min_credits: 6
-        courses: [CS 1004, CS 1101, CS 1102, CS 2102, CS 2103, CS 2119]
+        courses: [CS 1004, CS 1101, CS 1102, CS 2102, CS 2103, CS 2119,
+                  CS 2022, CS 2301, CS 2303, CS 3041, CS 3133, CS 3431, CS 3733, CS 4233, CS 4241,
+                  CS 4120, CS 4341, CS 4342, CS 4432, CS 4433, CS 4445, CS 4802, CS 4803, CS 4804,
+                  CS 4343, CS 4344, CS 4345]
       - name: Algorithms
         min_credits: 3
         courses: [CS 2223]
 
+  # two of the calculus list or the MA disciplinary electives, MA 2611 and MA 2612, MA 2071 or MA 2072
   # not modeled: not both MA 1020 and MA 1021, not both MA 1022 and MA 1120
   - name: Mathematics Foundation
     min_credits: 15
     children:
       - name: Calculus
         min_credits: 6
-        courses: [MA 1020, MA 1021, MA 1022, MA 1120]
+        courses: [MA 1020, MA 1021, MA 1022, MA 1120,
+                  MA 1023, MA 1024, MA 1033, MA 1034, MA 2051, MA 2073, MA 2201, MA 2210, MA 2431,
+                  MA 2621, MA 2631, MA 3231, MA 3233, MA 3257, MA 3627, MA 3631, MA 4213, MA 4214,
+                  MA 4222, MA 4235, MA 4237, MA 4603, MA 4631, MA 4632, MA 4635]
       - name: Applied Statistics
         min_credits: 6
         courses: [MA 2611, MA 2612]
@@ -54,23 +64,26 @@ requirements:
       code_prefix: [AE, AREN, BB, BME, CHE, CE, CH, ECE, ES, GE, ME, PH, RBE]
       academic_level: Undergraduate
 
-  # the catalog states no minimum
+  # 11/3 units, including one course from each category below
   # not modeled: at least 4/3 units at the 4000 level
   - name: Disciplinary Electives
-    courses: [CS 2022, MA 2201, CS 2301, CS 2303, CS 3041, CS 3133, CS 3431, CS 3733, CS 4120,
-              CS 4233, CS 4241, CS 4341, CS 4342, CS 4432, CS 4433, DS 4433, CS 4445, CS 4804,
-              BCB 4004, MA 4603, CS 4032, MA 3257, DS 4635, MA 4635, MA 1023, MA 1024, MA 1033,
-              MA 1034, MA 2051, MA 2073, MA 2210, MA 2431, MA 2621, MA 2631, MA 3231, MA 3233,
-              MA 3627, MA 3631, MA 4213, MA 4214, MA 4222, MA 4235, MA 4237, MA 4631, MA 4632,
-              MA 4644, MIS 3720, MIS 3787, MIS 4084, MIS 4720, MIS 4741, MKT 3650, OIE 3460,
-              OIE 4430, DS 4099]
+    min_credits: 33
+    courses: [CS 2022, CS 2301, CS 2303, CS 3041, CS 3133, CS 3431, CS 3733, CS 4233, CS 4241,
+              CS 4120, CS 4341, CS 4342, DS 4342, CS 4432, CS 4433, DS 4433, CS 4445, CS 4804,
+              CS 4802, BCB 4002, CS 4803, BCB 4003, CS 4343, DS 4343, CS 4344, DS 4344,
+              CS 4345, DS 4345,
+              MA 1023, MA 1024, MA 1033, MA 1034, MA 2051, MA 2073, MA 2201, MA 2210, MA 2431,
+              MA 2621, MA 2631, MA 3231, MA 3233, MA 3257, MA 3627, MA 3631, MA 4213, MA 4214,
+              MA 4222, MA 4235, MA 4237, MA 4603, MA 4631, MA 4632, MA 4635, DS 4635,
+              MIS 3720, MIS 3787, MIS 4084, MIS 4720, MIS 4741, MKT 3650, OIE 3460, OIE 4430,
+              DS 4099]
     children:
       - name: Data Access and Management
         min_credits: 3
-        courses: [CS 3431, MIS 3720, CS 4432, CS 4433, DS 4433]
+        courses: [CS 3431, CS 4432, MIS 3720, CS 4433, DS 4433]
       - name: Data Mining and Machine Learning
         min_credits: 3
-        courses: [CS 4445, CS 4342]
+        courses: [CS 4445, CS 4342, DS 4342]
       - name: Business Modeling and Prediction
         min_credits: 3
         courses: [MIS 4084, OIE 4430]
