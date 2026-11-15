@@ -167,11 +167,10 @@ def sign_in_page():
             st.markdown(f"**No profile for ID {sid:.0f} yet. Create one:**")
             year = st.selectbox("Graduation year", YEARS)
             email = st.text_input("Email", type="email")
-            depth = st.selectbox("Humanities & Arts depth topic", hua_topics(), index=None,
-                                 help="The topic your 3 HUA depth courses come from. You can change it later.")
+            # HUA depth topic is set later from the sidebar.
             if st.form_submit_button("Create profile", type="primary", width="stretch") and write(
-                    ("INSERT INTO student (student_id, grad_year, hua_depth, student_email) VALUES (%s, %s, %s, %s)",
-                     (sid, year, depth, email or None)), done="Profile created"):
+                    ("INSERT INTO student (student_id, grad_year, student_email) VALUES (%s, %s, %s)",
+                     (sid, year, email or None)), done="Profile created"):
                 sign_in(sid)
                 st.rerun()
 
@@ -188,10 +187,10 @@ def sidebar():
         if ss.email:
             st.caption(ss.email)
         st.selectbox("Program", list(progs), format_func=progs.get, key="program")
-        st.selectbox("Graduation year", YEARS, index=None, key="grad_year", on_change=save_profile)
         st.selectbox("Humanities & Arts depth topic", hua_topics(), index=None, key="hua_depth",
                      on_change=save_profile,
                      help="Courses in this topic count toward HUA depth; others count as breadth.")
+        st.selectbox("Graduation year", YEARS, index=None, key="grad_year", on_change=save_profile)
         st.button("Sign out", icon=":material/logout:", on_click=sign_out, width="stretch")
 
 
