@@ -10,13 +10,16 @@
 #   - get_requirement_options()  : ranked course choices for each requirement
 #   - student_credit_totals      : credit progress cards
 #   - fullcourselist             : course search and "My courses"
-#   - plan triggers              : HUA rules, double-count limit/partner, course
+#   - plan_placements            : each requirement a planned course fills, with its credits there
+#   - plan triggers              : HUA rules, double-count check and 40% limit, course
 #                                  list check. Their RAISE EXCEPTION messages
 #                                  are shown to the user as-is.
 #
 # Plan rows with requirement_id NULL are courses the student entered but has not
 # assigned yet ("My courses"). Assigning one UPDATEs that row; unassigning sets
-# requirement_id back to NULL.
+# requirement_id back to NULL. A double count is one row (the course taken) whose
+# doublecount_for/doublecount_req say which equivalent course it also stands in for,
+# and where, in the other degree.
 #
 # AI NOTICE: UI elements in this file were generated with Claude Opus 5.5 (Anthropic),
 #            based on the team's Figma mockup (v3 - grad and undergrad).
@@ -221,11 +224,13 @@ def overview(plan):
         with col.container(border=True, height="stretch"):
             st.metric(f"{name} credits", f"{have:g} / {need}")
             st.progress(min(have / need, 1.0))
-    pairs = [p for p in plan if p["doublecount_for"]]
+    # WPI: at most 40% of the M.S. credits count toward both degrees; a double count uses its M.S.-side credits
+    cap = 0.4 * next(r["min_credits"] for r in requirements(ss.program) if r["path"] == "ms")
+    used = sum(float(p["credits"]) for p in plan if p["doublecount_for"] and p["degree"] == "ms")
     with cols[3].container(border=True, height="stretch"):
-        st.metric("Double counts", f"{len(pairs)} / 4")
-        st.caption(", ".join(f"{p['course_code']} ⇄ {p['doublecount_for']}" for p in pairs)
-                   or "Pick a partner course when adding a double-countable course.")
+        st.metric("Double-counted credits", f"{used:g} / {cap:g}")
+        st.caption(", ".join(f"{p['course_code']} (as {p['doublecount_for']})" for p in plan if p["is_doublecount"])
+                   or "Pick “also count as …” when adding a double-countable course.")
 
 
 def my_courses(plan):
@@ -264,8 +269,8 @@ def my_courses(plan):
         names = {r["id"]: r["name"] for r in requirements(ss.program)}
         st.markdown(f"**Assigned** :gray-badge[{len(assigned)}]")
         st.dataframe(pd.DataFrame([{"Course": p["course_code"], "Title": courses().get(p["course_code"], {}).get("title"),
-                                    "Credits": credits_of(p["course_code"]), "Requirement": names.get(p["requirement_id"]),
-                                    "Degree": "M.S." if "/ms/" in p["requirement_id"] + "/" else "B.S."}
+                                    "Credits": float(p["credits"]), "Requirement": names.get(p["requirement_id"]),
+                                    "Degree": "M.S." if p["degree"] == "ms" else "B.S."}
                                    for p in assigned], columns=["Course", "Title", "Credits", "Requirement", "Degree"]),
                      hide_index=True, alt="Assigned courses", column_config=credits_col)
         st.caption("Unassign a course with ✕ in its requirement below.")
@@ -277,7 +282,7 @@ def stats(node, kids, plan):
     nid = node["id"]
     rows = [p for p in plan if p["requirement_id"] and
             (p["requirement_id"] == nid or p["requirement_id"].startswith(nid + "/"))]
-    cr = sum(credits_of(p["course_code"]) for p in rows)
+    cr = sum(float(p["credits"]) for p in rows)
     children = kids.get(nid, [])
     kids_done = sum(stats(ch, kids, plan)[0] for ch in children) if node["min_children"] else 0
     done = (bool(rows) and cr >= node["min_credits"] and len(rows) >= node["min_courses"]
@@ -295,53 +300,61 @@ def badge(done, text, started):
     return f":{color}-badge[{':material/check: ' if done else ''}{text}]"
 
 
-def option_label(o, paired):
+def option_label(o):
     tags = []
     if o["tier"] <= 4:
         tags.append(f"popular, {o['pct_chosen'] or 0:g}% chose")
-    code = o["course_code"]
     if o["is_taken"]:
         tags.append("taken")
-    if code in paired:
-        tags.append(f"paired with {paired[code]}")
-    elif o["is_double_countable"]:
+    if o["is_double_countable"]:
         tags.append("double-countable")
     if o["hua_role"]:
         tags.append(o["hua_role"])
-    # ✓ taken · ⇄ double-countable (can start a pair) · 🔗 already paired, just needs a requirement
-    link = "🔗 " if code in paired else "⇄ " if o["is_double_countable"] else ""
-    marks = ("✓ " if o["is_taken"] else "") + link
+    # ✓ taken · ⇄ double-countable (can also count toward the other degree)
+    marks = ("✓ " if o["is_taken"] else "") + ("⇄ " if o["is_double_countable"] else "")
     return f"{marks}{o['course_code']} — {o['title']}" + (f"  ({', '.join(tags)})" if tags else "")
+
+
+def credits_in(code, degree):
+    """What a course is worth toward a degree: its own credits at its own level; grad -> B.S. x1.5
+    (1 grad credit = 1/6 unit), undergrad -> M.S. x2/3."""
+    grad = courses().get(code, {}).get("academic_level") == "Graduate"
+    return credits_of(code) * (1 if grad == (degree == "ms") else 1.5 if grad else 2 / 3)
+
+
+@st.cache_data(ttl="1h")
+def slots(pid, code):
+    """Requirements in this program that list `code`, most specific (shortest course list) first."""
+    return [r["requirement_id"] for r in q(
+        """SELECT f.requirement_id FROM filledby f JOIN requirements r ON r.id = f.requirement_id
+           WHERE r.program_id = %s AND f.course_code = %s
+           ORDER BY (SELECT count(*) FROM filledby g WHERE g.requirement_id = r.id), r.path""", (pid, code))]
 
 
 def picker(node, kids, plan):
     """Assigned courses (with unassign buttons) + an add box fed by get_requirement_options()."""
     req, v = node["id"], ver()
-    paired = {}  # course -> its partner, both directions (one relation counts both ways)
-    for p in plan:
-        if p["doublecount_for"]:
-            paired[p["course_code"]], paired[p["doublecount_for"]] = p["doublecount_for"], p["course_code"]
     for p in plan:
         if p["requirement_id"] != req:
             continue
-        code = p["course_code"]
-        dc = paired.get(code)
+        code, dc = p["course_code"], p["doublecount_for"]
+        note = (f" :violet-badge[:material/sync_alt: as {dc}]" if p["is_doublecount"]
+                else f" :violet-badge[:material/sync_alt: also counts as {dc}]" if dc else "")
         # wrap=False keeps ✕ on the right; a long title wraps inside the text instead.
         with st.container(horizontal=True, vertical_alignment="center", wrap=False):
             # Indent arrow marks it as a course inside the requirement above, not another requirement.
             st.markdown(f":gray[:material/subdirectory_arrow_right:] {code} · {courses().get(code, {}).get('title', '')} "
-                        f":gray-badge[{credits_of(code):g} cr]"
-                        + (f" :violet-badge[:material/sync_alt: {dc}]" if dc else ""), width="stretch")
-            # Unassign (back to My courses). Either half of a double count unassigns the pair.
+                        f":gray-badge[{float(p['credits']):g} cr]" + note, width="stretch")
             unassign = st.button(":material/close:", type="tertiary", key=f"rm-{req}-{code}",
-                                 help="Unassign (moves it back to My courses)")
-        if unassign and write((
-                """UPDATE plan SET requirement_id = NULL, doublecount_for = NULL
-                   WHERE student_id = %(s)s AND program_id = %(p)s AND requirement_id = %(r)s
-                   AND (course_code = %(c)s OR doublecount_for = %(c)s OR course_code IN
-                        (SELECT doublecount_for FROM plan WHERE student_id = %(s)s AND program_id = %(p)s
-                         AND course_code = %(c)s))""",
-                {"s": ss.sid, "p": ss.program, "r": req, "c": code}), done=f"Moved {code} back to My courses"):
+                                 help="Stop double counting it" if p["is_doublecount"]
+                                 else "Unassign (moves it back to My courses)")
+        # The double-count side only drops the double count; the course's own side unassigns it entirely.
+        sql = ("UPDATE plan SET doublecount_for = NULL, doublecount_req = NULL" if p["is_doublecount"] else
+               "UPDATE plan SET requirement_id = NULL, doublecount_for = NULL, doublecount_req = NULL")
+        if unassign and write((sql + " WHERE student_id = %s AND program_id = %s AND course_code = %s",
+                               (ss.sid, ss.program, code)),
+                              done=f"{code} no longer double counts" if p["is_doublecount"]
+                              else f"Moved {code} back to My courses"):
             st.rerun()
 
     # Complete (this requirement plus its sub-requirements): no add box.
@@ -351,26 +364,34 @@ def picker(node, kids, plan):
     if not opts:
         st.caption("No more eligible courses.")
         return
-    # One relation covers both directions: a course already in a pair (either side) can't start another.
+    # A double count is the one course taken, also filling its equivalent's slot in the other degree.
+    other = "ms" if req.split("/")[1] == "bs" else "bs"
+    names = {r["id"]: r["name"] for r in requirements(ss.program)}
+    used = {p["course_code"] for p in plan} | {p["doublecount_for"] for p in plan if p["doublecount_for"]}
     with st.container(horizontal=True, vertical_alignment="bottom"):
-        code = st.selectbox("Add a course", list(opts), index=None, format_func=lambda c: option_label(opts[c], paired),
+        code = st.selectbox("Add a course", list(opts), index=None, format_func=lambda c: option_label(opts[c]),
                             key=f"add-{req}-{v}", placeholder="Add a course…", label_visibility="collapsed")
-        pair = None
-        free = [c for c in partners(ss.program).get(code, []) if c not in paired] if code not in paired else []
-        if code and free:
-            pair = st.selectbox("Double-count with", free + [None],  # first partner is the default
-                                key=f"pair-{req}-{v}", label_visibility="collapsed", width=230,
-                                format_func=lambda c: "Don't double count" if c is None else f"Double count with {c}")
+        # (equivalent course, other-degree requirement listing it); the first is the default
+        choices = [(eq, r) for eq in partners(ss.program).get(code, []) if eq not in used
+                   for r in slots(ss.program, eq) if r.split("/")[1] == other]
+        pick = None
+        if code and choices:
+            pick = st.selectbox("Double count", choices + [None], key=f"pair-{req}-{v}",
+                                label_visibility="collapsed", width=320,
+                                format_func=lambda o: "Don't double count" if o is None else
+                                f"Also count as {o[0]} in {names[o[1]]} ({credits_in(code, other):g} cr)")
         go = st.button("Add", icon=":material/add:", type="primary", disabled=not code, key=f"go-{req}-{v}")
+    d, dreq = pick or (None, None)
     # Already in My courses -> UPDATE that row; otherwise INSERT a new one.
     if go and write((
             """WITH upd AS (
-                 UPDATE plan SET requirement_id = %(r)s, doublecount_for = %(d)s
+                 UPDATE plan SET requirement_id = %(r)s, doublecount_for = %(d)s, doublecount_req = %(dr)s
                  WHERE student_id = %(s)s AND program_id = %(p)s AND course_code = %(c)s
                    AND requirement_id IS NULL RETURNING 1)
-               INSERT INTO plan (student_id, program_id, course_code, requirement_id, doublecount_for)
-               SELECT %(s)s, %(p)s, %(c)s, %(r)s, %(d)s WHERE NOT EXISTS (SELECT 1 FROM upd)""",
-            {"s": ss.sid, "p": ss.program, "c": code, "r": req, "d": pair}), done=f"Added {code} to {node['name']}"):
+               INSERT INTO plan (student_id, program_id, course_code, requirement_id, doublecount_for, doublecount_req)
+               SELECT %(s)s, %(p)s, %(c)s, %(r)s, %(d)s, %(dr)s WHERE NOT EXISTS (SELECT 1 FROM upd)""",
+            {"s": ss.sid, "p": ss.program, "c": code, "r": req, "d": d, "dr": dreq}),
+            done=f"Added {code} to {node['name']}" + (f", also counting as {d}" if d else "")):
         st.rerun()
 
 
@@ -427,7 +448,8 @@ def main():
             course_search()
     st.caption(programs()[ss.program])
 
-    plan = q("SELECT * FROM plan WHERE student_id = %s AND program_id = %s ORDER BY course_code",
+    # One row per requirement a course fills (a double count fills two), with what it's worth there.
+    plan = q("SELECT * FROM plan_placements WHERE student_id = %s AND program_id = %s ORDER BY course_code",
              (ss.sid, ss.program))
     overview(plan)
     my_courses(plan)
