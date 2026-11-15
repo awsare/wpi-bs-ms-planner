@@ -81,6 +81,6 @@ requirements:
             min_credits: 3
             courses: [AE 3120, AE 3430, AE 4210, AE 4310]
 
-  # not in the course listings
   - name: Major Qualifying Project
     min_credits: 9
+    courses: [MQP]

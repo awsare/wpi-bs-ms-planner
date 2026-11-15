@@ -41,9 +41,9 @@ requirements:
       - name: Thermal and Statistical Physics
         min_credits: 3
         courses: [CH 3510, ES 3001, PH 2101, PH 3206]
-      # not in the course listings
       - name: Major Qualifying Project
         min_credits: 9
+        courses: [MQP]
 
   # mathematics, science, engineering, computer science and business
   - name: Other Subjects

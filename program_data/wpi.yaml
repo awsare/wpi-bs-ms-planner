@@ -21,12 +21,19 @@ requirements:
       academic_level: Undergraduate
       exclude: [SS 3043]
 
-  # not in the course listings
   - name: Interactive Qualifying Project
     min_credits: 9
+    courses: [IQP]
 
   # four 0.75-credit WPE classes
   - name: Wellness and Physical Education
     min_credits: 3
     match:
       code_prefix: WPE
+
+  # 3/3 unit, any undergraduate course
+  - name: Free Electives
+    min_credits: 9
+    match:
+      academic_level: Undergraduate
+      exclude: [IQP, MQP]

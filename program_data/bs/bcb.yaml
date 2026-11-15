@@ -97,6 +97,6 @@ requirements:
                   DS 4635, MA 4635, MA 2271, MA 2273, MA 2431, MA 2631, MA 3631, MA 4214, MA 4473,
                   MA 4631, MA 4632]
 
-  # not in the course listings
   - name: Major Qualifying Project
     min_credits: 9
+    courses: [MQP]

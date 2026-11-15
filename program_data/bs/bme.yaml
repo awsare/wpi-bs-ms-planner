@@ -120,6 +120,6 @@ requirements:
     courses: [BME 3012, BME 3507, BME 3813]
 
   # includes 1/3 unit capstone design; a research MQP needs BME 4301 or equivalent
-  # not in the course listings
   - name: Major Qualifying Project
     min_credits: 9
+    courses: [MQP]

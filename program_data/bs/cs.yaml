@@ -43,9 +43,9 @@ requirements:
           academic_level: Undergraduate
           code_min: 2000
           exclude: [CS 2119]
-      # not in the course listings
       - name: Major Qualifying Project
         min_credits: 9
+        courses: [MQP]
 
   # only CS 3043 also counts toward Computer Science
   - name: Social Implications of Computing

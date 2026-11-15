@@ -81,6 +81,6 @@ requirements:
         min_credits: 9
         courses: [CS 4233, CS 4241, CS 4341, CS 4342, CS 4445, CS 4518, CS 4731, CS 4732]
 
-  # not in the course listings
   - name: Major Qualifying Project
     min_credits: 9
+    courses: [MQP]

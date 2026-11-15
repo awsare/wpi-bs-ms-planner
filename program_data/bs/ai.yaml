@@ -67,6 +67,6 @@ requirements:
   - name: Disciplinary AI Electives
     min_credits: 6
 
-  # not in the course listings
   - name: Major Qualifying Project
     min_credits: 9
+    courses: [MQP]

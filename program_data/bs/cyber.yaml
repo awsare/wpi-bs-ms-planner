@@ -54,9 +54,9 @@ requirements:
         min_credits: 3
         courses: [ECE 4802, ECE 4803, ECE 576, ECE 579]
 
-  # not in the course listings
   - name: Major Qualifying Project
     min_credits: 9
+    courses: [MQP]
 
   - name: Mathematics
     min_credits: 18

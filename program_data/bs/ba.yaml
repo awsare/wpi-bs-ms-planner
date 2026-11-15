@@ -110,6 +110,6 @@ requirements:
         match:
           code_prefix: [OBC, ETR]
 
-  # not in the course listings
   - name: Major Qualifying Project
     min_credits: 9
+    courses: [MQP]

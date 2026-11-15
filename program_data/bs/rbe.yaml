@@ -66,6 +66,6 @@ requirements:
       - name: Engineering Science and Design Electives
         min_credits: 9
       # must be a capstone design experience in robotics
-      # not in the course listings
       - name: Major Qualifying Project
         min_credits: 9
+        courses: [MQP]

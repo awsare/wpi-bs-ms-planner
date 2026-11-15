@@ -28,9 +28,9 @@ requirements:
           code_prefix: MA
           academic_level: Undergraduate
           code_min: 3000
-      # not in the course listings
       - name: Major Qualifying Project
         min_credits: 9
+        courses: [MQP]
 
   # not modeled: any course or independent study except AS, MS, PE
   - name: Additional Courses

@@ -53,9 +53,9 @@ requirements:
           code_prefix: [AE, AREN, BME, CE, CS, DS, ECE, ES, FP, ME, RBE]
           academic_level: Undergraduate
           code_min: 2000
-      # not in the course listings
       - name: Major Qualifying Project
         min_credits: 9
+        courses: [MQP]
 
   # up to 2/3 unit may also count toward Mathematics and Basic Science
   - name: Advanced Chemistry and Natural Science

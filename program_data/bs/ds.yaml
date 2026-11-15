@@ -88,6 +88,6 @@ requirements:
         min_credits: 3
         courses: [MIS 4084, OIE 4430]
 
-  # not in the course listings
   - name: Major Qualifying Project
     min_credits: 9
+    courses: [MQP]

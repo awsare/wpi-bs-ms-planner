@@ -74,6 +74,6 @@ requirements:
           - name: Thermofluid Design
             min_credits: 3
             courses: [ME 4422, ME 4429]
-      # not in the course listings
       - name: Major Qualifying Project
         min_credits: 9
+        courses: [MQP]
