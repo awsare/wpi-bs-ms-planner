@@ -91,7 +91,7 @@ def programs():
 def hua_topics():
     rows = q("""SELECT DISTINCT trim(unnest(regexp_split_to_array(c.subject, ';'))) AS t
                 FROM filledby f JOIN fullcourselist c USING (course_code)
-                WHERE f.requirement_id LIKE %s ORDER BY 1""", ("%/bs/humanities-and-arts",))
+                WHERE f.requirement_id LIKE %s ORDER BY 1""", ("%/bs/humanities-and-arts/depth",))
     return [r["t"] for r in rows]
 
 

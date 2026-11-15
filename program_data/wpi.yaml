@@ -1,13 +1,27 @@
 # WPI-wide B.S. requirements, added to every bs/*.yaml
 # https://wpi.cleancatalog.net/wpi-degree-requirements
 requirements:
-  # not modeled: HUA depth (3 related courses) and breadth (1 outside that grouping)
+  # 6 courses: 3 depth + Inquiry Seminar, 1 breadth, and 1 humanities elective.
+  # The depth/breadth/elective rules (topic, 2000-level, grouping, counts) are enforced by the check_hua_rules trigger.
+  # not modeled: the seminar's topic matching the depth topic; finishing all 5 courses before the seminar
   - name: Humanities and Arts
     min_credits: 18
-    match:
-      code_prefix: [AR, MU, TH, EN, WR, RH, HI, HU, INTL, PY, RE, SP, GN, ISE, AB, CN]
-      academic_level: Undergraduate
     children:
+      # 3 thematically related courses in the student's depth topic, at least one at the 2000 level or above
+      - name: Depth
+        min_credits: 9
+        match: &hua
+          code_prefix: [AR, MU, TH, EN, WR, RH, HI, HU, INTL, PY, RE, SP, GN, ISE, AB, CN]
+          academic_level: Undergraduate
+      # 1 course outside the depth grouping: art/music/theatre, languages, literature/writing,
+      # history/international studies, philosophy/religion (all-language depth may take breadth in a language)
+      - name: Breadth
+        min_credits: 3
+        match: *hua
+      # any 1 humanities and arts course
+      - name: Humanities Elective
+        min_credits: 3
+        match: *hua
       - name: Inquiry Seminar or Practicum
         min_credits: 3
         courses: [HU 3900, HU 3910]
