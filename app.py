@@ -314,7 +314,7 @@ def option_label(o, paired):
     return f"{marks}{o['course_code']} — {o['title']}" + (f"  ({', '.join(tags)})" if tags else "")
 
 
-def picker(node, plan):
+def picker(node, kids, plan):
     """Assigned courses (with unassign buttons) + an add box fed by get_requirement_options()."""
     req, v = node["id"], ver()
     paired = {}  # course -> its partner, both directions (one relation counts both ways)
@@ -326,7 +326,8 @@ def picker(node, plan):
             continue
         code = p["course_code"]
         dc = paired.get(code)
-        with st.container(horizontal=True, vertical_alignment="center"):
+        # wrap=False keeps ✕ on the right; a long title wraps inside the text instead.
+        with st.container(horizontal=True, vertical_alignment="center", wrap=False):
             # Indent arrow marks it as a course inside the requirement above, not another requirement.
             st.markdown(f":gray[:material/subdirectory_arrow_right:] {code} · {courses().get(code, {}).get('title', '')} "
                         f":gray-badge[{credits_of(code):g} cr]"
@@ -343,10 +344,8 @@ def picker(node, plan):
                 {"s": ss.sid, "p": ss.program, "r": req, "c": code}), done=f"Moved {code} back to My courses"):
             st.rerun()
 
-    # Enough credits (this requirement plus its sub-requirements): no add box.
-    cr = sum(credits_of(p["course_code"]) for p in plan if p["requirement_id"] and
-             (p["requirement_id"] == req or p["requirement_id"].startswith(req + "/")))
-    if node["min_credits"] and cr >= node["min_credits"]:
+    # Complete (this requirement plus its sub-requirements): no add box.
+    if stats(node, kids, plan)[0]:
         return
     opts = options(ss.sid, ss.program, req)
     if not opts:
@@ -378,7 +377,7 @@ def picker(node, plan):
 def render(node, kids, plan):
     children = kids.get(node["id"], [])
     if node["fillable"]:
-        picker(node, plan)
+        picker(node, kids, plan)
     elif not children:
         st.caption("No course list in the catalog for this requirement — it's tracked outside the planner.")
     for ch in children:
@@ -399,10 +398,10 @@ def requirement_tree(plan):
                       icon=":material/school:" if bs else ":material/workspace_premium:")
             st.caption(root["name"])
             for top in kids[root["id"]]:
-                done, text, _ = stats(top, kids, plan)
+                done, text, started = stats(top, kids, plan)
                 # The label is part of the expander's identity, so a changed credit count would make a
                 # new, closed expander. Remember open/closed ourselves and pass it back in.
-                label = f"{top['name']} · {text}"
+                label = f"{top['name']} {badge(done, text, started)}"
                 wkey, okey = f"exp-{top['id']}-{label}", f"open-{top['id']}"
                 exp = st.expander(label, expanded=ss.get(okey, False), key=wkey,
                                   icon=":material/check_circle:" if done else ":material/radio_button_unchecked:",
