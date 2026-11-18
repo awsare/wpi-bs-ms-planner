@@ -44,12 +44,22 @@ def conn():
     """One connection per browser session, reopened if Neon dropped it."""
     c = ss.get("conn")
     if c is None or c.closed:
-        c = ss.conn = psycopg.connect(os.environ["NEON_CONNECTION"], autocommit=True, row_factory=dict_row)
+        c = ss.conn = psycopg.connect(os.environ["NEON_CONNECTION"], autocommit=True, row_factory=dict_row,
+                                      keepalives=1, keepalives_idle=30, keepalives_interval=10, keepalives_count=5)
     return c
 
 
+def retry(fn):
+    """Run fn(conn); if Neon dropped the idle connection, reconnect and run it once more."""
+    try:
+        return fn(conn())
+    except psycopg.OperationalError:
+        ss.pop("conn", None)
+        return fn(conn())
+
+
 def q(sql, params=None):
-    return conn().execute(sql, params).fetchall()
+    return retry(lambda c: c.execute(sql, params).fetchall())
 
 
 def ver():
@@ -61,9 +71,11 @@ def write(*stmts, done=None):
     """Run (sql, params) pairs in one transaction. On a trigger error, show it and roll back.
     `done` is shown as a toast after the rerun."""
     try:
-        with conn().transaction():
-            for sql, params in stmts:
-                conn().execute(sql, params)
+        def run(c):
+            with c.transaction():
+                for sql, params in stmts:
+                    c.execute(sql, params)
+        retry(run)
     except psycopg.Error as e:
         msg = e.diag.message_primary or str(e)
         st.error(msg + (f"\n\n{e.diag.message_hint}" if e.diag.message_hint else ""), icon=":material/error:")
