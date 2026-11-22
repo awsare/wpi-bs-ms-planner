@@ -19,7 +19,7 @@
 #               operations described-in README.txt (from Github repo) to get 
 #               all required libraries and their dependencies installed (such 
 #               as streamlit, psycopg, pandas, etc.), created their local 
-#               instance of ".env"-file with their personal Connection-String 
+#               instance of ".streamlit/secrets.toml"-file with their personal Connection-String 
 #               provided-by Neon. User has (stable) Internet access, and the 
 #               ability to access and use a Web-browser. User is assumed to be 
 #               one of the 4 authors listed above; user is expected to have 
@@ -30,7 +30,7 @@
 # Output: A call-to a local instance of streamlit web-application; link will 
 #               open in user's default browser according-to their default tab/
 #               window settings.
-# System Calls: pandas, streamlit, psycopg, os, load_dotenv()
+# System Calls: pandas, streamlit, psycopg
 # ------------------------------------------------------------------------------
 # Procedure: 
 # Purpose/Spec: 
@@ -107,10 +107,8 @@
 # ----------------------------------------------------------------------------- 
 # Imports
 import psycopg
-import os
 import pandas as pd
 import streamlit as st
-from dotenv import load_dotenv
 
 # Global Variables
 
@@ -118,11 +116,8 @@ from dotenv import load_dotenv
 
 # Class/Function definition (remember that, by default, Python executes code in the order it is written; it does not use function prototypes)
 def demo_app():
-    # Load environment variables; ".env", includes Neon connection-string (per-user)
-    load_dotenv()
-
     # Connect to neon
-    with psycopg.connect(os.environ.get('NEON_CONNECTION')) as conn:
+    with psycopg.connect(st.secrets["NEON_CONNECTION"]) as conn:
         # Query and store to dataframe
         query = "SELECT * FROM doublecounts"
         df = pd.read_sql_query(query, conn)

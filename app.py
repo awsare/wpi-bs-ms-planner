@@ -25,16 +25,13 @@
 #            based on the team's Figma mockup (v3 - grad and undergrad).
 # -----------------------------------------------------------------------------
 """
-import os
 from collections import defaultdict
 
 import pandas as pd
 import psycopg
 import streamlit as st
-from dotenv import load_dotenv
 from psycopg.rows import dict_row
 
-load_dotenv()
 YEARS = list(range(2026, 2033))
 ss = st.session_state
 
@@ -44,7 +41,7 @@ def conn():
     """One connection per browser session, reopened if Neon dropped it."""
     c = ss.get("conn")
     if c is None or c.closed:
-        c = ss.conn = psycopg.connect(os.environ["NEON_CONNECTION"], autocommit=True, row_factory=dict_row,
+        c = ss.conn = psycopg.connect(st.secrets["NEON_CONNECTION"], autocommit=True, row_factory=dict_row,
                                       keepalives=1, keepalives_idle=30, keepalives_interval=10, keepalives_count=5)
     return c
 
