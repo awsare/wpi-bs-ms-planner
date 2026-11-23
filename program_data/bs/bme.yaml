@@ -88,6 +88,11 @@ requirements:
             min_credits: 6
             courses: [BME 3012, BME 3013, BME 3505, BME 3507, BME 3811, BME 3813, BME 4012, BME 4505,
                       BME 4507, BME 4607, BME 4811, BME 4813]
+            children:
+              # 1/6 unit, one of the labs above
+              - name: Living Systems Lab
+                min_courses: 1
+                courses: [BME 3012, BME 3507, BME 3813]
           - name: BME Design
             min_credits: 3
             courses: [BME 3300]
@@ -98,26 +103,10 @@ requirements:
               academic_level: Undergraduate
               code_min: 4000
 
-  # at least one course in each
-  - name: Core Competencies
-    children:
-      - name: Biomechanics or Biofluids
-        min_credits: 3
-        courses: [BME 2502, BME 3610, ES 2501, ES 2502, ES 2503, ES 3004]
-      - name: Biomaterials or Tissue Engineering
-        min_credits: 3
-        courses: [BME 2001, ES 2001]
-      - name: Biosensors or Bioinstrumentation
-        min_credits: 3
-        courses: [BME 2210, ECE 2010]
-      - name: Experimental Measurement and Data Analysis
-        min_credits: 3
-        courses: [BME 2211, ME 3901]
-
-  # 1/6 unit
-  - name: Living Systems Lab
-    min_courses: 1
-    courses: [BME 3012, BME 3507, BME 3813]
+  # not modeled: core competencies, one course in each, taken within the engineering courses above
+  # (not extra credit): biomechanics/biofluids (BME 2502, 3610, ES 2501, 2502, 2503, 3004),
+  # biomaterials/tissue engineering (BME 2001, ES 2001), biosensors/bioinstrumentation (BME 2210,
+  # ECE 2010), experimental measurement and data analysis (BME 2211, ME 3901)
 
   # includes 1/3 unit capstone design; a research MQP needs BME 4301 or equivalent
   - name: Major Qualifying Project

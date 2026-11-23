@@ -57,9 +57,11 @@ requirements:
         min_credits: 9
         courses: [MQP]
 
-  # up to 2/3 unit may also count toward Mathematics and Basic Science
+  # catalog: 5/3 units, of which up to 2/3 unit may also count toward Mathematics and Basic Science.
+  # A course fills one requirement here, so the 2/3 overlap is taken off (15 - 6 = 9), which keeps the
+  # major at the catalog's 11 units; place 2000+ BB/CH/PH/GE courses in Mathematics and Basic Science
   - name: Advanced Chemistry and Natural Science
-    min_credits: 15
+    min_credits: 9
     courses: [CH 1040]
     match:
       code_prefix: [BB, CH, PH, GE]

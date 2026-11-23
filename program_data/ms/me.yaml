@@ -42,4 +42,9 @@ requirements:
     max_credits: 9
     courses: [ME 598]
 
-  # not modeled: ME 591 seminar every semester (full-time); electives
+  # not modeled: ME 591 seminar every semester (full-time)
+
+  # whatever is left of the total; no min_credits, so the total decides how many are needed
+  - name: Electives
+    match:
+      academic_level: Graduate

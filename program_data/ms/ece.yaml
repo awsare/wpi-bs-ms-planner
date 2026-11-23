@@ -23,4 +23,9 @@ requirements:
       academic_level: Undergraduate
       code_min: 4000
 
-  # not modeled: remaining 9 cr only from CS/DS/PH/MA/engineering
+
+  # the remaining credits: 500-level CS, DS, PH, engineering or MA; no min_credits, so the total decides
+  - name: Other Graduate Coursework
+    match:
+      code_prefix: [CS, DS, PH, BME, CHE, CE, ECE, FP, MFE, MTE, ME, RBE, SYS, MA]
+      academic_level: Graduate

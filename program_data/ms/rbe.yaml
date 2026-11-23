@@ -43,4 +43,9 @@ requirements:
     max_credits: 3
     courses: [RBE 5900]
 
-  # not modeled: electives (500+ science, engineering, business); 6 cr before capstone
+  # not modeled: electives limited to 500+ science, engineering, business; 6 cr before capstone
+
+  # whatever is left of the total; no min_credits, so the total decides how many are needed
+  - name: Electives
+    match:
+      academic_level: Graduate

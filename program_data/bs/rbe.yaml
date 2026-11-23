@@ -56,9 +56,10 @@ requirements:
         match:
           code_prefix: ECE
           academic_level: Undergraduate
-      # the catalog gives no course list
+      # the catalog gives no course list; ES 2501 is WPI's statics course ("or equivalent")
       - name: Statics
         min_credits: 3
+        courses: [ES 2501]
       - name: Classical Controls
         min_credits: 3
         courses: [ES 3011, ECE 3012, AE 2310]

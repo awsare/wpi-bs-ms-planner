@@ -51,4 +51,9 @@ requirements:
     max_credits: 3
     courses: [AE 5900]
 
-  # not modeled: 7 cr electives; 6 cr coursework before AE 5098/5099
+  # not modeled: 6 cr coursework before AE 5098/5099
+
+  # whatever is left of the total; no min_credits, so the total decides how many are needed
+  - name: Electives
+    match:
+      academic_level: Graduate

@@ -40,5 +40,10 @@ requirements:
       - { name: Thesis,     min_credits: 9, courses: [BCB 599] }
       - { name: Internship, min_credits: 3, courses: [BCB 5900] }
 
-  # not modeled: electives from the lists above (3-6 cr thesis, 9-12 cr internship);
+  # not modeled: electives limited to the lists above (3-6 cr thesis, 9-12 cr internship);
   # BCB 555 does not count in the internship option
+
+  # whatever is left of the total; no min_credits, so the total decides how many are needed
+  - name: Electives
+    match:
+      academic_level: Graduate

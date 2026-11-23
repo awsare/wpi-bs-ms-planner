@@ -39,10 +39,10 @@ requirements:
       - { name: Capstone Project, min_credits: 3, courses: [CS 594, DS 594, RBE 594] }
       - { name: Thesis,           min_credits: 9, courses: [CS 599, DS 599, RBE 599] }
 
-  # 30 = 15 core + 3 GQP + 12 electives; the thesis route doesn't reduce electives (15 + 9 + 12 = 36)
+  # 30 = 15 core + 3 GQP + 12 electives, or 15 core + 9 thesis + 6 electives; no min_credits,
+  # so the 30-credit total decides how many are needed
   # not modeled: at most 6 cr outside the core bins (AI-related topics, ISG, research with advisor OK)
   - name: Electives
-    min_credits: 12
     match:
       academic_level: Graduate
 

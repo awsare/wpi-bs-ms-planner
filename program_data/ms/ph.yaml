@@ -66,5 +66,10 @@ requirements:
       - { name: Thesis,            min_credits: 6, courses: [PH 599] }
       - { name: Directed Research, min_credits: 6, courses: [PH 598] }
 
-  # not modeled: 9 cr electives; PH 580 seminar each semester (full-time);
+  # not modeled: PH 580 seminar each semester (full-time);
   # medical physics anatomy/physiology and ethics courses (no fixed codes)
+
+  # whatever is left of the total; no min_credits, so the total decides how many are needed
+  - name: Electives
+    match:
+      academic_level: Graduate

@@ -13,6 +13,8 @@ requirements:
         match: &hua
           code_prefix: [AR, MU, TH, EN, WR, RH, HI, HU, INTL, PY, RE, SP, GN, ISE, AB, CN]
           academic_level: Undergraduate
+          # the seminar has its own slot below
+          exclude: [HU 3900, HU 3910]
       # 1 course outside the depth grouping: art/music/theatre, languages, literature/writing,
       # history/international studies, philosophy/religion (all-language depth may take breadth in a language)
       - name: Breadth
@@ -45,9 +47,9 @@ requirements:
     match:
       code_prefix: WPE
 
-  # 3/3 unit, any undergraduate course
+  # whatever is left of the 135 after the distribution requirements (catalog sets no minimum);
+  # no min_credits, so the B.S. total, not this bucket, decides how many are needed
   - name: Free Electives
-    min_credits: 9
     match:
       academic_level: Undergraduate
       exclude: [IQP, MQP]

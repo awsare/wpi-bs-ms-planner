@@ -71,6 +71,6 @@ requirements:
           academic_level: Undergraduate
           code_min: 2000
           exclude: [CS 2011, CS 2022, CS 3043]
-      - name: Engineering Design
-        min_credits: 3
-        courses: [ECE 2799, BME 3300, CS 3733, ES 3501, ME 2300, ME 4320]
+      # not modeled: 1/3 unit of engineering design inside the 6 units above, either ECE 2799 in
+      # Electrical and Computer Engineering or one of BME 3300, CS 3733, ES 3501, ME 2300, ME 4320
+      # in Additional Engineering Science and Design

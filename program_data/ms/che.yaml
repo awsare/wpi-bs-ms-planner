@@ -37,5 +37,10 @@ requirements:
     min_courses: 2
     courses: [CHE 502]
 
-  # not modeled: general electives (9 course-based, 3 thesis, any grad course);
+  # general electives (9 course-based, 3 thesis) go in Electives below
   # Professional Engineering Option (GQP + track electives in the department handbook); CHE 503 colloquium
+
+  # whatever is left of the total; no min_credits, so the total decides how many are needed
+  - name: Electives
+    match:
+      academic_level: Graduate

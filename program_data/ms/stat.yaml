@@ -25,3 +25,14 @@ requirements:
 
   # not modeled: capstone experience (thesis, project, practicum, report/proposal, or exam);
   # upper-level undergrad courses with committee approval
+
+  # whatever is left of the total; no min_credits, so the total decides how many are needed
+  - name: Electives
+    match:
+      academic_level: Graduate
+
+  # with Graduate Program Committee approval
+  - name: Upper-Level Undergraduate
+    match:
+      academic_level: Undergraduate
+      code_min: 3000

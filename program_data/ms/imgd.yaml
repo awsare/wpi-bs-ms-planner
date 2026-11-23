@@ -19,4 +19,14 @@ requirements:
       - { name: Thesis,                      min_credits: 9, courses: [IMGD 599] }
       - { name: Graduate Qualifying Project, min_credits: 9, courses: [IMGD 596] }
 
-  # not modeled: 6 cr electives, any 4000+ course with advisor approval
+
+  # whatever is left of the total; no min_credits, so the total decides how many are needed
+  - name: Electives
+    match:
+      academic_level: Graduate
+
+  # electives may be any 4000-level or higher course with advisor approval
+  - name: Upper-Level Undergraduate
+    match:
+      academic_level: Undergraduate
+      code_min: 4000

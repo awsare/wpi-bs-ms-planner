@@ -31,3 +31,8 @@ requirements:
       code_min: 3000
 
   # not modeled: capstone experience (thesis, project, practicum, report/proposal, or exam)
+
+  # whatever is left of the total; no min_credits, so the total decides how many are needed
+  - name: Electives
+    match:
+      academic_level: Graduate

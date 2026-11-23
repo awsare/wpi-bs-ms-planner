@@ -224,8 +224,9 @@ def course_search():
 # ----------------------------------------------------------------------------- overview
 def overview(plan):
     rows = q("SELECT * FROM student_credit_totals WHERE student_id = %s AND program_id = %s", (ss.sid, ss.program))
-    t = rows[0] if rows else {"ug_credits": 0, "ug_required": 135, "gr_credits": 0,
-                              "gr_required": 30, "total_credits": 0, "total_required": 165}
+    totals = {r["path"]: r["min_credits"] for r in requirements(ss.program) if r["path"] in ("bs", "ms")}
+    t = rows[0] if rows else {"ug_credits": 0, "ug_required": totals["bs"], "gr_credits": 0, "gr_required": totals["ms"],
+                              "total_credits": 0, "total_required": totals["bs"] + totals["ms"]}
     cols = st.columns(4)
     for col, (name, k) in zip(cols, [("Undergraduate", "ug"), ("Graduate", "gr"), ("Total", "total")]):
         have, need = float(t[f"{k}_credits"]), t[f"{k}_required"]
@@ -233,7 +234,7 @@ def overview(plan):
             st.metric(f"{name} credits", f"{have:g} / {need}")
             st.progress(min(have / need, 1.0))
     # WPI: at most 40% of the M.S. credits count toward both degrees; a double count uses its M.S.-side credits
-    cap = 0.4 * next(r["min_credits"] for r in requirements(ss.program) if r["path"] == "ms")
+    cap = 0.4 * totals["ms"]
     used = sum(float(p["credits"]) for p in plan if p["doublecount_for"] and p["degree"] == "ms")
     with cols[3].container(border=True, height="stretch"):
         st.metric("Double-counted credits", f"{used:g} / {cap:g}")
@@ -296,6 +297,14 @@ def stats(node, kids, plan):
     done = (bool(rows) and cr >= node["min_credits"] and len(rows) >= node["min_courses"]
             and kids_done >= node["min_children"])
     parts = [f"{cr:g}/{node['min_credits']} cr" if node["min_credits"] else f"{cr:g} cr"]
+    # A catch-all (Free Electives, M.S. Electives) has no minimum of its own: it is done when the degree total is met.
+    root = next((r for r in kids[None] if r["id"] == node["parent_id"]), None)
+    if root and not (node["min_credits"] or node["min_courses"] or node["max_credits"] or children):
+        left = root["min_credits"] - sum(float(p["credits"]) for p in plan
+                                         if p["requirement_id"] and p["requirement_id"].startswith(root["id"] + "/"))
+        done = left <= 0
+        if left > 0:
+            parts.append(f"{left:g} more for the {root['min_credits']}-credit total")
     if node["min_courses"]:
         parts.append(f"{len(rows)}/{node['min_courses']} courses")
     if node["min_children"] and children:

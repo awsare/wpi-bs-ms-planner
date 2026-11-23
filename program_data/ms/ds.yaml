@@ -8,9 +8,15 @@ requirements:
   - name: Core Data Science Coursework
     min_credits: 15
     children:
+      # waived for WPI B.S. in Data Science graduates (the only B.S. paired here):
+      # any DS graduate course, including DS 501
       - name: Integrative Data Science
         min_credits: 3
         courses: [DS 501]
+        match:
+          code_prefix: DS
+          academic_level: Graduate
+          exclude: [DS 598, DS 599]
       - name: Mathematical Analytics
         min_credits: 3
         courses: [DS 502, MA 543, MA 542, MA 554]
@@ -39,4 +45,9 @@ requirements:
       code_prefix: [ACC, BUS, ETR, FIN, MIS, MKT, OBC, OIE]
       academic_level: Graduate
 
-  # not modeled: electives from the pre-approved list or any DS course; not both CS 5084 and CS 584
+  # not modeled: electives limited to the pre-approved list or any DS course; not both CS 5084 and CS 584
+
+  # whatever is left of the total; no min_credits, so the total decides how many are needed
+  - name: Electives
+    match:
+      academic_level: Graduate

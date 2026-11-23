@@ -63,11 +63,11 @@ requirements:
           code_prefix: IMGD
           code_min: 4000
 
-  # CS 1101, CS 1102 and 2000-level or higher; CS 3043 doesn't count
+  # CS 1004, CS 1101, CS 1102 and 2000-level or higher; CS 3043 doesn't count
   # not modeled: only one of CS 1004/1101/1102, CS 2301/2303, CS 2119/2102
   - name: Computer Science
     min_credits: 33
-    courses: [CS 1101, CS 1102]
+    courses: [CS 1004, CS 1101, CS 1102]
     match:
       code_prefix: CS
       academic_level: Undergraduate

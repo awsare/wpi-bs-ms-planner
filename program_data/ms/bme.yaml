@@ -15,13 +15,8 @@ requirements:
       code_prefix: BME
       academic_level: Graduate
       exclude: [BME 591, BME 597, BME 599]
-
-  # one course each; catalog lists examples, substitutions need approval
-  - name: Core Competencies
+    # the BME core competencies are BME courses, so they count here (30 = 12 BME + 6 thesis/project + 12 electives)
     children:
-      - name: Mathematics
-        min_credits: 3
-        courses: [MA 511, MA 501]
       - name: Life Science
         min_credits: 3
         courses: [BME 560, BME 562, BME 564]
@@ -31,6 +26,13 @@ requirements:
       - name: Clinical Needs Analysis and Design
         min_credits: 1
         courses: [BME 592]
+
+  # one course each; catalog lists examples, substitutions need approval
+  - name: Core Competencies
+    children:
+      - name: Mathematics
+        min_credits: 3
+        courses: [MA 511, MA 501]
       - name: Value Creation and Commercialization
         min_credits: 3
         courses: [ETR 500, ETR 593, SYS 501, SYS 502]
@@ -51,4 +53,9 @@ requirements:
       academic_level: Undergraduate
       code_min: 4000
 
-  # not modeled: 15 cr technical depth (thematic, advisor-approved); 12 cr electives
+  # not modeled: 15 cr technical depth (thematic, advisor-approved)
+
+  # whatever is left of the total; no min_credits, so the total decides how many are needed
+  - name: Electives
+    match:
+      academic_level: Graduate

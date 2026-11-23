@@ -103,7 +103,8 @@ requirements:
           code_prefix: [CS, DS, MA]
           academic_level: Undergraduate
           code_min: 2000
-          exclude: [CS 3043]
+          # CS must be 3000-level or above (CS 2119 is listed separately)
+          exclude: [CS 3043, CS 2011, CS 2022, CS 2102, CS 2103, CS 2223, CS 2301, CS 2303]
       - name: Business and Entrepreneurship
         max_credits: 6
         courses: [BUS 1020, BUS 2020, MIS 3010]
