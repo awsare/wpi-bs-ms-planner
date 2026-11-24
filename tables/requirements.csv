@@ -1,0 +1,673 @@
+id,path,program_id,parent_id,name,min_credits,max_credits,min_children,min_courses
+ae-bs-ae-ms/bs,bs,ae-bs-ae-ms,,B.S. in Aerospace Engineering,135,0,9,0
+ae-bs-ae-ms/bs/mathematics-and-basic-sciences,bs/mathematics-and-basic-sciences,ae-bs-ae-ms,ae-bs-ae-ms/bs,Mathematics and Basic Sciences,30,0,3,0
+ae-bs-ae-ms/bs/mathematics-and-basic-sciences/mathematics,bs/mathematics-and-basic-sciences/mathematics,ae-bs-ae-ms,ae-bs-ae-ms/bs/mathematics-and-basic-sciences,Mathematics,21,0,0,0
+ae-bs-ae-ms/bs/mathematics-and-basic-sciences/physics,bs/mathematics-and-basic-sciences/physics,ae-bs-ae-ms,ae-bs-ae-ms/bs/mathematics-and-basic-sciences,Physics,6,0,0,0
+ae-bs-ae-ms/bs/mathematics-and-basic-sciences/chemistry,bs/mathematics-and-basic-sciences/chemistry,ae-bs-ae-ms,ae-bs-ae-ms/bs/mathematics-and-basic-sciences,Chemistry,3,0,0,0
+ae-bs-ae-ms/bs/core-aerospace-engineering,bs/core-aerospace-engineering,ae-bs-ae-ms,ae-bs-ae-ms/bs,Core Aerospace Engineering,33,0,6,0
+ae-bs-ae-ms/bs/core-aerospace-engineering/fluid-dynamics,bs/core-aerospace-engineering/fluid-dynamics,ae-bs-ae-ms,ae-bs-ae-ms/bs/core-aerospace-engineering,Fluid Dynamics,6,0,0,0
+ae-bs-ae-ms/bs/core-aerospace-engineering/propulsion-and-energy,bs/core-aerospace-engineering/propulsion-and-energy,ae-bs-ae-ms,ae-bs-ae-ms/bs/core-aerospace-engineering,Propulsion and Energy,3,0,0,0
+ae-bs-ae-ms/bs/core-aerospace-engineering/materials-and-structures,bs/core-aerospace-engineering/materials-and-structures,ae-bs-ae-ms,ae-bs-ae-ms/bs/core-aerospace-engineering,Materials and Structures,12,0,0,0
+ae-bs-ae-ms/bs/core-aerospace-engineering/flight-dynamics-and-controls,bs/core-aerospace-engineering/flight-dynamics-and-controls,ae-bs-ae-ms,ae-bs-ae-ms/bs/core-aerospace-engineering,Flight Dynamics and Controls,6,0,0,0
+ae-bs-ae-ms/bs/core-aerospace-engineering/experimentation,bs/core-aerospace-engineering/experimentation,ae-bs-ae-ms,ae-bs-ae-ms/bs/core-aerospace-engineering,Experimentation,3,0,0,0
+ae-bs-ae-ms/bs/core-aerospace-engineering/space-environments,bs/core-aerospace-engineering/space-environments,ae-bs-ae-ms,ae-bs-ae-ms/bs/core-aerospace-engineering,Space Environments,3,0,0,0
+ae-bs-ae-ms/bs/track,bs/track,ae-bs-ae-ms,ae-bs-ae-ms/bs,Track,0,0,1,0
+ae-bs-ae-ms/bs/track/aeronautics,bs/track/aeronautics,ae-bs-ae-ms,ae-bs-ae-ms/bs/track,Aeronautics,18,0,6,0
+ae-bs-ae-ms/bs/track/aeronautics/aerodynamics,bs/track/aeronautics/aerodynamics,ae-bs-ae-ms,ae-bs-ae-ms/bs/track/aeronautics,Aerodynamics,3,0,0,0
+ae-bs-ae-ms/bs/track/aeronautics/air-breathing-propulsion,bs/track/aeronautics/air-breathing-propulsion,ae-bs-ae-ms,ae-bs-ae-ms/bs/track/aeronautics,Air-Breathing Propulsion,3,0,0,0
+ae-bs-ae-ms/bs/track/aeronautics/composites,bs/track/aeronautics/composites,ae-bs-ae-ms,ae-bs-ae-ms/bs/track/aeronautics,Composites,3,0,0,0
+ae-bs-ae-ms/bs/track/aeronautics/aircraft-dynamics-and-control,bs/track/aeronautics/aircraft-dynamics-and-control,ae-bs-ae-ms,ae-bs-ae-ms/bs/track/aeronautics,Aircraft Dynamics and Control,3,0,0,0
+ae-bs-ae-ms/bs/track/aeronautics/aircraft-design,bs/track/aeronautics/aircraft-design,ae-bs-ae-ms,ae-bs-ae-ms/bs/track/aeronautics,Aircraft Design,3,0,0,0
+ae-bs-ae-ms/bs/track/aeronautics/astronautics-elective,bs/track/aeronautics/astronautics-elective,ae-bs-ae-ms,ae-bs-ae-ms/bs/track/aeronautics,Astronautics Elective,3,0,0,0
+ae-bs-ae-ms/bs/track/astronautics,bs/track/astronautics,ae-bs-ae-ms,ae-bs-ae-ms/bs/track,Astronautics,18,0,4,0
+ae-bs-ae-ms/bs/track/astronautics/rocket-propulsion,bs/track/astronautics/rocket-propulsion,ae-bs-ae-ms,ae-bs-ae-ms/bs/track/astronautics,Rocket Propulsion,3,0,0,0
+ae-bs-ae-ms/bs/track/astronautics/spacecraft-flight-dynamics-and-control,bs/track/astronautics/spacecraft-flight-dynamics-and-control,ae-bs-ae-ms,ae-bs-ae-ms/bs/track/astronautics,Spacecraft Flight Dynamics and Control,9,0,0,0
+ae-bs-ae-ms/bs/track/astronautics/spacecraft-and-mission-design,bs/track/astronautics/spacecraft-and-mission-design,ae-bs-ae-ms,ae-bs-ae-ms/bs/track/astronautics,Spacecraft and Mission Design,3,0,0,0
+ae-bs-ae-ms/bs/track/astronautics/aeronautics-elective,bs/track/astronautics/aeronautics-elective,ae-bs-ae-ms,ae-bs-ae-ms/bs/track/astronautics,Aeronautics Elective,3,0,0,0
+ae-bs-ae-ms/bs/major-qualifying-project,bs/major-qualifying-project,ae-bs-ae-ms,ae-bs-ae-ms/bs,Major Qualifying Project,9,0,0,0
+ae-bs-ae-ms/bs/humanities-and-arts,bs/humanities-and-arts,ae-bs-ae-ms,ae-bs-ae-ms/bs,Humanities and Arts,18,0,4,0
+ae-bs-ae-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,ae-bs-ae-ms,ae-bs-ae-ms/bs/humanities-and-arts,Depth,9,0,0,0
+ae-bs-ae-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,ae-bs-ae-ms,ae-bs-ae-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+ae-bs-ae-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,ae-bs-ae-ms,ae-bs-ae-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+ae-bs-ae-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,ae-bs-ae-ms,ae-bs-ae-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+ae-bs-ae-ms/bs/social-science,bs/social-science,ae-bs-ae-ms,ae-bs-ae-ms/bs,Social Science,6,0,0,0
+ae-bs-ae-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,ae-bs-ae-ms,ae-bs-ae-ms/bs,Interactive Qualifying Project,9,0,0,0
+ae-bs-ae-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,ae-bs-ae-ms,ae-bs-ae-ms/bs,Wellness and Physical Education,3,0,0,0
+ae-bs-ae-ms/bs/free-electives,bs/free-electives,ae-bs-ae-ms,ae-bs-ae-ms/bs,Free Electives,9,0,0,0
+ae-bs-ae-ms/ms,ms,ae-bs-ae-ms,,M.S. in Aerospace Engineering,30,0,4,0
+ae-bs-ae-ms/ms/ae-curricular-areas,ms/ae-curricular-areas,ae-bs-ae-ms,ae-bs-ae-ms/ms,AE Curricular Areas,12,0,5,0
+ae-bs-ae-ms/ms/ae-curricular-areas/fluid-dynamics,ms/ae-curricular-areas/fluid-dynamics,ae-bs-ae-ms,ae-bs-ae-ms/ms/ae-curricular-areas,Fluid Dynamics,2,0,0,0
+ae-bs-ae-ms/ms/ae-curricular-areas/propulsion-and-energy,ms/ae-curricular-areas/propulsion-and-energy,ae-bs-ae-ms,ae-bs-ae-ms/ms/ae-curricular-areas,Propulsion and Energy,2,0,0,0
+ae-bs-ae-ms/ms/ae-curricular-areas/flight-dynamics-and-control,ms/ae-curricular-areas/flight-dynamics-and-control,ae-bs-ae-ms,ae-bs-ae-ms/ms/ae-curricular-areas,Flight Dynamics and Control,2,0,0,0
+ae-bs-ae-ms/ms/ae-curricular-areas/materials-and-structures,ms/ae-curricular-areas/materials-and-structures,ae-bs-ae-ms,ae-bs-ae-ms/ms/ae-curricular-areas,Materials and Structures,2,0,0,0
+ae-bs-ae-ms/ms/ae-curricular-areas/computational-engineering,ms/ae-curricular-areas/computational-engineering,ae-bs-ae-ms,ae-bs-ae-ms/ms/ae-curricular-areas,Computational Engineering,2,0,0,0
+ae-bs-ae-ms/ms/applied-mathematics,ms/applied-mathematics,ae-bs-ae-ms,ae-bs-ae-ms/ms,Applied Mathematics,3,0,0,0
+ae-bs-ae-ms/ms/thesis-or-non-thesis,ms/thesis-or-non-thesis,ae-bs-ae-ms,ae-bs-ae-ms/ms,Thesis or Non-Thesis,0,0,1,0
+ae-bs-ae-ms/ms/thesis-or-non-thesis/thesis-option,ms/thesis-or-non-thesis/thesis-option,ae-bs-ae-ms,ae-bs-ae-ms/ms/thesis-or-non-thesis,Thesis Option,0,0,1,0
+ae-bs-ae-ms/ms/thesis-or-non-thesis/thesis-option/thesis,ms/thesis-or-non-thesis/thesis-option/thesis,ae-bs-ae-ms,ae-bs-ae-ms/ms/thesis-or-non-thesis/thesis-option,Thesis,8,0,0,0
+ae-bs-ae-ms/ms/thesis-or-non-thesis/non-thesis-option,ms/thesis-or-non-thesis/non-thesis-option,ae-bs-ae-ms,ae-bs-ae-ms/ms/thesis-or-non-thesis,Non-Thesis Option,0,0,1,0
+ae-bs-ae-ms/ms/thesis-or-non-thesis/non-thesis-option/ae-coursework-or-directed-research,ms/thesis-or-non-thesis/non-thesis-option/ae-coursework-or-directed-research,ae-bs-ae-ms,ae-bs-ae-ms/ms/thesis-or-non-thesis/non-thesis-option,AE Coursework or Directed Research,8,0,0,0
+ae-bs-ae-ms/ms/aerospace-engineering-seminar,ms/aerospace-engineering-seminar,ae-bs-ae-ms,ae-bs-ae-ms/ms,Aerospace Engineering Seminar,0,0,0,4
+ae-bs-ae-ms/ms/internship,ms/internship,ae-bs-ae-ms,ae-bs-ae-ms/ms,Internship,0,3,0,0
+ai-bs-ai-ms/bs,bs,ai-bs-ai-ms,,B.S. in Artificial Intelligence,135,0,13,0
+ai-bs-ai-ms/bs/computer-science-foundation,bs/computer-science-foundation,ai-bs-ai-ms,ai-bs-ai-ms/bs,Computer Science Foundation,9,0,2,0
+ai-bs-ai-ms/bs/computer-science-foundation/introductory-cs,bs/computer-science-foundation/introductory-cs,ai-bs-ai-ms,ai-bs-ai-ms/bs/computer-science-foundation,Introductory CS,6,0,0,0
+ai-bs-ai-ms/bs/computer-science-foundation/algorithms,bs/computer-science-foundation/algorithms,ai-bs-ai-ms,ai-bs-ai-ms/bs/computer-science-foundation,Algorithms,3,0,0,0
+ai-bs-ai-ms/bs/mathematical-sciences-foundation,bs/mathematical-sciences-foundation,ai-bs-ai-ms,ai-bs-ai-ms/bs,Mathematical Sciences Foundation,15,0,3,0
+ai-bs-ai-ms/bs/mathematical-sciences-foundation/applied-statistics,bs/mathematical-sciences-foundation/applied-statistics,ai-bs-ai-ms,ai-bs-ai-ms/bs/mathematical-sciences-foundation,Applied Statistics,6,0,0,0
+ai-bs-ai-ms/bs/mathematical-sciences-foundation/linear-algebra,bs/mathematical-sciences-foundation/linear-algebra,ai-bs-ai-ms,ai-bs-ai-ms/bs/mathematical-sciences-foundation,Linear Algebra,3,0,0,0
+ai-bs-ai-ms/bs/mathematical-sciences-foundation/calculus,bs/mathematical-sciences-foundation/calculus,ai-bs-ai-ms,ai-bs-ai-ms/bs/mathematical-sciences-foundation,Calculus,6,0,0,0
+ai-bs-ai-ms/bs/ai-core,bs/ai-core,ai-bs-ai-ms,ai-bs-ai-ms/bs,AI Core,24,0,4,0
+ai-bs-ai-ms/bs/ai-core/ai-foundations,bs/ai-core/ai-foundations,ai-bs-ai-ms,ai-bs-ai-ms/bs/ai-core,AI Foundations,9,0,0,0
+ai-bs-ai-ms/bs/ai-core/ai-overview,bs/ai-core/ai-overview,ai-bs-ai-ms,ai-bs-ai-ms/bs/ai-core,AI Overview,3,0,0,0
+ai-bs-ai-ms/bs/ai-core/machine-learning,bs/ai-core/machine-learning,ai-bs-ai-ms,ai-bs-ai-ms/bs/ai-core,Machine Learning,3,0,0,0
+ai-bs-ai-ms/bs/ai-core/interaction-and-reasoning,bs/ai-core/interaction-and-reasoning,ai-bs-ai-ms,ai-bs-ai-ms/bs/ai-core,Interaction and Reasoning,3,0,0,0
+ai-bs-ai-ms/bs/ai-ethics-and-social-implications,bs/ai-ethics-and-social-implications,ai-bs-ai-ms,ai-bs-ai-ms/bs,AI Ethics and Social Implications,3,0,0,0
+ai-bs-ai-ms/bs/natural-or-engineering-science,bs/natural-or-engineering-science,ai-bs-ai-ms,ai-bs-ai-ms/bs,Natural or Engineering Science,6,0,0,0
+ai-bs-ai-ms/bs/concentration,bs/concentration,ai-bs-ai-ms,ai-bs-ai-ms/bs,Concentration,18,0,0,0
+ai-bs-ai-ms/bs/disciplinary-ai-electives,bs/disciplinary-ai-electives,ai-bs-ai-ms,ai-bs-ai-ms/bs,Disciplinary AI Electives,6,0,0,0
+ai-bs-ai-ms/bs/major-qualifying-project,bs/major-qualifying-project,ai-bs-ai-ms,ai-bs-ai-ms/bs,Major Qualifying Project,9,0,0,0
+ai-bs-ai-ms/bs/humanities-and-arts,bs/humanities-and-arts,ai-bs-ai-ms,ai-bs-ai-ms/bs,Humanities and Arts,18,0,4,0
+ai-bs-ai-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,ai-bs-ai-ms,ai-bs-ai-ms/bs/humanities-and-arts,Depth,9,0,0,0
+ai-bs-ai-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,ai-bs-ai-ms,ai-bs-ai-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+ai-bs-ai-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,ai-bs-ai-ms,ai-bs-ai-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+ai-bs-ai-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,ai-bs-ai-ms,ai-bs-ai-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+ai-bs-ai-ms/bs/social-science,bs/social-science,ai-bs-ai-ms,ai-bs-ai-ms/bs,Social Science,6,0,0,0
+ai-bs-ai-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,ai-bs-ai-ms,ai-bs-ai-ms/bs,Interactive Qualifying Project,9,0,0,0
+ai-bs-ai-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,ai-bs-ai-ms,ai-bs-ai-ms/bs,Wellness and Physical Education,3,0,0,0
+ai-bs-ai-ms/bs/free-electives,bs/free-electives,ai-bs-ai-ms,ai-bs-ai-ms/bs,Free Electives,9,0,0,0
+ai-bs-ai-ms/ms,ms,ai-bs-ai-ms,,M.S. in Artificial Intelligence,30,0,3,0
+ai-bs-ai-ms/ms/preparatory-courses,ms/preparatory-courses,ai-bs-ai-ms,ai-bs-ai-ms/ms,Preparatory Courses,0,6,0,0
+ai-bs-ai-ms/ms/core,ms/core,ai-bs-ai-ms,ai-bs-ai-ms/ms,Core,15,0,5,0
+ai-bs-ai-ms/ms/core/artificial-intelligence,ms/core/artificial-intelligence,ai-bs-ai-ms,ai-bs-ai-ms/ms/core,Artificial Intelligence,3,0,0,0
+ai-bs-ai-ms/ms/core/fairness-ethics-and-ai,ms/core/fairness-ethics-and-ai,ai-bs-ai-ms,ai-bs-ai-ms/ms/core,Fairness Ethics and AI,3,0,0,0
+ai-bs-ai-ms/ms/core/machine-learning,ms/core/machine-learning,ai-bs-ai-ms,ai-bs-ai-ms/ms/core,Machine Learning,3,0,0,0
+ai-bs-ai-ms/ms/core/knowledge-representation-and-reasoning,ms/core/knowledge-representation-and-reasoning,ai-bs-ai-ms,ai-bs-ai-ms/ms/core,Knowledge Representation and Reasoning,3,0,0,0
+ai-bs-ai-ms/ms/core/interaction-and-action,ms/core/interaction-and-action,ai-bs-ai-ms,ai-bs-ai-ms/ms/core,Interaction and Action,3,0,0,0
+ai-bs-ai-ms/ms/capstone-or-thesis,ms/capstone-or-thesis,ai-bs-ai-ms,ai-bs-ai-ms/ms,Capstone or Thesis,0,0,1,0
+ai-bs-ai-ms/ms/capstone-or-thesis/capstone-project,ms/capstone-or-thesis/capstone-project,ai-bs-ai-ms,ai-bs-ai-ms/ms/capstone-or-thesis,Capstone Project,3,0,0,0
+ai-bs-ai-ms/ms/capstone-or-thesis/thesis,ms/capstone-or-thesis/thesis,ai-bs-ai-ms,ai-bs-ai-ms/ms/capstone-or-thesis,Thesis,9,0,0,0
+ai-bs-ai-ms/ms/electives,ms/electives,ai-bs-ai-ms,ai-bs-ai-ms/ms,Electives,12,0,0,0
+ai-bs-ai-ms/ms/business-school,ms/business-school,ai-bs-ai-ms,ai-bs-ai-ms/ms,Business School,0,14,0,0
+ds-bs-ai-ms/bs,bs,ds-bs-ai-ms,,B.S. in Data Science,135,0,13,0
+ds-bs-ai-ms/bs/data-science-core,bs/data-science-core,ds-bs-ai-ms,ds-bs-ai-ms/bs,Data Science Core,9,0,0,0
+ds-bs-ai-ms/bs/business-foundation,bs/business-foundation,ds-bs-ai-ms,ds-bs-ai-ms/bs,Business Foundation,6,0,2,0
+ds-bs-ai-ms/bs/business-foundation/entrepreneurship-and-innovation,bs/business-foundation/entrepreneurship-and-innovation,ds-bs-ai-ms,ds-bs-ai-ms/bs/business-foundation,Entrepreneurship and Innovation,3,0,0,0
+ds-bs-ai-ms/bs/business-foundation/business-analysis,bs/business-foundation/business-analysis,ds-bs-ai-ms,ds-bs-ai-ms/bs/business-foundation,Business Analysis,3,0,0,0
+ds-bs-ai-ms/bs/computer-science-foundation,bs/computer-science-foundation,ds-bs-ai-ms,ds-bs-ai-ms/bs,Computer Science Foundation,9,0,2,0
+ds-bs-ai-ms/bs/computer-science-foundation/introductory-cs,bs/computer-science-foundation/introductory-cs,ds-bs-ai-ms,ds-bs-ai-ms/bs/computer-science-foundation,Introductory CS,6,0,0,0
+ds-bs-ai-ms/bs/computer-science-foundation/algorithms,bs/computer-science-foundation/algorithms,ds-bs-ai-ms,ds-bs-ai-ms/bs/computer-science-foundation,Algorithms,3,0,0,0
+ds-bs-ai-ms/bs/mathematics-foundation,bs/mathematics-foundation,ds-bs-ai-ms,ds-bs-ai-ms/bs,Mathematics Foundation,15,0,3,0
+ds-bs-ai-ms/bs/mathematics-foundation/calculus,bs/mathematics-foundation/calculus,ds-bs-ai-ms,ds-bs-ai-ms/bs/mathematics-foundation,Calculus,6,0,0,0
+ds-bs-ai-ms/bs/mathematics-foundation/applied-statistics,bs/mathematics-foundation/applied-statistics,ds-bs-ai-ms,ds-bs-ai-ms/bs/mathematics-foundation,Applied Statistics,6,0,0,0
+ds-bs-ai-ms/bs/mathematics-foundation/linear-algebra,bs/mathematics-foundation/linear-algebra,ds-bs-ai-ms,ds-bs-ai-ms/bs/mathematics-foundation,Linear Algebra,3,0,0,0
+ds-bs-ai-ms/bs/data-privacy-and-ethics,bs/data-privacy-and-ethics,ds-bs-ai-ms,ds-bs-ai-ms/bs,Data Privacy and Ethics,3,0,0,0
+ds-bs-ai-ms/bs/natural-or-engineering-sciences,bs/natural-or-engineering-sciences,ds-bs-ai-ms,ds-bs-ai-ms/bs,Natural or Engineering Sciences,6,0,0,0
+ds-bs-ai-ms/bs/disciplinary-electives,bs/disciplinary-electives,ds-bs-ai-ms,ds-bs-ai-ms/bs,Disciplinary Electives,33,0,3,0
+ds-bs-ai-ms/bs/disciplinary-electives/data-access-and-management,bs/disciplinary-electives/data-access-and-management,ds-bs-ai-ms,ds-bs-ai-ms/bs/disciplinary-electives,Data Access and Management,3,0,0,0
+ds-bs-ai-ms/bs/disciplinary-electives/data-mining-and-machine-learning,bs/disciplinary-electives/data-mining-and-machine-learning,ds-bs-ai-ms,ds-bs-ai-ms/bs/disciplinary-electives,Data Mining and Machine Learning,3,0,0,0
+ds-bs-ai-ms/bs/disciplinary-electives/business-modeling-and-prediction,bs/disciplinary-electives/business-modeling-and-prediction,ds-bs-ai-ms,ds-bs-ai-ms/bs/disciplinary-electives,Business Modeling and Prediction,3,0,0,0
+ds-bs-ai-ms/bs/major-qualifying-project,bs/major-qualifying-project,ds-bs-ai-ms,ds-bs-ai-ms/bs,Major Qualifying Project,9,0,0,0
+ds-bs-ai-ms/bs/humanities-and-arts,bs/humanities-and-arts,ds-bs-ai-ms,ds-bs-ai-ms/bs,Humanities and Arts,18,0,4,0
+ds-bs-ai-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,ds-bs-ai-ms,ds-bs-ai-ms/bs/humanities-and-arts,Depth,9,0,0,0
+ds-bs-ai-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,ds-bs-ai-ms,ds-bs-ai-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+ds-bs-ai-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,ds-bs-ai-ms,ds-bs-ai-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+ds-bs-ai-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,ds-bs-ai-ms,ds-bs-ai-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+ds-bs-ai-ms/bs/social-science,bs/social-science,ds-bs-ai-ms,ds-bs-ai-ms/bs,Social Science,6,0,0,0
+ds-bs-ai-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,ds-bs-ai-ms,ds-bs-ai-ms/bs,Interactive Qualifying Project,9,0,0,0
+ds-bs-ai-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,ds-bs-ai-ms,ds-bs-ai-ms/bs,Wellness and Physical Education,3,0,0,0
+ds-bs-ai-ms/bs/free-electives,bs/free-electives,ds-bs-ai-ms,ds-bs-ai-ms/bs,Free Electives,9,0,0,0
+ds-bs-ai-ms/ms,ms,ds-bs-ai-ms,,M.S. in Artificial Intelligence,30,0,3,0
+ds-bs-ai-ms/ms/preparatory-courses,ms/preparatory-courses,ds-bs-ai-ms,ds-bs-ai-ms/ms,Preparatory Courses,0,6,0,0
+ds-bs-ai-ms/ms/core,ms/core,ds-bs-ai-ms,ds-bs-ai-ms/ms,Core,15,0,5,0
+ds-bs-ai-ms/ms/core/artificial-intelligence,ms/core/artificial-intelligence,ds-bs-ai-ms,ds-bs-ai-ms/ms/core,Artificial Intelligence,3,0,0,0
+ds-bs-ai-ms/ms/core/fairness-ethics-and-ai,ms/core/fairness-ethics-and-ai,ds-bs-ai-ms,ds-bs-ai-ms/ms/core,Fairness Ethics and AI,3,0,0,0
+ds-bs-ai-ms/ms/core/machine-learning,ms/core/machine-learning,ds-bs-ai-ms,ds-bs-ai-ms/ms/core,Machine Learning,3,0,0,0
+ds-bs-ai-ms/ms/core/knowledge-representation-and-reasoning,ms/core/knowledge-representation-and-reasoning,ds-bs-ai-ms,ds-bs-ai-ms/ms/core,Knowledge Representation and Reasoning,3,0,0,0
+ds-bs-ai-ms/ms/core/interaction-and-action,ms/core/interaction-and-action,ds-bs-ai-ms,ds-bs-ai-ms/ms/core,Interaction and Action,3,0,0,0
+ds-bs-ai-ms/ms/capstone-or-thesis,ms/capstone-or-thesis,ds-bs-ai-ms,ds-bs-ai-ms/ms,Capstone or Thesis,0,0,1,0
+ds-bs-ai-ms/ms/capstone-or-thesis/capstone-project,ms/capstone-or-thesis/capstone-project,ds-bs-ai-ms,ds-bs-ai-ms/ms/capstone-or-thesis,Capstone Project,3,0,0,0
+ds-bs-ai-ms/ms/capstone-or-thesis/thesis,ms/capstone-or-thesis/thesis,ds-bs-ai-ms,ds-bs-ai-ms/ms/capstone-or-thesis,Thesis,9,0,0,0
+ds-bs-ai-ms/ms/electives,ms/electives,ds-bs-ai-ms,ds-bs-ai-ms/ms,Electives,12,0,0,0
+ds-bs-ai-ms/ms/business-school,ms/business-school,ds-bs-ai-ms,ds-bs-ai-ms/ms,Business School,0,14,0,0
+bcb-bs-bcb-ms/bs,bs,bcb-bs-bcb-ms,,B.S. in Bioinformatics and Computational Biology,135,0,13,0
+bcb-bs-bcb-ms/bs/bioinformatics-and-computational-biology,bs/bioinformatics-and-computational-biology,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,Bioinformatics and Computational Biology,6,0,0,0
+bcb-bs-bcb-ms/bs/mathematics-foundation,bs/mathematics-foundation,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,Mathematics Foundation,15,0,3,0
+bcb-bs-bcb-ms/bs/mathematics-foundation/calculus,bs/mathematics-foundation/calculus,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/mathematics-foundation,Calculus,6,0,0,0
+bcb-bs-bcb-ms/bs/mathematics-foundation/linear-algebra,bs/mathematics-foundation/linear-algebra,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/mathematics-foundation,Linear Algebra,3,0,0,0
+bcb-bs-bcb-ms/bs/mathematics-foundation/statistics,bs/mathematics-foundation/statistics,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/mathematics-foundation,Statistics,3,0,0,0
+bcb-bs-bcb-ms/bs/computer-science-foundation,bs/computer-science-foundation,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,Computer Science Foundation,12,0,3,0
+bcb-bs-bcb-ms/bs/computer-science-foundation/1000-level-programming,bs/computer-science-foundation/1000-level-programming,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/computer-science-foundation,1000-Level Programming,3,0,0,0
+bcb-bs-bcb-ms/bs/computer-science-foundation/2000-level-programming,bs/computer-science-foundation/2000-level-programming,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/computer-science-foundation,2000-Level Programming,3,0,0,0
+bcb-bs-bcb-ms/bs/computer-science-foundation/discrete-mathematics-and-algorithms,bs/computer-science-foundation/discrete-mathematics-and-algorithms,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/computer-science-foundation,Discrete Mathematics and Algorithms,6,0,0,0
+bcb-bs-bcb-ms/bs/biology-foundation,bs/biology-foundation,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,Biology Foundation,15,0,3,0
+bcb-bs-bcb-ms/bs/biology-foundation/foundational-biology,bs/biology-foundation/foundational-biology,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/biology-foundation,Foundational Biology,3,0,0,0
+bcb-bs-bcb-ms/bs/biology-foundation/cell-biology-or-genetics,bs/biology-foundation/cell-biology-or-genetics,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/biology-foundation,Cell Biology or Genetics,3,0,0,0
+bcb-bs-bcb-ms/bs/biology-foundation/biology-laboratory,bs/biology-foundation/biology-laboratory,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/biology-foundation,Biology Laboratory,3,0,0,0
+bcb-bs-bcb-ms/bs/chemistry-foundation,bs/chemistry-foundation,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,Chemistry Foundation,12,0,2,0
+bcb-bs-bcb-ms/bs/chemistry-foundation/general-chemistry,bs/chemistry-foundation/general-chemistry,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/chemistry-foundation,General Chemistry,6,0,0,0
+bcb-bs-bcb-ms/bs/chemistry-foundation/organic-chemistry,bs/chemistry-foundation/organic-chemistry,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/chemistry-foundation,Organic Chemistry,3,0,0,0
+bcb-bs-bcb-ms/bs/ethics-social-implications-and-policy,bs/ethics-social-implications-and-policy,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,"Ethics, Social Implications and Policy",3,0,0,0
+bcb-bs-bcb-ms/bs/advanced-electives,bs/advanced-electives,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,Advanced Electives,18,0,2,0
+bcb-bs-bcb-ms/bs/advanced-electives/most-related-to-bcb,bs/advanced-electives/most-related-to-bcb,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/advanced-electives,Most Related to BCB,9,0,0,0
+bcb-bs-bcb-ms/bs/advanced-electives/additional-advanced-electives,bs/advanced-electives/additional-advanced-electives,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/advanced-electives,Additional Advanced Electives,3,0,0,0
+bcb-bs-bcb-ms/bs/major-qualifying-project,bs/major-qualifying-project,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,Major Qualifying Project,9,0,0,0
+bcb-bs-bcb-ms/bs/humanities-and-arts,bs/humanities-and-arts,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,Humanities and Arts,18,0,4,0
+bcb-bs-bcb-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/humanities-and-arts,Depth,9,0,0,0
+bcb-bs-bcb-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+bcb-bs-bcb-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+bcb-bs-bcb-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+bcb-bs-bcb-ms/bs/social-science,bs/social-science,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,Social Science,6,0,0,0
+bcb-bs-bcb-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,Interactive Qualifying Project,9,0,0,0
+bcb-bs-bcb-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,Wellness and Physical Education,3,0,0,0
+bcb-bs-bcb-ms/bs/free-electives,bs/free-electives,bcb-bs-bcb-ms,bcb-bs-bcb-ms/bs,Free Electives,9,0,0,0
+bcb-bs-bcb-ms/ms,ms,bcb-bs-bcb-ms,,M.S. in Bioinformatics and Computational Biology,30,0,6,0
+bcb-bs-bcb-ms/ms/bcb-interdisciplinary-courses,ms/bcb-interdisciplinary-courses,bcb-bs-bcb-ms,bcb-bs-bcb-ms/ms,BCB Interdisciplinary Courses,6,0,0,0
+bcb-bs-bcb-ms/ms/life-science,ms/life-science,bcb-bs-bcb-ms,bcb-bs-bcb-ms/ms,Life Science,3,0,0,0
+bcb-bs-bcb-ms/ms/computer-science,ms/computer-science,bcb-bs-bcb-ms,bcb-bs-bcb-ms/ms,Computer Science,3,0,0,0
+bcb-bs-bcb-ms/ms/mathematics,ms/mathematics,bcb-bs-bcb-ms,bcb-bs-bcb-ms/ms,Mathematics,3,0,0,0
+bcb-bs-bcb-ms/ms/ethics,ms/ethics,bcb-bs-bcb-ms,bcb-bs-bcb-ms/ms,Ethics,0,0,0,1
+bcb-bs-bcb-ms/ms/thesis-or-internship,ms/thesis-or-internship,bcb-bs-bcb-ms,bcb-bs-bcb-ms/ms,Thesis or Internship,0,0,1,0
+bcb-bs-bcb-ms/ms/thesis-or-internship/thesis,ms/thesis-or-internship/thesis,bcb-bs-bcb-ms,bcb-bs-bcb-ms/ms/thesis-or-internship,Thesis,9,0,0,0
+bcb-bs-bcb-ms/ms/thesis-or-internship/internship,ms/thesis-or-internship/internship,bcb-bs-bcb-ms,bcb-bs-bcb-ms/ms/thesis-or-internship,Internship,3,0,0,0
+bme-bs-bme-ms/bs,bs,bme-bs-bme-ms,,B.S. in Biomedical Engineering,135,0,14,0
+bme-bs-bme-ms/bs/mathematics,bs/mathematics,bme-bs-bme-ms,bme-bs-bme-ms/bs,Mathematics,18,0,2,0
+bme-bs-bme-ms/bs/mathematics/differential-equations,bs/mathematics/differential-equations,bme-bs-bme-ms,bme-bs-bme-ms/bs/mathematics,Differential Equations,3,0,0,0
+bme-bs-bme-ms/bs/mathematics/statistics,bs/mathematics/statistics,bme-bs-bme-ms,bme-bs-bme-ms/bs/mathematics,Statistics,3,0,0,0
+bme-bs-bme-ms/bs/basic-science,bs/basic-science,bme-bs-bme-ms,bme-bs-bme-ms/bs,Basic Science,18,0,3,0
+bme-bs-bme-ms/bs/basic-science/biology,bs/basic-science/biology,bme-bs-bme-ms,bme-bs-bme-ms/bs/basic-science,Biology,6,0,1,0
+bme-bs-bme-ms/bs/basic-science/biology/2000-level-biology,bs/basic-science/biology/2000-level-biology,bme-bs-bme-ms,bme-bs-bme-ms/bs/basic-science/biology,2000-Level Biology,3,0,0,0
+bme-bs-bme-ms/bs/basic-science/chemistry,bs/basic-science/chemistry,bme-bs-bme-ms,bme-bs-bme-ms/bs/basic-science,Chemistry,6,0,0,0
+bme-bs-bme-ms/bs/basic-science/physics,bs/basic-science/physics,bme-bs-bme-ms,bme-bs-bme-ms/bs/basic-science,Physics,6,0,0,0
+bme-bs-bme-ms/bs/supplemental-science,bs/supplemental-science,bme-bs-bme-ms,bme-bs-bme-ms/bs,Supplemental Science,3,0,0,0
+bme-bs-bme-ms/bs/computer-science,bs/computer-science,bme-bs-bme-ms,bme-bs-bme-ms/bs,Computer Science,3,0,0,0
+bme-bs-bme-ms/bs/physiology,bs/physiology,bme-bs-bme-ms,bme-bs-bme-ms/bs,Physiology,3,0,0,0
+bme-bs-bme-ms/bs/biomedical-engineering-and-engineering,bs/biomedical-engineering-and-engineering,bme-bs-bme-ms,bme-bs-bme-ms/bs,Biomedical Engineering and Engineering,42,0,3,0
+bme-bs-bme-ms/bs/biomedical-engineering-and-engineering/2000-level-engineering,bs/biomedical-engineering-and-engineering/2000-level-engineering,bme-bs-bme-ms,bme-bs-bme-ms/bs/biomedical-engineering-and-engineering,2000-Level Engineering,9,0,0,0
+bme-bs-bme-ms/bs/biomedical-engineering-and-engineering/3000-level-engineering,bs/biomedical-engineering-and-engineering/3000-level-engineering,bme-bs-bme-ms,bme-bs-bme-ms/bs/biomedical-engineering-and-engineering,3000-Level Engineering,6,0,0,0
+bme-bs-bme-ms/bs/biomedical-engineering-and-engineering/bme-coursework,bs/biomedical-engineering-and-engineering/bme-coursework,bme-bs-bme-ms,bme-bs-bme-ms/bs/biomedical-engineering-and-engineering,BME Coursework,27,0,4,0
+bme-bs-bme-ms/bs/biomedical-engineering-and-engineering/bme-coursework/2000-level-bme,bs/biomedical-engineering-and-engineering/bme-coursework/2000-level-bme,bme-bs-bme-ms,bme-bs-bme-ms/bs/biomedical-engineering-and-engineering/bme-coursework,2000-Level BME,12,0,0,0
+bme-bs-bme-ms/bs/biomedical-engineering-and-engineering/bme-coursework/bme-labs,bs/biomedical-engineering-and-engineering/bme-coursework/bme-labs,bme-bs-bme-ms,bme-bs-bme-ms/bs/biomedical-engineering-and-engineering/bme-coursework,BME Labs,6,0,0,0
+bme-bs-bme-ms/bs/biomedical-engineering-and-engineering/bme-coursework/bme-design,bs/biomedical-engineering-and-engineering/bme-coursework/bme-design,bme-bs-bme-ms,bme-bs-bme-ms/bs/biomedical-engineering-and-engineering/bme-coursework,BME Design,3,0,0,0
+bme-bs-bme-ms/bs/biomedical-engineering-and-engineering/bme-coursework/4000-level-bme,bs/biomedical-engineering-and-engineering/bme-coursework/4000-level-bme,bme-bs-bme-ms,bme-bs-bme-ms/bs/biomedical-engineering-and-engineering/bme-coursework,4000-Level BME,6,0,0,0
+bme-bs-bme-ms/bs/core-competencies,bs/core-competencies,bme-bs-bme-ms,bme-bs-bme-ms/bs,Core Competencies,0,0,4,0
+bme-bs-bme-ms/bs/core-competencies/biomechanics-or-biofluids,bs/core-competencies/biomechanics-or-biofluids,bme-bs-bme-ms,bme-bs-bme-ms/bs/core-competencies,Biomechanics or Biofluids,3,0,0,0
+bme-bs-bme-ms/bs/core-competencies/biomaterials-or-tissue-engineering,bs/core-competencies/biomaterials-or-tissue-engineering,bme-bs-bme-ms,bme-bs-bme-ms/bs/core-competencies,Biomaterials or Tissue Engineering,3,0,0,0
+bme-bs-bme-ms/bs/core-competencies/biosensors-or-bioinstrumentation,bs/core-competencies/biosensors-or-bioinstrumentation,bme-bs-bme-ms,bme-bs-bme-ms/bs/core-competencies,Biosensors or Bioinstrumentation,3,0,0,0
+bme-bs-bme-ms/bs/core-competencies/experimental-measurement-and-data-analysis,bs/core-competencies/experimental-measurement-and-data-analysis,bme-bs-bme-ms,bme-bs-bme-ms/bs/core-competencies,Experimental Measurement and Data Analysis,3,0,0,0
+bme-bs-bme-ms/bs/living-systems-lab,bs/living-systems-lab,bme-bs-bme-ms,bme-bs-bme-ms/bs,Living Systems Lab,0,0,0,1
+bme-bs-bme-ms/bs/major-qualifying-project,bs/major-qualifying-project,bme-bs-bme-ms,bme-bs-bme-ms/bs,Major Qualifying Project,9,0,0,0
+bme-bs-bme-ms/bs/humanities-and-arts,bs/humanities-and-arts,bme-bs-bme-ms,bme-bs-bme-ms/bs,Humanities and Arts,18,0,4,0
+bme-bs-bme-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,bme-bs-bme-ms,bme-bs-bme-ms/bs/humanities-and-arts,Depth,9,0,0,0
+bme-bs-bme-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,bme-bs-bme-ms,bme-bs-bme-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+bme-bs-bme-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,bme-bs-bme-ms,bme-bs-bme-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+bme-bs-bme-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,bme-bs-bme-ms,bme-bs-bme-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+bme-bs-bme-ms/bs/social-science,bs/social-science,bme-bs-bme-ms,bme-bs-bme-ms/bs,Social Science,6,0,0,0
+bme-bs-bme-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,bme-bs-bme-ms,bme-bs-bme-ms/bs,Interactive Qualifying Project,9,0,0,0
+bme-bs-bme-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,bme-bs-bme-ms,bme-bs-bme-ms/bs,Wellness and Physical Education,3,0,0,0
+bme-bs-bme-ms/bs/free-electives,bs/free-electives,bme-bs-bme-ms,bme-bs-bme-ms/bs,Free Electives,9,0,0,0
+bme-bs-bme-ms/ms,ms,bme-bs-bme-ms,,M.S. in Biomedical Engineering,30,0,4,0
+bme-bs-bme-ms/ms/bme-courses,ms/bme-courses,bme-bs-bme-ms,bme-bs-bme-ms/ms,BME Courses,12,0,0,0
+bme-bs-bme-ms/ms/core-competencies,ms/core-competencies,bme-bs-bme-ms,bme-bs-bme-ms/ms,Core Competencies,0,0,5,0
+bme-bs-bme-ms/ms/core-competencies/mathematics,ms/core-competencies/mathematics,bme-bs-bme-ms,bme-bs-bme-ms/ms/core-competencies,Mathematics,3,0,0,0
+bme-bs-bme-ms/ms/core-competencies/life-science,ms/core-competencies/life-science,bme-bs-bme-ms,bme-bs-bme-ms/ms/core-competencies,Life Science,3,0,0,0
+bme-bs-bme-ms/ms/core-competencies/regulations-and-controls,ms/core-competencies/regulations-and-controls,bme-bs-bme-ms,bme-bs-bme-ms/ms/core-competencies,Regulations and Controls,3,0,0,0
+bme-bs-bme-ms/ms/core-competencies/clinical-needs-analysis-and-design,ms/core-competencies/clinical-needs-analysis-and-design,bme-bs-bme-ms,bme-bs-bme-ms/ms/core-competencies,Clinical Needs Analysis and Design,1,0,0,0
+bme-bs-bme-ms/ms/core-competencies/value-creation-and-commercialization,ms/core-competencies/value-creation-and-commercialization,bme-bs-bme-ms,bme-bs-bme-ms/ms/core-competencies,Value Creation and Commercialization,3,0,0,0
+bme-bs-bme-ms/ms/thesis-or-project,ms/thesis-or-project,bme-bs-bme-ms,bme-bs-bme-ms/ms,Thesis or Project,0,0,1,0
+bme-bs-bme-ms/ms/thesis-or-project/thesis,ms/thesis-or-project/thesis,bme-bs-bme-ms,bme-bs-bme-ms/ms/thesis-or-project,Thesis,6,0,0,0
+bme-bs-bme-ms/ms/thesis-or-project/professional-project,ms/thesis-or-project/professional-project,bme-bs-bme-ms,bme-bs-bme-ms/ms/thesis-or-project,Professional Project,6,0,0,0
+bme-bs-bme-ms/ms/graduate-seminar,ms/graduate-seminar,bme-bs-bme-ms,bme-bs-bme-ms/ms,Graduate Seminar,0,0,0,2
+bme-bs-bme-ms/ms/upper-level-undergraduate,ms/upper-level-undergraduate,bme-bs-bme-ms,bme-bs-bme-ms/ms,Upper-Level Undergraduate,0,8,0,0
+che-bs-che-ms/bs,bs,che-bs-che-ms,,B.S. in Chemical Engineering,135,0,8,0
+che-bs-che-ms/bs/mathematics-and-basic-science,bs/mathematics-and-basic-science,che-bs-che-ms,che-bs-che-ms/bs,Mathematics and Basic Science,36,0,3,0
+che-bs-che-ms/bs/mathematics-and-basic-science/mathematics,bs/mathematics-and-basic-science/mathematics,che-bs-che-ms,che-bs-che-ms/bs/mathematics-and-basic-science,Mathematics,0,0,0,0
+che-bs-che-ms/bs/mathematics-and-basic-science/chemistry,bs/mathematics-and-basic-science/chemistry,che-bs-che-ms,che-bs-che-ms/bs/mathematics-and-basic-science,Chemistry,0,0,0,3
+che-bs-che-ms/bs/mathematics-and-basic-science/physics,bs/mathematics-and-basic-science/physics,che-bs-che-ms,che-bs-che-ms/bs/mathematics-and-basic-science,Physics,0,0,0,2
+che-bs-che-ms/bs/mathematics-and-basic-science/biology-or-biochemistry,bs/mathematics-and-basic-science/biology-or-biochemistry,che-bs-che-ms,che-bs-che-ms/bs/mathematics-and-basic-science,Biology or Biochemistry,0,0,0,1
+che-bs-che-ms/bs/engineering-science-and-design,bs/engineering-science-and-design,che-bs-che-ms,che-bs-che-ms/bs,Engineering Science and Design,54,0,4,0
+che-bs-che-ms/bs/engineering-science-and-design/core-chemical-engineering,bs/engineering-science-and-design/core-chemical-engineering,che-bs-che-ms,che-bs-che-ms/bs/engineering-science-and-design,Core Chemical Engineering,36,0,0,0
+che-bs-che-ms/bs/engineering-science-and-design/capstone-design,bs/engineering-science-and-design/capstone-design,che-bs-che-ms,che-bs-che-ms/bs/engineering-science-and-design,Capstone Design,3,0,0,0
+che-bs-che-ms/bs/engineering-science-and-design/engineering-outside-the-major,bs/engineering-science-and-design/engineering-outside-the-major,che-bs-che-ms,che-bs-che-ms/bs/engineering-science-and-design,Engineering Outside the Major,3,0,0,0
+che-bs-che-ms/bs/engineering-science-and-design/major-qualifying-project,bs/engineering-science-and-design/major-qualifying-project,che-bs-che-ms,che-bs-che-ms/bs/engineering-science-and-design,Major Qualifying Project,9,0,0,0
+che-bs-che-ms/bs/advanced-chemistry-and-natural-science,bs/advanced-chemistry-and-natural-science,che-bs-che-ms,che-bs-che-ms/bs,Advanced Chemistry and Natural Science,15,0,1,0
+che-bs-che-ms/bs/advanced-chemistry-and-natural-science/advanced-chemistry,bs/advanced-chemistry-and-natural-science/advanced-chemistry,che-bs-che-ms,che-bs-che-ms/bs/advanced-chemistry-and-natural-science,Advanced Chemistry,0,0,0,3
+che-bs-che-ms/bs/humanities-and-arts,bs/humanities-and-arts,che-bs-che-ms,che-bs-che-ms/bs,Humanities and Arts,18,0,4,0
+che-bs-che-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,che-bs-che-ms,che-bs-che-ms/bs/humanities-and-arts,Depth,9,0,0,0
+che-bs-che-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,che-bs-che-ms,che-bs-che-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+che-bs-che-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,che-bs-che-ms,che-bs-che-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+che-bs-che-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,che-bs-che-ms,che-bs-che-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+che-bs-che-ms/bs/social-science,bs/social-science,che-bs-che-ms,che-bs-che-ms/bs,Social Science,6,0,0,0
+che-bs-che-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,che-bs-che-ms,che-bs-che-ms/bs,Interactive Qualifying Project,9,0,0,0
+che-bs-che-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,che-bs-che-ms,che-bs-che-ms/bs,Wellness and Physical Education,3,0,0,0
+che-bs-che-ms/bs/free-electives,bs/free-electives,che-bs-che-ms,che-bs-che-ms/bs,Free Electives,9,0,0,0
+che-bs-che-ms/ms,ms,che-bs-che-ms,,M.S. in Chemical Engineering,30,0,3,0
+che-bs-che-ms/ms/core,ms/core,che-bs-che-ms,che-bs-che-ms/ms,Core,9,0,0,0
+che-bs-che-ms/ms/course-based-or-thesis,ms/course-based-or-thesis,che-bs-che-ms,che-bs-che-ms/ms,Course-Based or Thesis,0,0,1,0
+che-bs-che-ms/ms/course-based-or-thesis/course-based-option,ms/course-based-or-thesis/course-based-option,che-bs-che-ms,che-bs-che-ms/ms/course-based-or-thesis,Course-Based Option,0,0,1,0
+che-bs-che-ms/ms/course-based-or-thesis/course-based-option/che-electives,ms/course-based-or-thesis/course-based-option/che-electives,che-bs-che-ms,che-bs-che-ms/ms/course-based-or-thesis/course-based-option,ChE Electives,12,0,0,0
+che-bs-che-ms/ms/course-based-or-thesis/thesis-option,ms/course-based-or-thesis/thesis-option,che-bs-che-ms,che-bs-che-ms/ms/course-based-or-thesis,Thesis Option,0,0,2,0
+che-bs-che-ms/ms/course-based-or-thesis/thesis-option/che-electives,ms/course-based-or-thesis/thesis-option/che-electives,che-bs-che-ms,che-bs-che-ms/ms/course-based-or-thesis/thesis-option,ChE Electives,6,0,0,0
+che-bs-che-ms/ms/course-based-or-thesis/thesis-option/thesis-research,ms/course-based-or-thesis/thesis-option/thesis-research,che-bs-che-ms,che-bs-che-ms/ms/course-based-or-thesis/thesis-option,Thesis Research,12,0,0,0
+che-bs-che-ms/ms/professional-development,ms/professional-development,che-bs-che-ms,che-bs-che-ms/ms,Professional Development,0,0,0,2
+cs-bs-cs-ms/bs,bs,cs-bs-cs-ms,,B.S. in Computer Science,135,0,9,0
+cs-bs-cs-ms/bs/computer-science,bs/computer-science,cs-bs-cs-ms,cs-bs-cs-ms/bs,Computer Science,54,0,5,0
+cs-bs-cs-ms/bs/computer-science/systems,bs/computer-science/systems,cs-bs-cs-ms,cs-bs-cs-ms/bs/computer-science,Systems,3,0,0,0
+cs-bs-cs-ms/bs/computer-science/theory-and-languages,bs/computer-science/theory-and-languages,cs-bs-cs-ms,cs-bs-cs-ms/bs/computer-science,Theory and Languages,3,0,0,0
+cs-bs-cs-ms/bs/computer-science/design,bs/computer-science/design,cs-bs-cs-ms,cs-bs-cs-ms/bs/computer-science,Design,3,0,0,0
+cs-bs-cs-ms/bs/computer-science/advanced-cs,bs/computer-science/advanced-cs,cs-bs-cs-ms,cs-bs-cs-ms/bs/computer-science,Advanced CS,15,0,1,0
+cs-bs-cs-ms/bs/computer-science/advanced-cs/4000-level-cs,bs/computer-science/advanced-cs/4000-level-cs,cs-bs-cs-ms,cs-bs-cs-ms/bs/computer-science/advanced-cs,4000-Level CS,0,0,0,0
+cs-bs-cs-ms/bs/computer-science/advanced-cs/graduate-cs,bs/computer-science/advanced-cs/graduate-cs,cs-bs-cs-ms,cs-bs-cs-ms/bs/computer-science/advanced-cs,Graduate CS,0,0,0,0
+cs-bs-cs-ms/bs/computer-science/other-cs,bs/computer-science/other-cs,cs-bs-cs-ms,cs-bs-cs-ms/bs/computer-science,Other CS,0,0,0,0
+cs-bs-cs-ms/bs/computer-science/major-qualifying-project,bs/computer-science/major-qualifying-project,cs-bs-cs-ms,cs-bs-cs-ms/bs/computer-science,Major Qualifying Project,9,0,0,0
+cs-bs-cs-ms/bs/social-implications-of-computing,bs/social-implications-of-computing,cs-bs-cs-ms,cs-bs-cs-ms/bs,Social Implications of Computing,3,0,0,0
+cs-bs-cs-ms/bs/mathematics,bs/mathematics,cs-bs-cs-ms,cs-bs-cs-ms/bs,Mathematics,21,0,2,0
+cs-bs-cs-ms/bs/mathematics/probability,bs/mathematics/probability,cs-bs-cs-ms,cs-bs-cs-ms/bs/mathematics,Probability,3,0,0,0
+cs-bs-cs-ms/bs/mathematics/statistics,bs/mathematics/statistics,cs-bs-cs-ms,cs-bs-cs-ms/bs/mathematics,Statistics,3,0,0,0
+cs-bs-cs-ms/bs/mathematics/other-mathematics,bs/mathematics/other-mathematics,cs-bs-cs-ms,cs-bs-cs-ms/bs/mathematics,Other Mathematics,0,0,0,0
+cs-bs-cs-ms/bs/basic-science,bs/basic-science,cs-bs-cs-ms,cs-bs-cs-ms/bs,Basic Science,15,0,1,0
+cs-bs-cs-ms/bs/basic-science/natural-science,bs/basic-science/natural-science,cs-bs-cs-ms,cs-bs-cs-ms/bs/basic-science,Natural Science,0,0,0,3
+cs-bs-cs-ms/bs/humanities-and-arts,bs/humanities-and-arts,cs-bs-cs-ms,cs-bs-cs-ms/bs,Humanities and Arts,18,0,4,0
+cs-bs-cs-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,cs-bs-cs-ms,cs-bs-cs-ms/bs/humanities-and-arts,Depth,9,0,0,0
+cs-bs-cs-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,cs-bs-cs-ms,cs-bs-cs-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+cs-bs-cs-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,cs-bs-cs-ms,cs-bs-cs-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+cs-bs-cs-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,cs-bs-cs-ms,cs-bs-cs-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+cs-bs-cs-ms/bs/social-science,bs/social-science,cs-bs-cs-ms,cs-bs-cs-ms/bs,Social Science,6,0,0,0
+cs-bs-cs-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,cs-bs-cs-ms,cs-bs-cs-ms/bs,Interactive Qualifying Project,9,0,0,0
+cs-bs-cs-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,cs-bs-cs-ms,cs-bs-cs-ms/bs,Wellness and Physical Education,3,0,0,0
+cs-bs-cs-ms/bs/free-electives,bs/free-electives,cs-bs-cs-ms,cs-bs-cs-ms/bs,Free Electives,9,0,0,0
+cs-bs-cs-ms/ms,ms,cs-bs-cs-ms,,M.S. in Computer Science,30,0,2,0
+cs-bs-cs-ms/ms/cs-breadth,ms/cs-breadth,cs-bs-cs-ms,cs-bs-cs-ms/ms,CS Breadth,0,0,4,0
+cs-bs-cs-ms/ms/cs-breadth/theory,ms/cs-breadth/theory,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth,Theory,3,0,0,0
+cs-bs-cs-ms/ms/cs-breadth/algorithms,ms/cs-breadth/algorithms,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth,Algorithms,3,0,0,0
+cs-bs-cs-ms/ms/cs-breadth/systems-or-networks,ms/cs-breadth/systems-or-networks,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth,Systems or Networks,0,0,1,0
+cs-bs-cs-ms/ms/cs-breadth/systems-or-networks/systems,ms/cs-breadth/systems-or-networks/systems,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth/systems-or-networks,Systems,3,0,0,0
+cs-bs-cs-ms/ms/cs-breadth/systems-or-networks/networks,ms/cs-breadth/systems-or-networks/networks,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth/systems-or-networks,Networks,3,0,0,0
+cs-bs-cs-ms/ms/cs-breadth/other-breadth,ms/cs-breadth/other-breadth,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth,Other Breadth,0,0,1,0
+cs-bs-cs-ms/ms/cs-breadth/other-breadth/design,ms/cs-breadth/other-breadth/design,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth/other-breadth,Design,3,0,0,0
+cs-bs-cs-ms/ms/cs-breadth/other-breadth/compilers-and-languages,ms/cs-breadth/other-breadth/compilers-and-languages,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth/other-breadth,Compilers and Languages,3,0,0,0
+cs-bs-cs-ms/ms/cs-breadth/other-breadth/graphics-and-imaging,ms/cs-breadth/other-breadth/graphics-and-imaging,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth/other-breadth,Graphics and Imaging,3,0,0,0
+cs-bs-cs-ms/ms/cs-breadth/other-breadth/artificial-intelligence,ms/cs-breadth/other-breadth/artificial-intelligence,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth/other-breadth,Artificial Intelligence,3,0,0,0
+cs-bs-cs-ms/ms/cs-breadth/other-breadth/databases,ms/cs-breadth/other-breadth/databases,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth/other-breadth,Databases,3,0,0,0
+cs-bs-cs-ms/ms/cs-breadth/other-breadth/cybersecurity,ms/cs-breadth/other-breadth/cybersecurity,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth/other-breadth,Cybersecurity,3,0,0,0
+cs-bs-cs-ms/ms/cs-breadth/other-breadth/applications-of-cs,ms/cs-breadth/other-breadth/applications-of-cs,cs-bs-cs-ms,cs-bs-cs-ms/ms/cs-breadth/other-breadth,Applications of CS,3,0,0,0
+cs-bs-cs-ms/ms/cs-electives,ms/cs-electives,cs-bs-cs-ms,cs-bs-cs-ms/ms,CS Electives,18,0,0,0
+cyber-bs-cyber-ms/bs,bs,cyber-bs-cyber-ms,,B.S. in Cybersecurity,135,0,13,0
+cyber-bs-cyber-ms/bs/basic-science-and-engineering-science,bs/basic-science-and-engineering-science,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Basic Science and Engineering Science,15,0,2,0
+cyber-bs-cyber-ms/bs/basic-science-and-engineering-science/basic-science,bs/basic-science-and-engineering-science/basic-science,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/basic-science-and-engineering-science,Basic Science,9,0,0,0
+cyber-bs-cyber-ms/bs/basic-science-and-engineering-science/engineering-science,bs/basic-science-and-engineering-science/engineering-science,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/basic-science-and-engineering-science,Engineering Science,6,0,0,0
+cyber-bs-cyber-ms/bs/computer-science-foundation,bs/computer-science-foundation,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Computer Science Foundation,15,0,0,0
+cyber-bs-cyber-ms/bs/electrical-and-computer-engineering-foundation,bs/electrical-and-computer-engineering-foundation,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Electrical and Computer Engineering Foundation,15,0,0,0
+cyber-bs-cyber-ms/bs/cybersecurity-core,bs/cybersecurity-core,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Cybersecurity Core,9,0,2,0
+cyber-bs-cyber-ms/bs/cybersecurity-core/core-cs,bs/cybersecurity-core/core-cs,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/cybersecurity-core,Core CS,3,0,0,0
+cyber-bs-cyber-ms/bs/cybersecurity-core/core-ece,bs/cybersecurity-core/core-ece,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/cybersecurity-core,Core ECE,3,0,0,0
+cyber-bs-cyber-ms/bs/cybersecurity-electives,bs/cybersecurity-electives,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Cybersecurity Electives,6,0,2,0
+cyber-bs-cyber-ms/bs/cybersecurity-electives/elective-cs,bs/cybersecurity-electives/elective-cs,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/cybersecurity-electives,Elective CS,3,0,0,0
+cyber-bs-cyber-ms/bs/cybersecurity-electives/elective-ece,bs/cybersecurity-electives/elective-ece,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/cybersecurity-electives,Elective ECE,3,0,0,0
+cyber-bs-cyber-ms/bs/major-qualifying-project,bs/major-qualifying-project,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Major Qualifying Project,9,0,0,0
+cyber-bs-cyber-ms/bs/mathematics,bs/mathematics,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Mathematics,18,0,2,0
+cyber-bs-cyber-ms/bs/mathematics/probability,bs/mathematics/probability,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/mathematics,Probability,3,0,0,0
+cyber-bs-cyber-ms/bs/mathematics/linear-algebra,bs/mathematics/linear-algebra,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/mathematics,Linear Algebra,3,0,0,0
+cyber-bs-cyber-ms/bs/mathematics/other-mathematics,bs/mathematics/other-mathematics,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/mathematics,Other Mathematics,0,0,0,0
+cyber-bs-cyber-ms/bs/societal-impacts,bs/societal-impacts,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Societal Impacts,3,0,0,0
+cyber-bs-cyber-ms/bs/humanities-and-arts,bs/humanities-and-arts,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Humanities and Arts,18,0,4,0
+cyber-bs-cyber-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/humanities-and-arts,Depth,9,0,0,0
+cyber-bs-cyber-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+cyber-bs-cyber-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+cyber-bs-cyber-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+cyber-bs-cyber-ms/bs/social-science,bs/social-science,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Social Science,6,0,0,0
+cyber-bs-cyber-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Interactive Qualifying Project,9,0,0,0
+cyber-bs-cyber-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Wellness and Physical Education,3,0,0,0
+cyber-bs-cyber-ms/bs/free-electives,bs/free-electives,cyber-bs-cyber-ms,cyber-bs-cyber-ms/bs,Free Electives,9,0,0,0
+cyber-bs-cyber-ms/ms,ms,cyber-bs-cyber-ms,,M.S. in Cyber Security,30,0,3,0
+cyber-bs-cyber-ms/ms/bridge-courses,ms/bridge-courses,cyber-bs-cyber-ms,cyber-bs-cyber-ms/ms,Bridge Courses,0,9,0,0
+cyber-bs-cyber-ms/ms/core,ms/core,cyber-bs-cyber-ms,cyber-bs-cyber-ms/ms,Core,0,0,3,0
+cyber-bs-cyber-ms/ms/core/technical,ms/core/technical,cyber-bs-cyber-ms,cyber-bs-cyber-ms/ms/core,Technical,3,0,0,0
+cyber-bs-cyber-ms/ms/core/human-behavior,ms/core/human-behavior,cyber-bs-cyber-ms,cyber-bs-cyber-ms/ms/core,Human Behavior,3,0,0,0
+cyber-bs-cyber-ms/ms/core/business,ms/core/business,cyber-bs-cyber-ms,cyber-bs-cyber-ms/ms/core,Business,3,0,0,0
+cyber-bs-cyber-ms/ms/depth,ms/depth,cyber-bs-cyber-ms,cyber-bs-cyber-ms/ms,Depth,9,0,0,0
+cyber-bs-cyber-ms/ms/capstone-or-thesis,ms/capstone-or-thesis,cyber-bs-cyber-ms,cyber-bs-cyber-ms/ms,Capstone or Thesis,0,0,1,0
+cyber-bs-cyber-ms/ms/capstone-or-thesis/capstone-project,ms/capstone-or-thesis/capstone-project,cyber-bs-cyber-ms,cyber-bs-cyber-ms/ms/capstone-or-thesis,Capstone Project,3,0,0,0
+cyber-bs-cyber-ms/ms/capstone-or-thesis/thesis,ms/capstone-or-thesis/thesis,cyber-bs-cyber-ms,cyber-bs-cyber-ms/ms/capstone-or-thesis,Thesis,9,0,0,0
+ds-bs-ds-ms/bs,bs,ds-bs-ds-ms,,B.S. in Data Science,135,0,13,0
+ds-bs-ds-ms/bs/data-science-core,bs/data-science-core,ds-bs-ds-ms,ds-bs-ds-ms/bs,Data Science Core,9,0,0,0
+ds-bs-ds-ms/bs/business-foundation,bs/business-foundation,ds-bs-ds-ms,ds-bs-ds-ms/bs,Business Foundation,6,0,2,0
+ds-bs-ds-ms/bs/business-foundation/entrepreneurship-and-innovation,bs/business-foundation/entrepreneurship-and-innovation,ds-bs-ds-ms,ds-bs-ds-ms/bs/business-foundation,Entrepreneurship and Innovation,3,0,0,0
+ds-bs-ds-ms/bs/business-foundation/business-analysis,bs/business-foundation/business-analysis,ds-bs-ds-ms,ds-bs-ds-ms/bs/business-foundation,Business Analysis,3,0,0,0
+ds-bs-ds-ms/bs/computer-science-foundation,bs/computer-science-foundation,ds-bs-ds-ms,ds-bs-ds-ms/bs,Computer Science Foundation,9,0,2,0
+ds-bs-ds-ms/bs/computer-science-foundation/introductory-cs,bs/computer-science-foundation/introductory-cs,ds-bs-ds-ms,ds-bs-ds-ms/bs/computer-science-foundation,Introductory CS,6,0,0,0
+ds-bs-ds-ms/bs/computer-science-foundation/algorithms,bs/computer-science-foundation/algorithms,ds-bs-ds-ms,ds-bs-ds-ms/bs/computer-science-foundation,Algorithms,3,0,0,0
+ds-bs-ds-ms/bs/mathematics-foundation,bs/mathematics-foundation,ds-bs-ds-ms,ds-bs-ds-ms/bs,Mathematics Foundation,15,0,3,0
+ds-bs-ds-ms/bs/mathematics-foundation/calculus,bs/mathematics-foundation/calculus,ds-bs-ds-ms,ds-bs-ds-ms/bs/mathematics-foundation,Calculus,6,0,0,0
+ds-bs-ds-ms/bs/mathematics-foundation/applied-statistics,bs/mathematics-foundation/applied-statistics,ds-bs-ds-ms,ds-bs-ds-ms/bs/mathematics-foundation,Applied Statistics,6,0,0,0
+ds-bs-ds-ms/bs/mathematics-foundation/linear-algebra,bs/mathematics-foundation/linear-algebra,ds-bs-ds-ms,ds-bs-ds-ms/bs/mathematics-foundation,Linear Algebra,3,0,0,0
+ds-bs-ds-ms/bs/data-privacy-and-ethics,bs/data-privacy-and-ethics,ds-bs-ds-ms,ds-bs-ds-ms/bs,Data Privacy and Ethics,3,0,0,0
+ds-bs-ds-ms/bs/natural-or-engineering-sciences,bs/natural-or-engineering-sciences,ds-bs-ds-ms,ds-bs-ds-ms/bs,Natural or Engineering Sciences,6,0,0,0
+ds-bs-ds-ms/bs/disciplinary-electives,bs/disciplinary-electives,ds-bs-ds-ms,ds-bs-ds-ms/bs,Disciplinary Electives,33,0,3,0
+ds-bs-ds-ms/bs/disciplinary-electives/data-access-and-management,bs/disciplinary-electives/data-access-and-management,ds-bs-ds-ms,ds-bs-ds-ms/bs/disciplinary-electives,Data Access and Management,3,0,0,0
+ds-bs-ds-ms/bs/disciplinary-electives/data-mining-and-machine-learning,bs/disciplinary-electives/data-mining-and-machine-learning,ds-bs-ds-ms,ds-bs-ds-ms/bs/disciplinary-electives,Data Mining and Machine Learning,3,0,0,0
+ds-bs-ds-ms/bs/disciplinary-electives/business-modeling-and-prediction,bs/disciplinary-electives/business-modeling-and-prediction,ds-bs-ds-ms,ds-bs-ds-ms/bs/disciplinary-electives,Business Modeling and Prediction,3,0,0,0
+ds-bs-ds-ms/bs/major-qualifying-project,bs/major-qualifying-project,ds-bs-ds-ms,ds-bs-ds-ms/bs,Major Qualifying Project,9,0,0,0
+ds-bs-ds-ms/bs/humanities-and-arts,bs/humanities-and-arts,ds-bs-ds-ms,ds-bs-ds-ms/bs,Humanities and Arts,18,0,4,0
+ds-bs-ds-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,ds-bs-ds-ms,ds-bs-ds-ms/bs/humanities-and-arts,Depth,9,0,0,0
+ds-bs-ds-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,ds-bs-ds-ms,ds-bs-ds-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+ds-bs-ds-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,ds-bs-ds-ms,ds-bs-ds-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+ds-bs-ds-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,ds-bs-ds-ms,ds-bs-ds-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+ds-bs-ds-ms/bs/social-science,bs/social-science,ds-bs-ds-ms,ds-bs-ds-ms/bs,Social Science,6,0,0,0
+ds-bs-ds-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,ds-bs-ds-ms,ds-bs-ds-ms/bs,Interactive Qualifying Project,9,0,0,0
+ds-bs-ds-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,ds-bs-ds-ms,ds-bs-ds-ms/bs,Wellness and Physical Education,3,0,0,0
+ds-bs-ds-ms/bs/free-electives,bs/free-electives,ds-bs-ds-ms,ds-bs-ds-ms/bs,Free Electives,9,0,0,0
+ds-bs-ds-ms/ms,ms,ds-bs-ds-ms,,M.S. in Data Science,30,0,2,0
+ds-bs-ds-ms/ms/core-data-science-coursework,ms/core-data-science-coursework,ds-bs-ds-ms,ds-bs-ds-ms/ms,Core Data Science Coursework,15,0,5,0
+ds-bs-ds-ms/ms/core-data-science-coursework/integrative-data-science,ms/core-data-science-coursework/integrative-data-science,ds-bs-ds-ms,ds-bs-ds-ms/ms/core-data-science-coursework,Integrative Data Science,3,0,0,0
+ds-bs-ds-ms/ms/core-data-science-coursework/mathematical-analytics,ms/core-data-science-coursework/mathematical-analytics,ds-bs-ds-ms,ds-bs-ds-ms/ms/core-data-science-coursework,Mathematical Analytics,3,0,0,0
+ds-bs-ds-ms/ms/core-data-science-coursework/data-access-and-management,ms/core-data-science-coursework/data-access-and-management,ds-bs-ds-ms,ds-bs-ds-ms/ms/core-data-science-coursework,Data Access and Management,3,0,0,0
+ds-bs-ds-ms/ms/core-data-science-coursework/data-analytics-and-mining,ms/core-data-science-coursework/data-analytics-and-mining,ds-bs-ds-ms,ds-bs-ds-ms/ms/core-data-science-coursework,Data Analytics and Mining,3,0,0,0
+ds-bs-ds-ms/ms/core-data-science-coursework/business-intelligence-and-case-studies,ms/core-data-science-coursework/business-intelligence-and-case-studies,ds-bs-ds-ms,ds-bs-ds-ms/ms/core-data-science-coursework,Business Intelligence and Case Studies,3,0,0,0
+ds-bs-ds-ms/ms/capstone-or-thesis,ms/capstone-or-thesis,ds-bs-ds-ms,ds-bs-ds-ms/ms,Capstone or Thesis,0,0,1,0
+ds-bs-ds-ms/ms/capstone-or-thesis/graduate-qualifying-project,ms/capstone-or-thesis/graduate-qualifying-project,ds-bs-ds-ms,ds-bs-ds-ms/ms/capstone-or-thesis,Graduate Qualifying Project,3,0,0,0
+ds-bs-ds-ms/ms/capstone-or-thesis/thesis,ms/capstone-or-thesis/thesis,ds-bs-ds-ms,ds-bs-ds-ms/ms/capstone-or-thesis,Thesis,9,0,0,0
+ds-bs-ds-ms/ms/business-school,ms/business-school,ds-bs-ds-ms,ds-bs-ds-ms/ms,Business School,0,14,0,0
+ece-bs-ece-ms/bs,bs,ece-bs-ece-ms,,B.S. in Electrical and Computer Engineering,135,0,7,0
+ece-bs-ece-ms/bs/mathematics-and-basic-science,bs/mathematics-and-basic-science,ece-bs-ece-ms,ece-bs-ece-ms/bs,Mathematics and Basic Science,36,0,4,0
+ece-bs-ece-ms/bs/mathematics-and-basic-science/mathematics,bs/mathematics-and-basic-science/mathematics,ece-bs-ece-ms,ece-bs-ece-ms/bs/mathematics-and-basic-science,Mathematics,21,0,0,0
+ece-bs-ece-ms/bs/mathematics-and-basic-science/physics,bs/mathematics-and-basic-science/physics,ece-bs-ece-ms,ece-bs-ece-ms/bs/mathematics-and-basic-science,Physics,6,0,0,0
+ece-bs-ece-ms/bs/mathematics-and-basic-science/chemistry-or-biology,bs/mathematics-and-basic-science/chemistry-or-biology,ece-bs-ece-ms,ece-bs-ece-ms/bs/mathematics-and-basic-science,Chemistry or Biology,3,0,0,0
+ece-bs-ece-ms/bs/mathematics-and-basic-science/mathematics-or-basic-science,bs/mathematics-and-basic-science/mathematics-or-basic-science,ece-bs-ece-ms,ece-bs-ece-ms/bs/mathematics-and-basic-science,Mathematics or Basic Science,6,0,0,0
+ece-bs-ece-ms/bs/engineering-science-and-design,bs/engineering-science-and-design,ece-bs-ece-ms,ece-bs-ece-ms/bs,Engineering Science and Design,54,0,4,0
+ece-bs-ece-ms/bs/engineering-science-and-design/electrical-and-computer-engineering,bs/engineering-science-and-design/electrical-and-computer-engineering,ece-bs-ece-ms,ece-bs-ece-ms/bs/engineering-science-and-design,Electrical and Computer Engineering,45,0,4,0
+ece-bs-ece-ms/bs/engineering-science-and-design/electrical-and-computer-engineering/electrical-engineering,bs/engineering-science-and-design/electrical-and-computer-engineering/electrical-engineering,ece-bs-ece-ms,ece-bs-ece-ms/bs/engineering-science-and-design/electrical-and-computer-engineering,Electrical Engineering,9,0,0,0
+ece-bs-ece-ms/bs/engineering-science-and-design/electrical-and-computer-engineering/digital-circuit-design,bs/engineering-science-and-design/electrical-and-computer-engineering/digital-circuit-design,ece-bs-ece-ms,ece-bs-ece-ms/bs/engineering-science-and-design/electrical-and-computer-engineering,Digital Circuit Design,3,0,0,0
+ece-bs-ece-ms/bs/engineering-science-and-design/electrical-and-computer-engineering/embedded-computing,bs/engineering-science-and-design/electrical-and-computer-engineering/embedded-computing,ece-bs-ece-ms,ece-bs-ece-ms/bs/engineering-science-and-design/electrical-and-computer-engineering,Embedded Computing,3,0,0,0
+ece-bs-ece-ms/bs/engineering-science-and-design/electrical-and-computer-engineering/major-qualifying-project,bs/engineering-science-and-design/electrical-and-computer-engineering/major-qualifying-project,ece-bs-ece-ms,ece-bs-ece-ms/bs/engineering-science-and-design/electrical-and-computer-engineering,Major Qualifying Project,9,0,0,0
+ece-bs-ece-ms/bs/engineering-science-and-design/computational-engineering,bs/engineering-science-and-design/computational-engineering,ece-bs-ece-ms,ece-bs-ece-ms/bs/engineering-science-and-design,Computational Engineering,3,0,0,0
+ece-bs-ece-ms/bs/engineering-science-and-design/additional-engineering-science-and-design,bs/engineering-science-and-design/additional-engineering-science-and-design,ece-bs-ece-ms,ece-bs-ece-ms/bs/engineering-science-and-design,Additional Engineering Science and Design,6,0,0,0
+ece-bs-ece-ms/bs/engineering-science-and-design/engineering-design,bs/engineering-science-and-design/engineering-design,ece-bs-ece-ms,ece-bs-ece-ms/bs/engineering-science-and-design,Engineering Design,3,0,0,0
+ece-bs-ece-ms/bs/humanities-and-arts,bs/humanities-and-arts,ece-bs-ece-ms,ece-bs-ece-ms/bs,Humanities and Arts,18,0,4,0
+ece-bs-ece-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,ece-bs-ece-ms,ece-bs-ece-ms/bs/humanities-and-arts,Depth,9,0,0,0
+ece-bs-ece-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,ece-bs-ece-ms,ece-bs-ece-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+ece-bs-ece-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,ece-bs-ece-ms,ece-bs-ece-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+ece-bs-ece-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,ece-bs-ece-ms,ece-bs-ece-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+ece-bs-ece-ms/bs/social-science,bs/social-science,ece-bs-ece-ms,ece-bs-ece-ms/bs,Social Science,6,0,0,0
+ece-bs-ece-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,ece-bs-ece-ms,ece-bs-ece-ms/bs,Interactive Qualifying Project,9,0,0,0
+ece-bs-ece-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,ece-bs-ece-ms,ece-bs-ece-ms/bs,Wellness and Physical Education,3,0,0,0
+ece-bs-ece-ms/bs/free-electives,bs/free-electives,ece-bs-ece-ms,ece-bs-ece-ms/bs,Free Electives,9,0,0,0
+ece-bs-ece-ms/ms,ms,ece-bs-ece-ms,,M.S. in Electrical and Computer Engineering,30,0,1,0
+ece-bs-ece-ms/ms/ece-graduate-coursework,ms/ece-graduate-coursework,ece-bs-ece-ms,ece-bs-ece-ms/ms,ECE Graduate Coursework,21,0,0,0
+ece-bs-ece-ms/ms/thesis-option,ms/thesis-option,ece-bs-ece-ms,ece-bs-ece-ms/ms,Thesis Option,0,9,0,0
+ece-bs-ece-ms/ms/upper-level-undergraduate,ms/upper-level-undergraduate,ece-bs-ece-ms,ece-bs-ece-ms/ms,Upper-Level Undergraduate,0,6,0,0
+imgd-bs-imgd-ms/bs,bs,imgd-bs-imgd-ms,,B.S. in Interactive Media & Game Development Technology,135,0,16,0
+imgd-bs-imgd-ms/bs/imgd-core,bs/imgd-core,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,IMGD Core,6,0,0,0
+imgd-bs-imgd-ms/bs/imgd-design,bs/imgd-design,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,IMGD Design,3,0,0,0
+imgd-bs-imgd-ms/bs/imgd-audio,bs/imgd-audio,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,IMGD Audio,3,0,0,0
+imgd-bs-imgd-ms/bs/imgd-social-and-philosophical-issues,bs/imgd-social-and-philosophical-issues,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,IMGD Social and Philosophical Issues,3,0,0,0
+imgd-bs-imgd-ms/bs/cultural-narratives,bs/cultural-narratives,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,Cultural Narratives,3,0,0,0
+imgd-bs-imgd-ms/bs/visual-arts,bs/visual-arts,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,Visual Arts,3,0,0,0
+imgd-bs-imgd-ms/bs/natural-and-engineering-sciences,bs/natural-and-engineering-sciences,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,Natural and Engineering Sciences,6,0,0,0
+imgd-bs-imgd-ms/bs/mathematics-and-data-analysis,bs/mathematics-and-data-analysis,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,Mathematics and Data Analysis,6,0,0,0
+imgd-bs-imgd-ms/bs/general-imgd,bs/general-imgd,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,General IMGD,15,0,3,0
+imgd-bs-imgd-ms/bs/general-imgd/technical-game-development,bs/general-imgd/technical-game-development,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs/general-imgd,Technical Game Development,3,0,0,0
+imgd-bs-imgd-ms/bs/general-imgd/game-development-process,bs/general-imgd/game-development-process,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs/general-imgd,Game Development Process,6,0,0,0
+imgd-bs-imgd-ms/bs/general-imgd/4000-level-imgd,bs/general-imgd/4000-level-imgd,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs/general-imgd,4000-Level IMGD,3,0,0,0
+imgd-bs-imgd-ms/bs/computer-science,bs/computer-science,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,Computer Science,33,0,2,0
+imgd-bs-imgd-ms/bs/computer-science/3000-level-cs,bs/computer-science/3000-level-cs,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs/computer-science,3000-Level CS,9,0,0,0
+imgd-bs-imgd-ms/bs/computer-science/4000-level-cs,bs/computer-science/4000-level-cs,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs/computer-science,4000-Level CS,9,0,0,0
+imgd-bs-imgd-ms/bs/major-qualifying-project,bs/major-qualifying-project,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,Major Qualifying Project,9,0,0,0
+imgd-bs-imgd-ms/bs/humanities-and-arts,bs/humanities-and-arts,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,Humanities and Arts,18,0,4,0
+imgd-bs-imgd-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs/humanities-and-arts,Depth,9,0,0,0
+imgd-bs-imgd-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+imgd-bs-imgd-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+imgd-bs-imgd-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+imgd-bs-imgd-ms/bs/social-science,bs/social-science,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,Social Science,6,0,0,0
+imgd-bs-imgd-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,Interactive Qualifying Project,9,0,0,0
+imgd-bs-imgd-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,Wellness and Physical Education,3,0,0,0
+imgd-bs-imgd-ms/bs/free-electives,bs/free-electives,imgd-bs-imgd-ms,imgd-bs-imgd-ms/bs,Free Electives,9,0,0,0
+imgd-bs-imgd-ms/ms,ms,imgd-bs-imgd-ms,,M.S. in Interactive Media & Game Development,30,0,3,0
+imgd-bs-imgd-ms/ms/game-design-studio,ms/game-design-studio,imgd-bs-imgd-ms,imgd-bs-imgd-ms/ms,Game Design Studio,3,0,0,0
+imgd-bs-imgd-ms/ms/core-courses,ms/core-courses,imgd-bs-imgd-ms,imgd-bs-imgd-ms/ms,Core Courses,12,0,0,0
+imgd-bs-imgd-ms/ms/thesis-or-project,ms/thesis-or-project,imgd-bs-imgd-ms,imgd-bs-imgd-ms/ms,Thesis or Project,0,0,1,0
+imgd-bs-imgd-ms/ms/thesis-or-project/thesis,ms/thesis-or-project/thesis,imgd-bs-imgd-ms,imgd-bs-imgd-ms/ms/thesis-or-project,Thesis,9,0,0,0
+imgd-bs-imgd-ms/ms/thesis-or-project/graduate-qualifying-project,ms/thesis-or-project/graduate-qualifying-project,imgd-bs-imgd-ms,imgd-bs-imgd-ms/ms/thesis-or-project,Graduate Qualifying Project,9,0,0,0
+ma-bs-ma-ms/bs,bs,ma-bs-ma-ms,,B.S. in Mathematical Sciences,135,0,10,0
+ma-bs-ma-ms/bs/mathematics,bs/mathematics,ma-bs-ma-ms,ma-bs-ma-ms/bs,Mathematics,66,0,4,0
+ma-bs-ma-ms/bs/mathematics/transition-courses,bs/mathematics/transition-courses,ma-bs-ma-ms,ma-bs-ma-ms/bs/mathematics,Transition Courses,3,0,0,0
+ma-bs-ma-ms/bs/mathematics/core-courses,bs/mathematics/core-courses,ma-bs-ma-ms,ma-bs-ma-ms/bs/mathematics,Core Courses,12,0,0,0
+ma-bs-ma-ms/bs/mathematics/upper-level-courses,bs/mathematics/upper-level-courses,ma-bs-ma-ms,ma-bs-ma-ms/bs/mathematics,Upper Level Courses,9,0,0,0
+ma-bs-ma-ms/bs/mathematics/major-qualifying-project,bs/mathematics/major-qualifying-project,ma-bs-ma-ms,ma-bs-ma-ms/bs/mathematics,Major Qualifying Project,9,0,0,0
+ma-bs-ma-ms/bs/additional-courses,bs/additional-courses,ma-bs-ma-ms,ma-bs-ma-ms/bs,Additional Courses,6,0,0,0
+ma-bs-ma-ms/bs/basic-science,bs/basic-science,ma-bs-ma-ms,ma-bs-ma-ms/bs,Basic Science,6,0,0,0
+ma-bs-ma-ms/bs/computer-or-data-science,bs/computer-or-data-science,ma-bs-ma-ms,ma-bs-ma-ms/bs,Computer or Data Science,6,0,0,0
+ma-bs-ma-ms/bs/related-courses,bs/related-courses,ma-bs-ma-ms,ma-bs-ma-ms/bs,Related Courses,6,0,0,0
+ma-bs-ma-ms/bs/humanities-and-arts,bs/humanities-and-arts,ma-bs-ma-ms,ma-bs-ma-ms/bs,Humanities and Arts,18,0,4,0
+ma-bs-ma-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,ma-bs-ma-ms,ma-bs-ma-ms/bs/humanities-and-arts,Depth,9,0,0,0
+ma-bs-ma-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,ma-bs-ma-ms,ma-bs-ma-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+ma-bs-ma-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,ma-bs-ma-ms,ma-bs-ma-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+ma-bs-ma-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,ma-bs-ma-ms,ma-bs-ma-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+ma-bs-ma-ms/bs/social-science,bs/social-science,ma-bs-ma-ms,ma-bs-ma-ms/bs,Social Science,6,0,0,0
+ma-bs-ma-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,ma-bs-ma-ms,ma-bs-ma-ms/bs,Interactive Qualifying Project,9,0,0,0
+ma-bs-ma-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,ma-bs-ma-ms,ma-bs-ma-ms/bs,Wellness and Physical Education,3,0,0,0
+ma-bs-ma-ms/bs/free-electives,bs/free-electives,ma-bs-ma-ms,ma-bs-ma-ms/bs,Free Electives,9,0,0,0
+ma-bs-ma-ms/ms,ms,ma-bs-ma-ms,,M.S. in Applied Mathematics,30,0,3,0
+ma-bs-ma-ms/ms/required-courses,ms/required-courses,ma-bs-ma-ms,ma-bs-ma-ms/ms,Required Courses,0,0,3,0
+ma-bs-ma-ms/ms/required-courses/linear-algebra,ms/required-courses/linear-algebra,ma-bs-ma-ms,ma-bs-ma-ms/ms/required-courses,Linear Algebra,3,0,0,0
+ma-bs-ma-ms/ms/required-courses/lebesgue-measure-and-integration,ms/required-courses/lebesgue-measure-and-integration,ma-bs-ma-ms,ma-bs-ma-ms/ms/required-courses,Lebesgue Measure and Integration,3,0,0,0
+ma-bs-ma-ms/ms/required-courses/numerical-methods,ms/required-courses/numerical-methods,ma-bs-ma-ms,ma-bs-ma-ms/ms/required-courses,Numerical Methods,3,0,0,0
+ma-bs-ma-ms/ms/additional-ma-courses,ms/additional-ma-courses,ma-bs-ma-ms,ma-bs-ma-ms/ms,Additional MA Courses,12,0,0,0
+ma-bs-ma-ms/ms/graduate-seminar,ms/graduate-seminar,ma-bs-ma-ms,ma-bs-ma-ms/ms,Graduate Seminar,0,0,0,1
+ma-bs-ma-ms/ms/upper-level-undergraduate,ms/upper-level-undergraduate,ma-bs-ma-ms,ma-bs-ma-ms/ms,Upper-Level Undergraduate,0,6,0,0
+me-bs-me-ms/bs,bs,me-bs-me-ms,,B.S. in Mechanical Engineering,135,0,7,0
+me-bs-me-ms/bs/mathematics-and-basic-science,bs/mathematics-and-basic-science,me-bs-me-ms,me-bs-me-ms/bs,Mathematics and Basic Science,33,0,3,0
+me-bs-me-ms/bs/mathematics-and-basic-science/mathematics,bs/mathematics-and-basic-science/mathematics,me-bs-me-ms,me-bs-me-ms/bs/mathematics-and-basic-science,Mathematics,18,0,0,0
+me-bs-me-ms/bs/mathematics-and-basic-science/chemistry-and-physics,bs/mathematics-and-basic-science/chemistry-and-physics,me-bs-me-ms,me-bs-me-ms/bs/mathematics-and-basic-science,Chemistry and Physics,9,0,2,0
+me-bs-me-ms/bs/mathematics-and-basic-science/chemistry-and-physics/chemistry,bs/mathematics-and-basic-science/chemistry-and-physics/chemistry,me-bs-me-ms,me-bs-me-ms/bs/mathematics-and-basic-science/chemistry-and-physics,Chemistry,3,0,0,0
+me-bs-me-ms/bs/mathematics-and-basic-science/chemistry-and-physics/physics,bs/mathematics-and-basic-science/chemistry-and-physics/physics,me-bs-me-ms,me-bs-me-ms/bs/mathematics-and-basic-science/chemistry-and-physics,Physics,3,0,0,0
+me-bs-me-ms/bs/mathematics-and-basic-science/additional-mathematics-or-basic-science,bs/mathematics-and-basic-science/additional-mathematics-or-basic-science,me-bs-me-ms,me-bs-me-ms/bs/mathematics-and-basic-science,Additional Mathematics or Basic Science,6,0,0,0
+me-bs-me-ms/bs/mechanical-engineering-science-and-design,bs/mechanical-engineering-science-and-design,me-bs-me-ms,me-bs-me-ms/bs,Mechanical Engineering Science and Design,57,0,8,0
+me-bs-me-ms/bs/mechanical-engineering-science-and-design/programming,bs/mechanical-engineering-science-and-design/programming,me-bs-me-ms,me-bs-me-ms/bs/mechanical-engineering-science-and-design,Programming,3,0,0,0
+me-bs-me-ms/bs/mechanical-engineering-science-and-design/electrical-engineering,bs/mechanical-engineering-science-and-design/electrical-engineering,me-bs-me-ms,me-bs-me-ms/bs/mechanical-engineering-science-and-design,Electrical Engineering,3,0,0,0
+me-bs-me-ms/bs/mechanical-engineering-science-and-design/materials-science,bs/mechanical-engineering-science-and-design/materials-science,me-bs-me-ms,me-bs-me-ms/bs/mechanical-engineering-science-and-design,Materials Science,3,0,0,0
+me-bs-me-ms/bs/mechanical-engineering-science-and-design/experimentation,bs/mechanical-engineering-science-and-design/experimentation,me-bs-me-ms,me-bs-me-ms/bs/mechanical-engineering-science-and-design,Experimentation,3,0,0,0
+me-bs-me-ms/bs/mechanical-engineering-science-and-design/mechanical-engineering-electives,bs/mechanical-engineering-science-and-design/mechanical-engineering-electives,me-bs-me-ms,me-bs-me-ms/bs/mechanical-engineering-science-and-design,Mechanical Engineering Electives,12,0,1,0
+me-bs-me-ms/bs/mechanical-engineering-science-and-design/mechanical-engineering-electives/me-2000-or-3000-level,bs/mechanical-engineering-science-and-design/mechanical-engineering-electives/me-2000-or-3000-level,me-bs-me-ms,me-bs-me-ms/bs/mechanical-engineering-science-and-design/mechanical-engineering-electives,ME 2000 or 3000 Level,6,0,0,0
+me-bs-me-ms/bs/mechanical-engineering-science-and-design/mechanical-systems,bs/mechanical-engineering-science-and-design/mechanical-systems,me-bs-me-ms,me-bs-me-ms/bs/mechanical-engineering-science-and-design,Mechanical Systems,12,0,1,0
+me-bs-me-ms/bs/mechanical-engineering-science-and-design/mechanical-systems/mechanical-design,bs/mechanical-engineering-science-and-design/mechanical-systems/mechanical-design,me-bs-me-ms,me-bs-me-ms/bs/mechanical-engineering-science-and-design/mechanical-systems,Mechanical Design,3,0,0,0
+me-bs-me-ms/bs/mechanical-engineering-science-and-design/thermofluid-systems,bs/mechanical-engineering-science-and-design/thermofluid-systems,me-bs-me-ms,me-bs-me-ms/bs/mechanical-engineering-science-and-design,Thermofluid Systems,12,0,1,0
+me-bs-me-ms/bs/mechanical-engineering-science-and-design/thermofluid-systems/thermofluid-design,bs/mechanical-engineering-science-and-design/thermofluid-systems/thermofluid-design,me-bs-me-ms,me-bs-me-ms/bs/mechanical-engineering-science-and-design/thermofluid-systems,Thermofluid Design,3,0,0,0
+me-bs-me-ms/bs/mechanical-engineering-science-and-design/major-qualifying-project,bs/mechanical-engineering-science-and-design/major-qualifying-project,me-bs-me-ms,me-bs-me-ms/bs/mechanical-engineering-science-and-design,Major Qualifying Project,9,0,0,0
+me-bs-me-ms/bs/humanities-and-arts,bs/humanities-and-arts,me-bs-me-ms,me-bs-me-ms/bs,Humanities and Arts,18,0,4,0
+me-bs-me-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,me-bs-me-ms,me-bs-me-ms/bs/humanities-and-arts,Depth,9,0,0,0
+me-bs-me-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,me-bs-me-ms,me-bs-me-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+me-bs-me-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,me-bs-me-ms,me-bs-me-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+me-bs-me-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,me-bs-me-ms,me-bs-me-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+me-bs-me-ms/bs/social-science,bs/social-science,me-bs-me-ms,me-bs-me-ms/bs,Social Science,6,0,0,0
+me-bs-me-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,me-bs-me-ms,me-bs-me-ms/bs,Interactive Qualifying Project,9,0,0,0
+me-bs-me-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,me-bs-me-ms,me-bs-me-ms/bs,Wellness and Physical Education,3,0,0,0
+me-bs-me-ms/bs/free-electives,bs/free-electives,me-bs-me-ms,me-bs-me-ms/bs,Free Electives,9,0,0,0
+me-bs-me-ms/ms,ms,me-bs-me-ms,,M.S. in Mechanical Engineering,30,0,2,0
+me-bs-me-ms/ms/analytical-methods-or-mathematics,ms/analytical-methods-or-mathematics,me-bs-me-ms,me-bs-me-ms/ms,Analytical Methods or Mathematics,3,0,0,0
+me-bs-me-ms/ms/thesis-or-non-thesis,ms/thesis-or-non-thesis,me-bs-me-ms,me-bs-me-ms/ms,Thesis or Non-Thesis,0,0,1,0
+me-bs-me-ms/ms/thesis-or-non-thesis/thesis-option,ms/thesis-or-non-thesis/thesis-option,me-bs-me-ms,me-bs-me-ms/ms/thesis-or-non-thesis,Thesis Option,0,0,2,0
+me-bs-me-ms/ms/thesis-or-non-thesis/thesis-option/me-coursework,ms/thesis-or-non-thesis/thesis-option/me-coursework,me-bs-me-ms,me-bs-me-ms/ms/thesis-or-non-thesis/thesis-option,ME Coursework,9,0,0,0
+me-bs-me-ms/ms/thesis-or-non-thesis/thesis-option/thesis-research,ms/thesis-or-non-thesis/thesis-option/thesis-research,me-bs-me-ms,me-bs-me-ms/ms/thesis-or-non-thesis/thesis-option,Thesis Research,12,0,0,0
+me-bs-me-ms/ms/thesis-or-non-thesis/non-thesis-option,ms/thesis-or-non-thesis/non-thesis-option,me-bs-me-ms,me-bs-me-ms/ms/thesis-or-non-thesis,Non-Thesis Option,0,0,1,0
+me-bs-me-ms/ms/thesis-or-non-thesis/non-thesis-option/me-coursework,ms/thesis-or-non-thesis/non-thesis-option/me-coursework,me-bs-me-ms,me-bs-me-ms/ms/thesis-or-non-thesis/non-thesis-option,ME Coursework,18,0,0,0
+me-bs-me-ms/ms/directed-research,ms/directed-research,me-bs-me-ms,me-bs-me-ms/ms,Directed Research,0,9,0,0
+ba-bs-msba-ms/bs,bs,ba-bs-msba-ms,,B.S. in Business Analytics and Applied AI,135,0,12,0
+ba-bs-msba-ms/bs/mathematics,bs/mathematics,ba-bs-msba-ms,ba-bs-msba-ms/bs,Mathematics,15,0,3,0
+ba-bs-msba-ms/bs/mathematics/calculus,bs/mathematics/calculus,ba-bs-msba-ms,ba-bs-msba-ms/bs/mathematics,Calculus,6,0,0,0
+ba-bs-msba-ms/bs/mathematics/linear-algebra,bs/mathematics/linear-algebra,ba-bs-msba-ms,ba-bs-msba-ms/bs/mathematics,Linear Algebra,3,0,0,0
+ba-bs-msba-ms/bs/mathematics/statistics,bs/mathematics/statistics,ba-bs-msba-ms,ba-bs-msba-ms/bs/mathematics,Statistics,6,0,0,0
+ba-bs-msba-ms/bs/computer-science,bs/computer-science,ba-bs-msba-ms,ba-bs-msba-ms/bs,Computer Science,3,0,0,0
+ba-bs-msba-ms/bs/basic-science,bs/basic-science,ba-bs-msba-ms,ba-bs-msba-ms/bs,Basic Science,0,0,0,0
+ba-bs-msba-ms/bs/business-foundation,bs/business-foundation,ba-bs-msba-ms,ba-bs-msba-ms/bs,Business Foundation,15,0,5,0
+ba-bs-msba-ms/bs/business-foundation/leadership,bs/business-foundation/leadership,ba-bs-msba-ms,ba-bs-msba-ms/bs/business-foundation,Leadership,3,0,0,0
+ba-bs-msba-ms/bs/business-foundation/financial-statements,bs/business-foundation/financial-statements,ba-bs-msba-ms,ba-bs-msba-ms/bs/business-foundation,Financial Statements,3,0,0,0
+ba-bs-msba-ms/bs/business-foundation/finance,bs/business-foundation/finance,ba-bs-msba-ms,ba-bs-msba-ms/bs/business-foundation,Finance,3,0,0,0
+ba-bs-msba-ms/bs/business-foundation/marketing-strategy,bs/business-foundation/marketing-strategy,ba-bs-msba-ms,ba-bs-msba-ms/bs/business-foundation,Marketing Strategy,3,0,0,0
+ba-bs-msba-ms/bs/business-foundation/business-elective,bs/business-foundation/business-elective,ba-bs-msba-ms,ba-bs-msba-ms/bs/business-foundation,Business Elective,3,0,0,0
+ba-bs-msba-ms/bs/technical-and-ai-foundation,bs/technical-and-ai-foundation,ba-bs-msba-ms,ba-bs-msba-ms/bs,Technical and AI Foundation,12,0,4,0
+ba-bs-msba-ms/bs/technical-and-ai-foundation/programming-or-data-science,bs/technical-and-ai-foundation/programming-or-data-science,ba-bs-msba-ms,ba-bs-msba-ms/bs/technical-and-ai-foundation,Programming or Data Science,3,0,0,0
+ba-bs-msba-ms/bs/technical-and-ai-foundation/data-management,bs/technical-and-ai-foundation/data-management,ba-bs-msba-ms,ba-bs-msba-ms/bs/technical-and-ai-foundation,Data Management,3,0,0,0
+ba-bs-msba-ms/bs/technical-and-ai-foundation/artificial-intelligence,bs/technical-and-ai-foundation/artificial-intelligence,ba-bs-msba-ms,ba-bs-msba-ms/bs/technical-and-ai-foundation,Artificial Intelligence,3,0,0,0
+ba-bs-msba-ms/bs/technical-and-ai-foundation/machine-learning,bs/technical-and-ai-foundation/machine-learning,ba-bs-msba-ms,ba-bs-msba-ms/bs/technical-and-ai-foundation,Machine Learning,3,0,0,0
+ba-bs-msba-ms/bs/analytics-foundation,bs/analytics-foundation,ba-bs-msba-ms,ba-bs-msba-ms/bs,Analytics Foundation,12,0,4,0
+ba-bs-msba-ms/bs/analytics-foundation/decision-analysis,bs/analytics-foundation/decision-analysis,ba-bs-msba-ms,ba-bs-msba-ms/bs/analytics-foundation,Decision Analysis,3,0,0,0
+ba-bs-msba-ms/bs/analytics-foundation/financial-or-marketing-analytics,bs/analytics-foundation/financial-or-marketing-analytics,ba-bs-msba-ms,ba-bs-msba-ms/bs/analytics-foundation,Financial or Marketing Analytics,3,0,0,0
+ba-bs-msba-ms/bs/analytics-foundation/operations,bs/analytics-foundation/operations,ba-bs-msba-ms,ba-bs-msba-ms/bs/analytics-foundation,Operations,3,0,0,0
+ba-bs-msba-ms/bs/analytics-foundation/business-intelligence,bs/analytics-foundation/business-intelligence,ba-bs-msba-ms,ba-bs-msba-ms/bs/analytics-foundation,Business Intelligence,3,0,0,0
+ba-bs-msba-ms/bs/business-analytics-and-applied-ai-electives,bs/business-analytics-and-applied-ai-electives,ba-bs-msba-ms,ba-bs-msba-ms/bs,Business Analytics and Applied AI Electives,18,0,1,0
+ba-bs-msba-ms/bs/business-analytics-and-applied-ai-electives/business-analytics-applications,bs/business-analytics-and-applied-ai-electives/business-analytics-applications,ba-bs-msba-ms,ba-bs-msba-ms/bs/business-analytics-and-applied-ai-electives,Business Analytics Applications,9,0,0,0
+ba-bs-msba-ms/bs/business-analytics-and-applied-ai-electives/computing-technologies-data-and-mathematical-sciences,bs/business-analytics-and-applied-ai-electives/computing-technologies-data-and-mathematical-sciences,ba-bs-msba-ms,ba-bs-msba-ms/bs/business-analytics-and-applied-ai-electives,"Computing Technologies, Data and Mathematical Sciences",0,9,0,0
+ba-bs-msba-ms/bs/business-analytics-and-applied-ai-electives/business-and-entrepreneurship,bs/business-analytics-and-applied-ai-electives/business-and-entrepreneurship,ba-bs-msba-ms,ba-bs-msba-ms/bs/business-analytics-and-applied-ai-electives,Business and Entrepreneurship,0,6,0,0
+ba-bs-msba-ms/bs/major-qualifying-project,bs/major-qualifying-project,ba-bs-msba-ms,ba-bs-msba-ms/bs,Major Qualifying Project,9,0,0,0
+ba-bs-msba-ms/bs/humanities-and-arts,bs/humanities-and-arts,ba-bs-msba-ms,ba-bs-msba-ms/bs,Humanities and Arts,18,0,4,0
+ba-bs-msba-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,ba-bs-msba-ms,ba-bs-msba-ms/bs/humanities-and-arts,Depth,9,0,0,0
+ba-bs-msba-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,ba-bs-msba-ms,ba-bs-msba-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+ba-bs-msba-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,ba-bs-msba-ms,ba-bs-msba-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+ba-bs-msba-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,ba-bs-msba-ms,ba-bs-msba-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+ba-bs-msba-ms/bs/social-science,bs/social-science,ba-bs-msba-ms,ba-bs-msba-ms/bs,Social Science,6,0,0,0
+ba-bs-msba-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,ba-bs-msba-ms,ba-bs-msba-ms/bs,Interactive Qualifying Project,9,0,0,0
+ba-bs-msba-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,ba-bs-msba-ms,ba-bs-msba-ms/bs,Wellness and Physical Education,3,0,0,0
+ba-bs-msba-ms/bs/free-electives,bs/free-electives,ba-bs-msba-ms,ba-bs-msba-ms/bs,Free Electives,9,0,0,0
+ba-bs-msba-ms/ms,ms,ba-bs-msba-ms,,M.S. in Business Analytics,30,0,3,0
+ba-bs-msba-ms/ms/core,ms/core,ba-bs-msba-ms,ba-bs-msba-ms/ms,Core,0,0,3,0
+ba-bs-msba-ms/ms/core/data-management-for-analytics,ms/core/data-management-for-analytics,ba-bs-msba-ms,ba-bs-msba-ms/ms/core,Data Management for Analytics,3,0,0,0
+ba-bs-msba-ms/ms/core/business-intelligence,ms/core/business-intelligence,ba-bs-msba-ms,ba-bs-msba-ms/ms/core,Business Intelligence,3,0,0,0
+ba-bs-msba-ms/ms/core/modeling-and-optimizing-processes,ms/core/modeling-and-optimizing-processes,ba-bs-msba-ms,ba-bs-msba-ms/ms/core,Modeling and Optimizing Processes,3,0,0,0
+ba-bs-msba-ms/ms/specialties,ms/specialties,ba-bs-msba-ms,ba-bs-msba-ms/ms,Specialties,0,0,2,0
+ba-bs-msba-ms/ms/specialties/advanced-business-analytics-methods,ms/specialties/advanced-business-analytics-methods,ba-bs-msba-ms,ba-bs-msba-ms/ms/specialties,Advanced Business Analytics Methods,0,0,3,0
+ba-bs-msba-ms/ms/specialties/advanced-business-analytics-methods/business-applications-in-machine-learning,ms/specialties/advanced-business-analytics-methods/business-applications-in-machine-learning,ba-bs-msba-ms,ba-bs-msba-ms/ms/specialties/advanced-business-analytics-methods,Business Applications in Machine Learning,3,0,0,0
+ba-bs-msba-ms/ms/specialties/advanced-business-analytics-methods/marketing-research,ms/specialties/advanced-business-analytics-methods/marketing-research,ba-bs-msba-ms,ba-bs-msba-ms/ms/specialties/advanced-business-analytics-methods,Marketing Research,3,0,0,0
+ba-bs-msba-ms/ms/specialties/advanced-business-analytics-methods/advanced-prescriptive-analytics,ms/specialties/advanced-business-analytics-methods/advanced-prescriptive-analytics,ba-bs-msba-ms,ba-bs-msba-ms/ms/specialties/advanced-business-analytics-methods,Advanced Prescriptive Analytics,3,0,0,0
+ba-bs-msba-ms/ms/specialties/artificial-intelligence-in-business,ms/specialties/artificial-intelligence-in-business,ba-bs-msba-ms,ba-bs-msba-ms/ms/specialties,Artificial Intelligence in Business,0,0,3,0
+ba-bs-msba-ms/ms/specialties/artificial-intelligence-in-business/business-applications-in-machine-learning,ms/specialties/artificial-intelligence-in-business/business-applications-in-machine-learning,ba-bs-msba-ms,ba-bs-msba-ms/ms/specialties/artificial-intelligence-in-business,Business Applications in Machine Learning,3,0,0,0
+ba-bs-msba-ms/ms/specialties/artificial-intelligence-in-business/ai-ethics-or-policy,ms/specialties/artificial-intelligence-in-business/ai-ethics-or-policy,ba-bs-msba-ms,ba-bs-msba-ms/ms/specialties/artificial-intelligence-in-business,AI Ethics or Policy,3,0,0,0
+ba-bs-msba-ms/ms/specialties/artificial-intelligence-in-business/ai-applications,ms/specialties/artificial-intelligence-in-business/ai-applications,ba-bs-msba-ms,ba-bs-msba-ms/ms/specialties/artificial-intelligence-in-business,AI Applications,3,0,0,0
+ba-bs-msba-ms/ms/specialties/marketing-analytics,ms/specialties/marketing-analytics,ba-bs-msba-ms,ba-bs-msba-ms/ms/specialties,Marketing Analytics,0,0,2,0
+ba-bs-msba-ms/ms/specialties/marketing-analytics/marketing-analytics,ms/specialties/marketing-analytics/marketing-analytics,ba-bs-msba-ms,ba-bs-msba-ms/ms/specialties/marketing-analytics,Marketing Analytics,3,0,0,0
+ba-bs-msba-ms/ms/specialties/marketing-analytics/marketing-electives,ms/specialties/marketing-analytics/marketing-electives,ba-bs-msba-ms,ba-bs-msba-ms/ms/specialties/marketing-analytics,Marketing Electives,6,0,0,0
+ba-bs-msba-ms/ms/specialties/operations-analytics,ms/specialties/operations-analytics,ba-bs-msba-ms,ba-bs-msba-ms/ms/specialties,Operations Analytics,9,0,0,0
+ba-bs-msba-ms/ms/capstone-project-experience,ms/capstone-project-experience,ba-bs-msba-ms,ba-bs-msba-ms/ms,Capstone Project Experience,0,0,2,0
+ba-bs-msba-ms/ms/capstone-project-experience/teaming-and-organizing-for-innovation,ms/capstone-project-experience/teaming-and-organizing-for-innovation,ba-bs-msba-ms,ba-bs-msba-ms/ms/capstone-project-experience,Teaming and Organizing for Innovation,3,0,0,0
+ba-bs-msba-ms/ms/capstone-project-experience/capstone-project,ms/capstone-project-experience/capstone-project,ba-bs-msba-ms,ba-bs-msba-ms/ms/capstone-project-experience,Capstone Project,3,0,0,0
+ph-bs-ph-ms/bs,bs,ph-bs-ph-ms,,B.S. in Physics,135,0,8,0
+ph-bs-ph-ms/bs/mathematics,bs/mathematics,ph-bs-ph-ms,ph-bs-ph-ms/bs,Mathematics,27,0,1,0
+ph-bs-ph-ms/bs/mathematics/3000-level-mathematics,bs/mathematics/3000-level-mathematics,ph-bs-ph-ms,ph-bs-ph-ms/bs/mathematics,3000-Level Mathematics,6,0,0,0
+ph-bs-ph-ms/bs/physics,bs/physics,ph-bs-ph-ms,ph-bs-ph-ms/bs,Physics,45,0,6,0
+ph-bs-ph-ms/bs/physics/mechanics,bs/physics/mechanics,ph-bs-ph-ms,ph-bs-ph-ms/bs/physics,Mechanics,3,0,0,0
+ph-bs-ph-ms/bs/physics/electromagnetism,bs/physics/electromagnetism,ph-bs-ph-ms,ph-bs-ph-ms/bs/physics,Electromagnetism,3,0,0,0
+ph-bs-ph-ms/bs/physics/experimental-physics,bs/physics/experimental-physics,ph-bs-ph-ms,ph-bs-ph-ms/bs/physics,Experimental Physics,3,0,0,0
+ph-bs-ph-ms/bs/physics/quantum-mechanics,bs/physics/quantum-mechanics,ph-bs-ph-ms,ph-bs-ph-ms/bs/physics,Quantum Mechanics,3,0,0,0
+ph-bs-ph-ms/bs/physics/thermal-and-statistical-physics,bs/physics/thermal-and-statistical-physics,ph-bs-ph-ms,ph-bs-ph-ms/bs/physics,Thermal and Statistical Physics,3,0,0,0
+ph-bs-ph-ms/bs/physics/major-qualifying-project,bs/physics/major-qualifying-project,ph-bs-ph-ms,ph-bs-ph-ms/bs/physics,Major Qualifying Project,9,0,0,0
+ph-bs-ph-ms/bs/other-subjects,bs/other-subjects,ph-bs-ph-ms,ph-bs-ph-ms/bs,Other Subjects,27,0,0,0
+ph-bs-ph-ms/bs/humanities-and-arts,bs/humanities-and-arts,ph-bs-ph-ms,ph-bs-ph-ms/bs,Humanities and Arts,18,0,4,0
+ph-bs-ph-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,ph-bs-ph-ms,ph-bs-ph-ms/bs/humanities-and-arts,Depth,9,0,0,0
+ph-bs-ph-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,ph-bs-ph-ms,ph-bs-ph-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+ph-bs-ph-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,ph-bs-ph-ms,ph-bs-ph-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+ph-bs-ph-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,ph-bs-ph-ms,ph-bs-ph-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+ph-bs-ph-ms/bs/social-science,bs/social-science,ph-bs-ph-ms,ph-bs-ph-ms/bs,Social Science,6,0,0,0
+ph-bs-ph-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,ph-bs-ph-ms,ph-bs-ph-ms/bs,Interactive Qualifying Project,9,0,0,0
+ph-bs-ph-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,ph-bs-ph-ms,ph-bs-ph-ms/bs,Wellness and Physical Education,3,0,0,0
+ph-bs-ph-ms/bs/free-electives,bs/free-electives,ph-bs-ph-ms,ph-bs-ph-ms/bs,Free Electives,9,0,0,0
+ph-bs-ph-ms/ms,ms,ph-bs-ph-ms,,M.S. in Physics or Applied Physics,30,0,2,0
+ph-bs-ph-ms/ms/physics-or-applied-physics,ms/physics-or-applied-physics,ph-bs-ph-ms,ph-bs-ph-ms/ms,Physics or Applied Physics,0,0,1,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/physics,ms/physics-or-applied-physics/physics,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics,Physics,0,0,5,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/physics/classical-mechanics-i,ms/physics-or-applied-physics/physics/classical-mechanics-i,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/physics,Classical Mechanics I,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/physics/quantum-mechanics-i,ms/physics-or-applied-physics/physics/quantum-mechanics-i,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/physics,Quantum Mechanics I,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/physics/quantum-mechanics-ii,ms/physics-or-applied-physics/physics/quantum-mechanics-ii,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/physics,Quantum Mechanics II,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/physics/thermodynamics-and-statistical-physics,ms/physics-or-applied-physics/physics/thermodynamics-and-statistical-physics,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/physics,Thermodynamics and Statistical Physics,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/physics/advanced-electromagnetic-theory,ms/physics-or-applied-physics/physics/advanced-electromagnetic-theory,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/physics,Advanced Electromagnetic Theory,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics,ms/physics-or-applied-physics/applied-physics,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics,Applied Physics,0,0,1,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter,ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics,Biophysics and Soft Condensed Matter,0,0,4,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter/classical-mechanics-i,ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter/classical-mechanics-i,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter,Classical Mechanics I,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter/thermodynamics-and-statistical-physics,ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter/thermodynamics-and-statistical-physics,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter,Thermodynamics and Statistical Physics,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter/ph-562,ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter/ph-562,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter,PH 562,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter/concentration-electives,ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter/concentration-electives,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/biophysics-and-soft-condensed-matter,Concentration Electives,6,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/nanoscience-and-technology,ms/physics-or-applied-physics/applied-physics/nanoscience-and-technology,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics,Nanoscience and Technology,0,0,3,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/nanoscience-and-technology/quantum-mechanics-i,ms/physics-or-applied-physics/applied-physics/nanoscience-and-technology/quantum-mechanics-i,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/nanoscience-and-technology,Quantum Mechanics I,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/nanoscience-and-technology/mechanics-or-e-m,ms/physics-or-applied-physics/applied-physics/nanoscience-and-technology/mechanics-or-e-m,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/nanoscience-and-technology,Mechanics or E&M,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/nanoscience-and-technology/concentration-courses,ms/physics-or-applied-physics/applied-physics/nanoscience-and-technology/concentration-courses,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/nanoscience-and-technology,Concentration Courses,9,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/photonics,ms/physics-or-applied-physics/applied-physics/photonics,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics,Photonics,0,0,4,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/photonics/quantum-mechanics-i,ms/physics-or-applied-physics/applied-physics/photonics/quantum-mechanics-i,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/photonics,Quantum Mechanics I,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/photonics/advanced-electromagnetic-theory,ms/physics-or-applied-physics/applied-physics/photonics/advanced-electromagnetic-theory,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/photonics,Advanced Electromagnetic Theory,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/photonics/ph-544,ms/physics-or-applied-physics/applied-physics/photonics/ph-544,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/photonics,PH 544,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/photonics/concentration-courses,ms/physics-or-applied-physics/applied-physics/photonics/concentration-courses,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/photonics,Concentration Courses,9,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/radiological-sciences,ms/physics-or-applied-physics/applied-physics/radiological-sciences,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics,Radiological Sciences,0,0,4,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/radiological-sciences/core-physics,ms/physics-or-applied-physics/applied-physics/radiological-sciences/core-physics,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/radiological-sciences,Core Physics,6,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/radiological-sciences/radiation-biology,ms/physics-or-applied-physics/applied-physics/radiological-sciences/radiation-biology,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/radiological-sciences,Radiation Biology,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/radiological-sciences/health-physics,ms/physics-or-applied-physics/applied-physics/radiological-sciences/health-physics,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/radiological-sciences,Health Physics,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/radiological-sciences/nse-560,ms/physics-or-applied-physics/applied-physics/radiological-sciences/nse-560,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/radiological-sciences,NSE 560,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics,ms/physics-or-applied-physics/applied-physics/medical-physics,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics,Medical Physics,0,0,6,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics/core-physics,ms/physics-or-applied-physics/applied-physics/medical-physics/core-physics,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics,Core Physics,6,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics/radiation-biology,ms/physics-or-applied-physics/applied-physics/medical-physics/radiation-biology,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics,Radiation Biology,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics/health-physics,ms/physics-or-applied-physics/applied-physics/medical-physics/health-physics,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics,Health Physics,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics/nse-560,ms/physics-or-applied-physics/applied-physics/medical-physics/nse-560,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics,NSE 560,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics/diagnostic-medical-physics,ms/physics-or-applied-physics/applied-physics/medical-physics/diagnostic-medical-physics,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics,Diagnostic Medical Physics,3,0,0,0
+ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics/radiation-therapy-physics,ms/physics-or-applied-physics/applied-physics/medical-physics/radiation-therapy-physics,ph-bs-ph-ms,ph-bs-ph-ms/ms/physics-or-applied-physics/applied-physics/medical-physics,Radiation Therapy Physics,3,0,0,0
+ph-bs-ph-ms/ms/thesis-or-directed-research,ms/thesis-or-directed-research,ph-bs-ph-ms,ph-bs-ph-ms/ms,Thesis or Directed Research,0,0,1,0
+ph-bs-ph-ms/ms/thesis-or-directed-research/thesis,ms/thesis-or-directed-research/thesis,ph-bs-ph-ms,ph-bs-ph-ms/ms/thesis-or-directed-research,Thesis,6,0,0,0
+ph-bs-ph-ms/ms/thesis-or-directed-research/directed-research,ms/thesis-or-directed-research/directed-research,ph-bs-ph-ms,ph-bs-ph-ms/ms/thesis-or-directed-research,Directed Research,6,0,0,0
+rbe-bs-rbe-ms/bs,bs,rbe-bs-rbe-ms,,B.S. in Robotics Engineering,135,0,10,0
+rbe-bs-rbe-ms/bs/mathematics,bs/mathematics,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs,Mathematics,21,0,0,0
+rbe-bs-rbe-ms/bs/basic-science,bs/basic-science,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs,Basic Science,12,0,1,0
+rbe-bs-rbe-ms/bs/basic-science/physics,bs/basic-science/physics,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/basic-science,Physics,6,0,0,0
+rbe-bs-rbe-ms/bs/entrepreneurship,bs/entrepreneurship,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs,Entrepreneurship,3,0,0,0
+rbe-bs-rbe-ms/bs/social-implications,bs/social-implications,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs,Social Implications,3,0,0,0
+rbe-bs-rbe-ms/bs/engineering-science-and-design,bs/engineering-science-and-design,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs,Engineering Science and Design,54,0,7,0
+rbe-bs-rbe-ms/bs/engineering-science-and-design/robotics-engineering,bs/engineering-science-and-design/robotics-engineering,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/engineering-science-and-design,Robotics Engineering,15,0,1,0
+rbe-bs-rbe-ms/bs/engineering-science-and-design/robotics-engineering/core-robotics,bs/engineering-science-and-design/robotics-engineering/core-robotics,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/engineering-science-and-design/robotics-engineering,Core Robotics,12,0,0,0
+rbe-bs-rbe-ms/bs/engineering-science-and-design/computer-science,bs/engineering-science-and-design/computer-science,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/engineering-science-and-design,Computer Science,9,0,0,0
+rbe-bs-rbe-ms/bs/engineering-science-and-design/electrical-and-computer-engineering,bs/engineering-science-and-design/electrical-and-computer-engineering,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/engineering-science-and-design,Electrical and Computer Engineering,6,0,0,0
+rbe-bs-rbe-ms/bs/engineering-science-and-design/statics,bs/engineering-science-and-design/statics,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/engineering-science-and-design,Statics,3,0,0,0
+rbe-bs-rbe-ms/bs/engineering-science-and-design/classical-controls,bs/engineering-science-and-design/classical-controls,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/engineering-science-and-design,Classical Controls,3,0,0,0
+rbe-bs-rbe-ms/bs/engineering-science-and-design/engineering-science-and-design-electives,bs/engineering-science-and-design/engineering-science-and-design-electives,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/engineering-science-and-design,Engineering Science and Design Electives,9,0,0,0
+rbe-bs-rbe-ms/bs/engineering-science-and-design/major-qualifying-project,bs/engineering-science-and-design/major-qualifying-project,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/engineering-science-and-design,Major Qualifying Project,9,0,0,0
+rbe-bs-rbe-ms/bs/humanities-and-arts,bs/humanities-and-arts,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs,Humanities and Arts,18,0,4,0
+rbe-bs-rbe-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/humanities-and-arts,Depth,9,0,0,0
+rbe-bs-rbe-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+rbe-bs-rbe-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+rbe-bs-rbe-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+rbe-bs-rbe-ms/bs/social-science,bs/social-science,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs,Social Science,6,0,0,0
+rbe-bs-rbe-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs,Interactive Qualifying Project,9,0,0,0
+rbe-bs-rbe-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs,Wellness and Physical Education,3,0,0,0
+rbe-bs-rbe-ms/bs/free-electives,bs/free-electives,rbe-bs-rbe-ms,rbe-bs-rbe-ms/bs,Free Electives,9,0,0,0
+rbe-bs-rbe-ms/ms,ms,rbe-bs-rbe-ms,,M.S. in Robotics Engineering,30,0,3,0
+rbe-bs-rbe-ms/ms/robotics-core,ms/robotics-core,rbe-bs-rbe-ms,rbe-bs-rbe-ms/ms,Robotics Core,15,0,2,0
+rbe-bs-rbe-ms/ms/robotics-core/foundations,ms/robotics-core/foundations,rbe-bs-rbe-ms,rbe-bs-rbe-ms/ms/robotics-core,Foundations,0,0,3,0
+rbe-bs-rbe-ms/ms/robotics-core/foundations/foundations-of-robotics,ms/robotics-core/foundations/foundations-of-robotics,rbe-bs-rbe-ms,rbe-bs-rbe-ms/ms/robotics-core/foundations,Foundations of Robotics,3,0,0,0
+rbe-bs-rbe-ms/ms/robotics-core/foundations/robot-dynamics,ms/robotics-core/foundations/robot-dynamics,rbe-bs-rbe-ms,rbe-bs-rbe-ms/ms/robotics-core/foundations,Robot Dynamics,3,0,0,0
+rbe-bs-rbe-ms/ms/robotics-core/foundations/robot-control,ms/robotics-core/foundations/robot-control,rbe-bs-rbe-ms,rbe-bs-rbe-ms/ms/robotics-core/foundations,Robot Control,3,0,0,0
+rbe-bs-rbe-ms/ms/robotics-core/core-robotics-engineering-electives,ms/robotics-core/core-robotics-engineering-electives,rbe-bs-rbe-ms,rbe-bs-rbe-ms/ms/robotics-core,Core Robotics Engineering Electives,6,0,0,0
+rbe-bs-rbe-ms/ms/engineering-context,ms/engineering-context,rbe-bs-rbe-ms,rbe-bs-rbe-ms/ms,Engineering Context,3,0,0,0
+rbe-bs-rbe-ms/ms/capstone-or-thesis,ms/capstone-or-thesis,rbe-bs-rbe-ms,rbe-bs-rbe-ms/ms,Capstone or Thesis,0,0,1,0
+rbe-bs-rbe-ms/ms/capstone-or-thesis/capstone-project,ms/capstone-or-thesis/capstone-project,rbe-bs-rbe-ms,rbe-bs-rbe-ms/ms/capstone-or-thesis,Capstone Project,3,0,0,0
+rbe-bs-rbe-ms/ms/capstone-or-thesis/thesis,ms/capstone-or-thesis/thesis,rbe-bs-rbe-ms,rbe-bs-rbe-ms/ms/capstone-or-thesis,Thesis,9,0,0,0
+rbe-bs-rbe-ms/ms/internship,ms/internship,rbe-bs-rbe-ms,rbe-bs-rbe-ms/ms,Internship,0,3,0,0
+ma-bs-stat-ms/bs,bs,ma-bs-stat-ms,,B.S. in Mathematical Sciences,135,0,10,0
+ma-bs-stat-ms/bs/mathematics,bs/mathematics,ma-bs-stat-ms,ma-bs-stat-ms/bs,Mathematics,66,0,4,0
+ma-bs-stat-ms/bs/mathematics/transition-courses,bs/mathematics/transition-courses,ma-bs-stat-ms,ma-bs-stat-ms/bs/mathematics,Transition Courses,3,0,0,0
+ma-bs-stat-ms/bs/mathematics/core-courses,bs/mathematics/core-courses,ma-bs-stat-ms,ma-bs-stat-ms/bs/mathematics,Core Courses,12,0,0,0
+ma-bs-stat-ms/bs/mathematics/upper-level-courses,bs/mathematics/upper-level-courses,ma-bs-stat-ms,ma-bs-stat-ms/bs/mathematics,Upper Level Courses,9,0,0,0
+ma-bs-stat-ms/bs/mathematics/major-qualifying-project,bs/mathematics/major-qualifying-project,ma-bs-stat-ms,ma-bs-stat-ms/bs/mathematics,Major Qualifying Project,9,0,0,0
+ma-bs-stat-ms/bs/additional-courses,bs/additional-courses,ma-bs-stat-ms,ma-bs-stat-ms/bs,Additional Courses,6,0,0,0
+ma-bs-stat-ms/bs/basic-science,bs/basic-science,ma-bs-stat-ms,ma-bs-stat-ms/bs,Basic Science,6,0,0,0
+ma-bs-stat-ms/bs/computer-or-data-science,bs/computer-or-data-science,ma-bs-stat-ms,ma-bs-stat-ms/bs,Computer or Data Science,6,0,0,0
+ma-bs-stat-ms/bs/related-courses,bs/related-courses,ma-bs-stat-ms,ma-bs-stat-ms/bs,Related Courses,6,0,0,0
+ma-bs-stat-ms/bs/humanities-and-arts,bs/humanities-and-arts,ma-bs-stat-ms,ma-bs-stat-ms/bs,Humanities and Arts,18,0,4,0
+ma-bs-stat-ms/bs/humanities-and-arts/depth,bs/humanities-and-arts/depth,ma-bs-stat-ms,ma-bs-stat-ms/bs/humanities-and-arts,Depth,9,0,0,0
+ma-bs-stat-ms/bs/humanities-and-arts/breadth,bs/humanities-and-arts/breadth,ma-bs-stat-ms,ma-bs-stat-ms/bs/humanities-and-arts,Breadth,3,0,0,0
+ma-bs-stat-ms/bs/humanities-and-arts/humanities-elective,bs/humanities-and-arts/humanities-elective,ma-bs-stat-ms,ma-bs-stat-ms/bs/humanities-and-arts,Humanities Elective,3,0,0,0
+ma-bs-stat-ms/bs/humanities-and-arts/inquiry-seminar-or-practicum,bs/humanities-and-arts/inquiry-seminar-or-practicum,ma-bs-stat-ms,ma-bs-stat-ms/bs/humanities-and-arts,Inquiry Seminar or Practicum,3,0,0,0
+ma-bs-stat-ms/bs/social-science,bs/social-science,ma-bs-stat-ms,ma-bs-stat-ms/bs,Social Science,6,0,0,0
+ma-bs-stat-ms/bs/interactive-qualifying-project,bs/interactive-qualifying-project,ma-bs-stat-ms,ma-bs-stat-ms/bs,Interactive Qualifying Project,9,0,0,0
+ma-bs-stat-ms/bs/wellness-and-physical-education,bs/wellness-and-physical-education,ma-bs-stat-ms,ma-bs-stat-ms/bs,Wellness and Physical Education,3,0,0,0
+ma-bs-stat-ms/bs/free-electives,bs/free-electives,ma-bs-stat-ms,ma-bs-stat-ms/bs,Free Electives,9,0,0,0
+ma-bs-stat-ms/ms,ms,ma-bs-stat-ms,,M.S. in Applied Statistics,30,0,2,0
+ma-bs-stat-ms/ms/required-courses,ms/required-courses,ma-bs-stat-ms,ma-bs-stat-ms/ms,Required Courses,0,0,5,0
+ma-bs-stat-ms/ms/required-courses/probability-and-mathematical-statistics-i,ms/required-courses/probability-and-mathematical-statistics-i,ma-bs-stat-ms,ma-bs-stat-ms/ms/required-courses,Probability and Mathematical Statistics I,3,0,0,0
+ma-bs-stat-ms/ms/required-courses/probability-and-mathematical-statistics-ii,ms/required-courses/probability-and-mathematical-statistics-ii,ma-bs-stat-ms,ma-bs-stat-ms/ms/required-courses,Probability and Mathematical Statistics II,3,0,0,0
+ma-bs-stat-ms/ms/required-courses/ma-546,ms/required-courses/ma-546,ma-bs-stat-ms,ma-bs-stat-ms/ms/required-courses,MA 546,3,0,0,0
+ma-bs-stat-ms/ms/required-courses/observational-and-sampling-studies,ms/required-courses/observational-and-sampling-studies,ma-bs-stat-ms,ma-bs-stat-ms/ms/required-courses,Observational and Sampling Studies,3,0,0,0
+ma-bs-stat-ms/ms/required-courses/statistics-graduate-seminar,ms/required-courses/statistics-graduate-seminar,ma-bs-stat-ms,ma-bs-stat-ms/ms/required-courses,Statistics Graduate Seminar,3,0,0,0
+ma-bs-stat-ms/ms/statistics-electives,ms/statistics-electives,ma-bs-stat-ms,ma-bs-stat-ms/ms,Statistics Electives,9,0,0,0

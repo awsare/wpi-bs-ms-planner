@@ -1,0 +1,18 @@
+id,name,bs_major,ms_program,school,catalog_url
+ae-bs-ae-ms,B.S. in Aerospace Engineering / M.S. in Aerospace Engineering,ae,ae,School of Engineering,https://wpi-grad.cleancatalog.net/aerospace-engineering/ms-in-aerospace-engineering
+ai-bs-ai-ms,B.S. in Artificial Intelligence / M.S. in Artificial Intelligence,ai,ai,School of Arts and Sciences,https://wpi-grad.cleancatalog.net/artificial-intelligence/ms-in-artificial-intelligence
+ds-bs-ai-ms,B.S. in Data Science / M.S. in Artificial Intelligence,ds,ai,School of Arts and Sciences,https://wpi-grad.cleancatalog.net/artificial-intelligence/ms-in-artificial-intelligence
+bcb-bs-bcb-ms,B.S. in Bioinformatics and Computational Biology / M.S. in Bioinformatics and Computational Biology,bcb,bcb,School of Arts and Sciences,https://wpi-grad.cleancatalog.net/bioinformatics-and-computational-biology/ms-in-bioinformatics-and-computational-biology
+bme-bs-bme-ms,B.S. in Biomedical Engineering / M.S. in Biomedical Engineering,bme,bme,School of Engineering,https://wpi-grad.cleancatalog.net/biomedical-engineering/ms-in-biomedical-engineering
+che-bs-che-ms,B.S. in Chemical Engineering / M.S. in Chemical Engineering,che,che,School of Engineering,https://wpi-grad.cleancatalog.net/chemical-engineering/master-of-science-in-chemical-engineering
+cs-bs-cs-ms,B.S. in Computer Science / M.S. in Computer Science,cs,cs,School of Arts and Sciences,https://wpi-grad.cleancatalog.net/computer-science/ms-in-computer-science
+cyber-bs-cyber-ms,B.S. in Cybersecurity / M.S. in Cyber Security,cyber,cyber,School of Arts and Sciences,https://wpi-grad.cleancatalog.net/cyber-security/ms-in-cyber-security
+ds-bs-ds-ms,B.S. in Data Science / M.S. in Data Science,ds,ds,School of Arts and Sciences,https://wpi-grad.cleancatalog.net/data-science/ms-in-data-science
+ece-bs-ece-ms,B.S. in Electrical and Computer Engineering / M.S. in Electrical and Computer Engineering,ece,ece,School of Engineering,https://wpi-grad.cleancatalog.net/electrical-and-computer-engineering/ms-in-electrical-and-computer-engineering
+imgd-bs-imgd-ms,B.S. in Interactive Media & Game Development Technology / M.S. in Interactive Media & Game Development,imgd,imgd,School of Arts and Sciences,https://wpi-grad.cleancatalog.net/interactive-media-game-development/ms-in-interactive-media-game-development
+ma-bs-ma-ms,B.S. in Mathematical Sciences / M.S. in Applied Mathematics,ma,ma,School of Arts and Sciences,https://wpi-grad.cleancatalog.net/mathematical-sciences/ms-in-applied-mathematics-program
+me-bs-me-ms,B.S. in Mechanical Engineering / M.S. in Mechanical Engineering,me,me,School of Engineering,https://wpi-grad.cleancatalog.net/mechanical-engineering/ms-in-mechanical-engineering
+ba-bs-msba-ms,B.S. in Business Analytics and Applied AI / M.S. in Business Analytics,ba,msba,School of Business,https://wpi-grad.cleancatalog.net/business-school-the/ms-in-business-analytics-msba
+ph-bs-ph-ms,B.S. in Physics / M.S. in Physics or Applied Physics,ph,ph,School of Arts and Sciences,https://wpi-grad.cleancatalog.net/physics/ms-in-physics-or-applied-physics
+rbe-bs-rbe-ms,B.S. in Robotics Engineering / M.S. in Robotics Engineering,rbe,rbe,School of Engineering,https://wpi-grad.cleancatalog.net/robotics-engineering/ms-in-robotics-engineering
+ma-bs-stat-ms,B.S. in Mathematical Sciences / M.S. in Applied Statistics,ma,stat,School of Arts and Sciences,https://wpi-grad.cleancatalog.net/mathematical-sciences/ms-in-applied-statistics-program
