@@ -332,11 +332,13 @@ def option_label(o):
     return f"{marks}{o['course_code']} — {o['title']}" + (f"  ({', '.join(tags)})" if tags else "")
 
 
-def credits_in(code, degree):
+def credits_in(code, degree, isu=False):
     """What a course is worth toward a degree: its own credits at its own level; grad -> B.S. x1.5
     (1 grad credit = 1/6 unit), undergrad -> M.S. x2/3."""
     grad = courses().get(code, {}).get("academic_level") == "Graduate"
-    return credits_of(code) * (1 if grad == (degree == "ms") else 1.5 if grad else 2 / 3)
+    if grad == (degree == "ms"):
+        return credits_of(code)
+    return credits_of(code) * (1.5 if grad else 2 / 3) + (isu and not grad)  # ISU: +1 grad credit
 
 
 @st.cache_data(ttl="1h")
@@ -391,23 +393,25 @@ def picker(node, kids, plan):
         # (equivalent course, other-degree requirement listing it); the first is the default
         choices = [(eq, r) for eq in partners(ss.program).get(code, []) if eq not in used
                    for r in slots(ss.program, eq) if r.split("/")[1] == other]
-        pick = None
+        pick, isu = None, False
         if code and choices:
             pick = st.selectbox("Double count", choices + [None], key=f"pair-{req}-{v}",
                                 label_visibility="collapsed", width=320,
                                 format_func=lambda o: "Don't double count" if o is None else
                                 f"Also count as {o[0]} in {names[o[1]]} ({credits_in(code, other):g} cr)")
+            if pick and other == "ms":
+                isu = st.checkbox("ISU credit (+1 grad cr)", key=f"isu-{req}-{v}")
         go = st.button("Add", icon=":material/add:", type="primary", disabled=not code, key=f"go-{req}-{v}")
     d, dreq = pick or (None, None)
     # Already in My courses -> UPDATE that row; otherwise INSERT a new one.
     if go and write((
             """WITH upd AS (
-                 UPDATE plan SET requirement_id = %(r)s, doublecount_for = %(d)s, doublecount_req = %(dr)s
+                 UPDATE plan SET requirement_id = %(r)s, doublecount_for = %(d)s, doublecount_req = %(dr)s, isu = %(i)s
                  WHERE student_id = %(s)s AND program_id = %(p)s AND course_code = %(c)s
                    AND requirement_id IS NULL RETURNING 1)
-               INSERT INTO plan (student_id, program_id, course_code, requirement_id, doublecount_for, doublecount_req)
-               SELECT %(s)s, %(p)s, %(c)s, %(r)s, %(d)s, %(dr)s WHERE NOT EXISTS (SELECT 1 FROM upd)""",
-            {"s": ss.sid, "p": ss.program, "c": code, "r": req, "d": d, "dr": dreq}),
+               INSERT INTO plan (student_id, program_id, course_code, requirement_id, doublecount_for, doublecount_req, isu)
+               SELECT %(s)s, %(p)s, %(c)s, %(r)s, %(d)s, %(dr)s, %(i)s WHERE NOT EXISTS (SELECT 1 FROM upd)""",
+            {"s": ss.sid, "p": ss.program, "c": code, "r": req, "d": d, "dr": dreq, "i": isu}),
             done=f"Added {code} to {node['name']}" + (f", also counting as {d}" if d else "")):
         st.rerun()
 
