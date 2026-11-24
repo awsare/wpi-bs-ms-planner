@@ -241,7 +241,12 @@ def overview(plan):
         have, need = float(t[f"{k}_credits"]), t[f"{k}_required"]
         with col.container(border=True, height="stretch"):
             st.metric(f"{name} credits", f"{have:g} / {need}", help=tips[k])
-            st.progress(min(have / need, 1.0))
+            # st.progress can't be recolored: green when filled, orange in progress, gray when empty (as the badges)
+            color = "#21c354" if have >= need else "#ff8700" if have > 0 else "#808495"
+            st.markdown(f'<div role="progressbar" aria-valuenow="{have:g}" aria-valuemax="{need}" '
+                        f'style="background:rgba(128,128,128,.25);border-radius:4px;height:8px">'
+                        f'<div style="width:{min(have / need, 1) * 100:.0f}%;background:{color};'
+                        f'border-radius:4px;height:100%"></div></div>', unsafe_allow_html=True)
     # WPI: at most 40% of the M.S. credits count toward both degrees; a double count uses its M.S.-side credits
     cap = 0.4 * totals["ms"]
     used = sum(float(p["credits"]) for p in plan if p["doublecount_for"] and p["degree"] == "ms")
