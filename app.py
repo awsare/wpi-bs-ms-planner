@@ -219,11 +219,28 @@ def course_search():
     t = text.lower()
     hits = [c for code, c in courses().items()
             if t in code.lower() or t in (c["title"] or "").lower() or t in (c["subject"] or "").lower()]
-    st.caption(f"{len(hits):,} matches")
-    st.dataframe(hits, hide_index=True, alt="Course search results",
-                 column_config={"course_code": "Course", "title": "Title", "subject": "Subject",
-                                "credits_raw": st.column_config.NumberColumn("Credits", format="%g"),
-                                "academic_level": "Level"})
+    st.caption(f"{len(hits):,} matches. Select a row to read its description or add it to My courses.")
+    sel = st.dataframe(hits, hide_index=True, alt="Course search results", on_select="rerun",
+                       selection_mode="single-row", key="search-hits",
+                       column_config={"course_code": "Course", "title": "Title", "subject": "Subject",
+                                      "credits_raw": st.column_config.NumberColumn("Credits", format="%g"),
+                                      "academic_level": "Level"}).selection.rows
+    if not sel:
+        return
+    c = hits[sel[0]]
+    code = c["course_code"]
+    desc = q("SELECT description FROM fullcourselist WHERE course_code = %s LIMIT 1", (code,))
+    st.subheader(f"{code} — {c['title']}", anchor=False)
+    st.caption(f"{c['credits_raw']:g} credits · {c['academic_level']} · {c['subject']}")
+    st.write((desc and desc[0]["description"]) or "No description in the catalog.")
+    have = q("SELECT 1 FROM plan WHERE student_id = %s AND program_id = %s AND course_code = %s",
+             (ss.sid, ss.program, code))
+    # Unassigned rows are "My courses"; assign them to a requirement from the sections below.
+    if st.button("Already in your plan" if have else "Add to My courses", icon=":material/add:",
+                 type="primary", disabled=bool(have)) and write((
+            "INSERT INTO plan (student_id, program_id, course_code) VALUES (%s, %s, %s)",
+            (ss.sid, ss.program, code)), done=f"Added {code} to My courses"):
+        st.rerun()
 
 
 # ----------------------------------------------------------------------------- overview
@@ -285,8 +302,8 @@ def my_courses(plan):
         picked = st.dataframe(table, hide_index=True, on_select="rerun", selection_mode="multi-row",
                               key=f"bank-{ss.program}-{ver()}", alt="Unassigned courses", column_config=credits_col)
         gone = [unassigned[i] for i in picked.selection.rows]
-        if st.button(f"Remove selected ({len(gone)})", icon=":material/delete:", disabled=not gone,
-                     key=f"bank-rm-{ver()}") and write(
+        if gone and st.button(f"Remove selected ({len(gone)})", icon=":material/delete:",
+                              key=f"bank-rm-{ver()}") and write(
                 *[("DELETE FROM plan WHERE student_id = %s AND program_id = %s AND course_code = %s "
                    "AND requirement_id IS NULL", (ss.sid, ss.program, c)) for c in gone],
                 done=f"Removed {len(gone)} course{'s' * (len(gone) > 1)}"):
