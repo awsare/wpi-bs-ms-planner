@@ -158,7 +158,7 @@ def sign_out():
 def sign_in_page():
     _, mid, _ = st.columns([1, 2, 1])
     with mid:
-        st.title("WPI BS/MS planner", icon=":material/school:")
+        st.title("WPI BS/MS planner", anchor=False)
         st.caption("Track the courses you've taken, fill each B.S. and M.S. requirement, "
                    "and choose which courses to double count.")
         with st.form("sign-in"):
@@ -192,13 +192,18 @@ def save_profile():
 def sidebar():
     progs = programs()
     with st.sidebar:
-        st.header(f"Student {ss.sid:.0f}", icon=":material/account_circle:")
+        st.header(f"Student {ss.sid:.0f}", icon=":material/account_circle:", anchor=False)
         if ss.email:
             st.caption(ss.email)
-        st.selectbox("Program", list(progs), format_func=progs.get, key="program")
+        st.selectbox("Program", list(progs), format_func=progs.get, key="program",
+                     help="Each program has its own plan. Switching shows that program's courses and "
+                          "requirements; your other plans are kept.")
         st.selectbox("Humanities & Arts depth topic", hua_topics(), index=None, key="hua_depth",
                      on_change=save_profile,
-                     help="Courses in this topic count toward HUA depth; others count as breadth.")
+                     help="Humanities & Arts depth is 3 courses in one topic (at least one at the 2000 level or above); "
+                          "breadth is 1 course outside that topic's area. Pick a topic here before adding depth "
+                          "courses — until then they can't be added. Changing it later doesn't remove courses "
+                          "you've already placed.")
         st.selectbox("Graduation year", YEARS, index=None, key="grad_year", on_change=save_profile)
         st.button("Sign out", icon=":material/logout:", on_click=sign_out, width="stretch")
 
@@ -228,16 +233,24 @@ def overview(plan):
     t = rows[0] if rows else {"ug_credits": 0, "ug_required": totals["bs"], "gr_credits": 0, "gr_required": totals["ms"],
                               "total_credits": 0, "total_required": totals["bs"] + totals["ms"]}
     cols = st.columns(4)
+    tips = {"ug": "B.S. credits. A grad course counts 1.5× here (a 2-credit grad course = 3 undergrad credits).",
+            "gr": "M.S. credits. An undergrad course counts 2/3 here (3 undergrad credits = 2 grad credits), "
+                  "or 3 with the ISU add-on.",
+            "total": "B.S. + M.S. credits. A double-counted course adds to both degrees."}
     for col, (name, k) in zip(cols, [("Undergraduate", "ug"), ("Graduate", "gr"), ("Total", "total")]):
         have, need = float(t[f"{k}_credits"]), t[f"{k}_required"]
         with col.container(border=True, height="stretch"):
-            st.metric(f"{name} credits", f"{have:g} / {need}")
+            st.metric(f"{name} credits", f"{have:g} / {need}", help=tips[k])
             st.progress(min(have / need, 1.0))
     # WPI: at most 40% of the M.S. credits count toward both degrees; a double count uses its M.S.-side credits
     cap = 0.4 * totals["ms"]
     used = sum(float(p["credits"]) for p in plan if p["doublecount_for"] and p["degree"] == "ms")
     with cols[3].container(border=True, height="stretch"):
-        st.metric("Double-counted credits", f"{used:g} / {cap:g}")
+        st.metric("Double-counted credits", f"{used:g} / {cap:g}",
+                  help="Double counting: one undergrad course also fills its equivalent grad course in the M.S. "
+                       "(paired courses are listed per program). It counts 3 credits toward the B.S. and 2 toward "
+                       "the M.S.; completing the ISU extra credit bumps the M.S. side to 3. WPI allows at most 40% "
+                       "of the M.S. credits to count toward both degrees.")
         st.caption(", ".join(f"{p['course_code']} (as {p['doublecount_for']})" for p in plan if p["is_doublecount"])
                    or "Pick “also count as …” when adding a double-countable course.")
 
@@ -246,7 +259,7 @@ def my_courses(plan):
     unassigned = [p["course_code"] for p in plan if p["requirement_id"] is None]
     in_plan = {p["course_code"] for p in plan}
     with st.container(border=True):
-        st.subheader("My courses", icon=":material/inventory_2:")
+        st.subheader("My courses", icon=":material/inventory_2:", anchor=False)
         st.caption("Every course you've taken or plan to take. Assign unassigned ones from the requirement "
                    "sections below, where they're marked ✓ taken.")
         with st.container(horizontal=True, vertical_alignment="bottom"):
@@ -389,7 +402,9 @@ def picker(node, kids, plan):
     used = {p["course_code"] for p in plan} | {p["doublecount_for"] for p in plan if p["doublecount_for"]}
     with st.container(horizontal=True, vertical_alignment="bottom"):
         code = st.selectbox("Add a course", list(opts), index=None, format_func=lambda c: option_label(opts[c]),
-                            key=f"add-{req}-{v}", placeholder="Add a course…", label_visibility="collapsed")
+                            key=f"add-{req}-{v}", placeholder="Add a course…", label_visibility="collapsed",
+                            help="✓ taken · ⇄ double-countable (can also count toward the other degree). "
+                                 "“Popular” = commonly chosen for this requirement.")
         # (equivalent course, other-degree requirement listing it); the first is the default
         choices = [(eq, r) for eq in partners(ss.program).get(code, []) if eq not in used
                    for r in slots(ss.program, eq) if r.split("/")[1] == other]
@@ -397,10 +412,14 @@ def picker(node, kids, plan):
         if code and choices:
             pick = st.selectbox("Double count", choices + [None], key=f"pair-{req}-{v}",
                                 label_visibility="collapsed", width=320,
+                                help="Also count this course as its equivalent in the other degree. "
+                                     "Uses part of your 40% double-count limit.",
                                 format_func=lambda o: "Don't double count" if o is None else
                                 f"Also count as {o[0]} in {names[o[1]]} ({credits_in(code, other):g} cr)")
             if pick and other == "ms":
-                isu = st.checkbox("ISU credit (+1 grad cr)", key=f"isu-{req}-{v}")
+                isu = st.checkbox("ISU credit (+1 grad cr)", key=f"isu-{req}-{v}",
+                                  help="Check if you complete the ISU extra credit for this course. "
+                                       "It raises the M.S. credit from 2 to 3 and counts toward the 40% limit.")
         go = st.button("Add", icon=":material/add:", type="primary", disabled=not code, key=f"go-{req}-{v}")
     d, dreq = pick or (None, None)
     # Already in My courses -> UPDATE that row; otherwise INSERT a new one.
@@ -436,8 +455,7 @@ def requirement_tree(plan):
     for col, root in zip(st.columns(2, gap="large"), kids[None]):
         with col:
             bs = root["path"] == "bs"
-            st.header("Undergraduate" if bs else "Graduate",
-                      icon=":material/school:" if bs else ":material/workspace_premium:")
+            st.header("Undergraduate" if bs else "Graduate", anchor=False)
             st.caption(root["name"])
             for top in kids[root["id"]]:
                 done, text, started = stats(top, kids, plan)
@@ -464,7 +482,7 @@ def main():
 
     sidebar()
     with st.container(horizontal=True, vertical_alignment="center"):
-        st.title("WPI BS/MS planner", icon=":material/school:", width="stretch")
+        st.title("WPI BS/MS planner", anchor=False, width="stretch")
         if st.button("Course search", icon=":material/search:"):
             course_search()
     st.caption(programs()[ss.program])
