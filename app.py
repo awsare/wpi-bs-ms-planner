@@ -122,7 +122,7 @@ def partners(pid):
 @st.cache_data(ttl="5m", max_entries=2000)
 def options(sid, pid, req):
     """get_requirement_options() for one requirement: {course_code: row}, in the function's order."""
-    rows = q("SELECT * FROM get_requirement_options(%s::real, %s, %s)", (sid, pid, req))
+    rows = q("SELECT * FROM get_requirement_options(%s, %s, %s)", (sid, pid, req))
     return {r["course_code"]: r for r in rows}
 
 
@@ -162,7 +162,7 @@ def sign_in_page():
         st.caption("Track the courses you've taken, fill each B.S. and M.S. requirement, "
                    "and choose which courses to double count.")
         with st.form("sign-in"):
-            raw = st.text_input("Student ID", placeholder="e.g. 901234567",
+            raw = st.text_input("Student ID", placeholder="e.g. 901234567", max_chars=9,
                                 validate=(r"^\d+$", "Use digits only."))
             if st.form_submit_button("Sign in", type="primary", icon=":material/login:", width="stretch") and raw:
                 ss.lookup = int(raw)  # student.student_id is BIGINT
