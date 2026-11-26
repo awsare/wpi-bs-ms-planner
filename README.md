@@ -1,8 +1,10 @@
 # WPI BS/MS Planner
 
-An unofficial Streamlit app for planning a WPI combined B.S./M.S. degree. Pick your majors, add courses by year, assign them to requirements, and see your credit progress. The database checks the plan against the program rules as you go.
+An unofficial Streamlit app for planning a WPI combined B.S./M.S. degree. Pick your majors, add courses, assign them to requirements, and see your credit progress. The database checks the plan against the program rules as you go.
 
 **[Access the live app here](https://wpi-bs-ms-planner.streamlit.app/)**
+
+**Tech stack:** Python, Streamlit, and PostgreSQL (hosted on Neon).
 
 ## Screenshots
 
@@ -12,11 +14,15 @@ An unofficial Streamlit app for planning a WPI combined B.S./M.S. degree. Pick y
 ![Requirement sections with the course dropdown open](docs/screenshots/dropdowns.png)
 *Each requirement's dropdown ranks eligible courses and tags them as taken, double-countable, or how often other students chose them.*
 
+## Project report
+
+[Read the project report](docs/project-report.pdf) (PDF).
+
 ## Features
 
 - **Course search** across undergraduate and graduate courses, with descriptions
 - **My courses**: add courses to your plan before assigning them to a requirement
-- **Requirement assignment** with ranked course choices for each requirement
+- **Requirement assignment** with a searchable dropdown that ranks courses for each requirement and tags them as taken, double-countable, or popular
 - **Credit progress cards** that change color as you approach each requirement's minimum
 - **Double-count checks**, including the 40% limit
 - **HUA rules** (depth, breadth, seminar, elective)
@@ -46,12 +52,18 @@ What the app reads and enforces:
 
 ```text
 app.py               Streamlit UI
+course_picker.py     Custom searchable course dropdown (Streamlit component)
+requirements.txt     Python dependencies
 build_tables.ipynb   Scrapes WPI course listings and builds the tables
 program_data/
   wpi.yaml           WPI-wide B.S. requirements, added to every major
   bs/                One YAML per B.S. major
   ms/                One YAML per M.S. program (lists its eligible bs_majors)
 tables/              CSVs written by the notebook
+docs/
+  er-diagram.png     ER diagram
+  screenshots/       Images used in this README
+  project-report.pdf    Final project paper
 .devcontainer/       Dev container / Codespaces config
 ```
 
@@ -59,36 +71,13 @@ tables/              CSVs written by the notebook
 
 `build_tables.ipynb` scrapes the WPI course listings, then builds the program and requirement tables from `program_data/`. Each M.S. YAML becomes one program per B.S. major in its `bs_majors`. That program combines the B.S. from `bs/`, the WPI-wide requirements in `wpi.yaml`, and the M.S. Everything is written to `tables/`.
 
-## Setup and running
-
-The app is public at https://wpi-bs-ms-planner.streamlit.app/. To run it locally, follow these steps.
-
-Requires Python 3.11+ and a Postgres database loaded with the schema and tables.
-
-```bash
-pip install -r requirements.txt
-```
-
-Add your connection string to `.streamlit/secrets.toml`, which is not committed:
-
-```toml
-NEON_CONNECTION = "postgresql://user:password@host/dbname?sslmode=require"
-```
-
-Then start the app:
-
-```bash
-streamlit run app.py
-```
-
-The repo also includes a dev container, so you can open it in VS Code or GitHub Codespaces instead.
-
 ## Limitations
 
 - Not official advising. Confirm your plan with your advisor.
 - Only covers the class of 2028 tracking sheets.
-- May not have the latest course listings.
+- Course listings were last scraped on November 15, 2026, so they may not reflect later changes. Program requirement data may also be out of date.
 - Course planner only, no timed scheduling.
+- No secure login system.
 
 ## Team
 
