@@ -363,7 +363,7 @@ def option_tags(o):
     """Chips under each option in the course picker: (style, text)."""
     return ([("taken", "✓ Taken")] if o["is_taken"] else []) + \
         ([("double", "⇄ Double-countable")] if o["is_double_countable"] else []) + \
-        ([("popular", f"★ Popular · {o['pct_chosen'] or 0:g}% chose")] if o["tier"] <= 4 else []) + \
+        ([("popular", f"★ {float(o['pct_chosen'] or 0):g}% chose")] if o["tier"] <= 4 else []) + \
         ([("", o["hua_role"])] if o["hua_role"] else [])
 
 

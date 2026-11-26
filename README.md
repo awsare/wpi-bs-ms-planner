@@ -6,6 +6,12 @@ An unofficial Streamlit app for planning a WPI combined B.S./M.S. degree. Pick y
 
 ## Screenshots
 
+![Credit progress cards and My courses](docs/screenshots/credits_courses.png)
+*Credit progress toward each degree, plus every course in the plan, split into unassigned and assigned.*
+
+![Requirement sections with the course dropdown open](docs/screenshots/dropdowns.png)
+*Each requirement's dropdown ranks eligible courses and tags them as taken, double-countable, or how often other students chose them.*
+
 ## Features
 
 - **Course search** across undergraduate and graduate courses, with descriptions
