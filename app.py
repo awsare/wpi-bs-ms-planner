@@ -190,14 +190,20 @@ def save_profile():
 
 
 def sidebar():
-    progs = programs()
+    # Program names are "B.S. in X / M.S. in Y": pick the B.S. major, then an M.S. paired with it.
+    split = {pid: [part.split(" in ", 1)[1] for part in name.split(" / ")] for pid, name in programs().items()}
     with st.sidebar:
         st.header(f"Student {ss.sid:.0f}", icon=":material/account_circle:", anchor=False)
         if ss.email:
             st.caption(ss.email)
-        st.selectbox("Program", list(progs), format_func=progs.get, key="program",
-                     help="Each program has its own plan. Switching shows that program's courses and "
-                          "requirements; your other plans are kept.")
+        bs, ms = split[ss.program]
+        majors = sorted({b for b, _ in split.values()})
+        bs = st.selectbox("B.S. major", majors, index=majors.index(bs),
+                          help="Each B.S./M.S. pairing has its own plan. Switching shows that pairing's courses and "
+                               "requirements; your other plans are kept.")
+        pairs = {m: pid for pid, (b, m) in split.items() if b == bs}
+        ms = st.selectbox("M.S. program", list(pairs), index=list(pairs).index(ms) if ms in pairs else 0)
+        ss.program = pairs[ms]
         st.selectbox("Humanities & Arts depth topic", hua_topics(), index=None, key="hua_depth",
                      on_change=save_profile,
                      help="Humanities & Arts depth is 3 courses in one topic (at least one at the 2000 level or above); "
@@ -507,7 +513,6 @@ def main():
         st.title("WPI BS/MS planner", anchor=False, width="stretch")
         if st.button("Course search", icon=":material/search:"):
             course_search()
-    st.caption(programs()[ss.program])
 
     # One row per requirement a course fills (a double count fills two), with what it's worth there.
     plan = q("SELECT * FROM plan_placements WHERE student_id = %s AND program_id = %s ORDER BY course_code",
