@@ -30,6 +30,7 @@ from collections import defaultdict
 import pandas as pd
 import psycopg
 import streamlit as st
+from course_picker import course_picker
 from psycopg.rows import dict_row
 
 YEARS = list(range(2026, 2033))
@@ -358,19 +359,12 @@ def badge(done, text, started):
     return f":{color}-badge[{':material/check: ' if done else ''}{text}]"
 
 
-def option_label(o):
-    tags = []
-    if o["tier"] <= 4:
-        tags.append(f"popular, {o['pct_chosen'] or 0:g}% chose")
-    if o["is_taken"]:
-        tags.append("taken")
-    if o["is_double_countable"]:
-        tags.append("double-countable")
-    if o["hua_role"]:
-        tags.append(o["hua_role"])
-    # ✓ taken · ⇄ double-countable (can also count toward the other degree)
-    marks = ("✓ " if o["is_taken"] else "") + ("⇄ " if o["is_double_countable"] else "")
-    return f"{marks}{o['course_code']} — {o['title']}" + (f"  ({', '.join(tags)})" if tags else "")
+def option_tags(o):
+    """Chips under each option in the course picker: (style, text)."""
+    return ([("taken", "✓ Taken")] if o["is_taken"] else []) + \
+        ([("double", "⇄ Double-countable")] if o["is_double_countable"] else []) + \
+        ([("popular", f"★ Popular · {o['pct_chosen'] or 0:g}% chose")] if o["tier"] <= 4 else []) + \
+        ([("", o["hua_role"])] if o["hua_role"] else [])
 
 
 def credits_in(code, degree, isu=False):
@@ -428,11 +422,10 @@ def picker(node, kids, plan):
     other = "ms" if req.split("/")[1] == "bs" else "bs"
     names = {r["id"]: r["name"] for r in requirements(ss.program)}
     used = {p["course_code"] for p in plan} | {p["doublecount_for"] for p in plan if p["doublecount_for"]}
-    with st.container(horizontal=True, vertical_alignment="bottom"):
-        code = st.selectbox("Add a course", list(opts), index=None, format_func=lambda c: option_label(opts[c]),
-                            key=f"add-{req}-{v}", placeholder="Add a course…", label_visibility="collapsed",
-                            help="✓ taken · ⇄ double-countable (can also count toward the other degree). "
-                                 "“Popular” = commonly chosen for this requirement.")
+    # Top alignment: the picker's option list opens inline and grows the row downward.
+    with st.container(horizontal=True, vertical_alignment="top"):
+        code = course_picker([{"code": c, "title": o["title"], "tags": option_tags(o)} for c, o in opts.items()],
+                             key=f"add-{req}-{v}")
         # (equivalent course, other-degree requirement listing it); the first is the default
         choices = [(eq, r) for eq in partners(ss.program).get(code, []) if eq not in used
                    for r in slots(ss.program, eq) if r.split("/")[1] == other]
