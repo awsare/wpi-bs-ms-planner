@@ -165,7 +165,7 @@ def sign_in_page():
             raw = st.text_input("Student ID", placeholder="e.g. 901234567",
                                 validate=(r"^\d+$", "Use digits only."))
             if st.form_submit_button("Sign in", type="primary", icon=":material/login:", width="stretch") and raw:
-                ss.lookup = float(raw)  # student.student_id is REAL
+                ss.lookup = int(raw)  # student.student_id is BIGINT
         sid = ss.get("lookup")
         if sid is None:
             return
